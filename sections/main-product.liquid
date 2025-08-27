@@ -339,7 +339,7 @@
                           <div class="limited-time-discount-text">LIMITED TIME: {{ discount_percentage }}% OFF</div>
                         {% endif %}
                       {% endif %}
-                      
+
                     <div class="product-title-price-container">
                       <div class="product-title-wrapper">
                         <div class="product-title uppercase--{{ block.settings.uppercase }}">
@@ -652,7 +652,7 @@
                       </button>
                       <a
                         href="{{ block.settings.side_panel_2_page.url }}"
-                        class="side-panel-links--link no-js"
+                        class="sideFOMO-panel-links--link no-js"
                         target="_blank"
                       >
                         {%- render 'svg-icons-inline', icon: block.settings.side_panel_2_icon -%}
@@ -680,10 +680,12 @@
                   {% else %}
                   
                   <!-- FOMO Stock Counter -->
-                  {% assign random_stock = 'now' | date: '%S' | modulo: 6 | plus: 3 %}
-                  <div class="fomo-counter">
-                    <p class="fomo-text">Only <span id="fomo-stock-count">{{ random_stock }}</span> left in stock - get it now!</p>
-                  </div>
+                  {% if settings.show_limited_time_discount_badge %}
+                    {% assign random_stock = 'now' | date: '%S' | modulo: 6 | plus: 3 %}
+                    <div class="fomo-counter">
+                      <p class="fomo-text">Only <span id="fomo-stock-count">{{ random_stock }}</span> left in stock - get it now!</p>
+                    </div>
+                  {% endif %}
                   
                   <div
                     id="backinstock-alert"
