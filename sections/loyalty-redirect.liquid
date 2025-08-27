@@ -1,0 +1,26 @@
+{%- if shop.customer_accounts_enabled -%}
+      {% if customer %}
+        {% if customer.tags contains '≥300 SPENT' %}
+          
+        {% else %}
+           <script>
+             window.location.replace("/account");
+           </script>
+        {% endif %}
+      {% else %}
+           <script>
+             window.location.replace("/account");
+           </script>
+      {%  endif %}
+{% else %}
+           <script>
+             window.location.replace("/account");
+           </script>
+{%  endif %}
+
+{% schema %}
+  {
+    "name": "Loyalty Redirect",
+    "settings": []
+  }
+{% endschema %}

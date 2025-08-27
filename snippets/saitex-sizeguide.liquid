@@ -1,0 +1,125 @@
+{% assign family_collection = product.metafields.custom.product_family %}
+{% if family_collection != blank %}
+  <div class="side-panel sizeguide-panelinner" id="Side-Panel-sizeguide">
+    <div class="side-panel-header">
+      <div>
+        <span>SIZE GUIDE</span>
+        <side-panel-close class="side-panel-close">
+          {%- render 'svg-icons' with 'close' -%}
+        </side-panel-close>
+      </div>
+    </div>
+    <div class="side-panel-content sizeguidepanel">
+      <div class="sizeguide-toolbar">
+        <div class="sizeguide-toolbar-name">
+          {{ collections[family_collection].metafields.custom.size_guide.value.title | remove: '[Size Guide] ' }}
+        </div>
+        <div class="sizeguide-toolbar-demention">
+          {% comment %} <div class="view-toggle-wrapper" bis_skin_checked="1">
+            <label class="view-toggle">
+              <input type="checkbox" id="viewToggle">
+              <div class="toggle-slider" bis_skin_checked="1">
+                <span class="view active">inches</span>
+                <span class="hide">cm</span>
+              </div>
+            </label>
+          </div> {% endcomment %}
+        </div>
+      </div>
+      <div class="sizeguide-tablet">
+        <div class="sizeguide-tablet-content">
+          {% comment %} <div class="sizeguide-tablet-content-heading">
+            <span>EDWIN SIZING</span>
+            <span>WAIST</span>
+            <span>LOW HIP</span>
+          </div> {% endcomment %}
+          <div class="sizeguide-tablet-content-table">
+            {{ collections[family_collection].metafields.custom.size_guide.value.content }}
+          </div>
+        </div>
+        <div class="sizeguide-tablet-note">
+          Note: this guide provides general sizing information, which can vary depending on style.
+        </div>
+      </div>
+      <div class="sizeguide-image">
+        <div class="sizeguide-image-title">Measurements guide</div>
+        <div class="sizeguide-image-content">
+          <div class="img-content-left">
+            <div class="icl-text1">Waist</div>
+            <div class="icl-text2">
+              Measure at the smallest part of your waist. This is usually below the rib cage and above the hip bone.
+            </div>
+          </div>
+          <div class="img-content-line">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0678/6315/0899/files/Frame_20.png?v=1754277126"
+              alt="sizeguide-line"
+            >
+          </div>
+          <div class="img-content-right">
+            <div class="icl-text1">Low Hip</div>
+            <div class="icl-text2">
+              Measure at the fullest part of your seat, keeping the tape parallel to the floor.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const viewToggle = document.getElementById('viewToggle');
+    const toggleSlider = document.querySelector('.toggle-slider');
+    const inchesSpan = toggleSlider.querySelector('.view');
+    const cmSpan = toggleSlider.querySelector('.hide');
+    
+    function updateToggleState() {
+      if (viewToggle.checked) {
+        convertTableValues('inches', 'cm');
+      } else {
+        convertTableValues('cm', 'inches');
+      }
+    }
+    
+    function convertTableValues(fromUnit, toUnit) {
+      const table = document.querySelector('.sizeguide-tablet-content-table table');
+      if (!table) return;
+      
+      const cells = table.querySelectorAll('td');
+      cells.forEach(cell => {
+        const text = cell.textContent.trim();          
+        const numberMatch = text.match(/^(\d+(?:\.\d+)?)\s*(inches?|cm|in)?$/i);
+        if (numberMatch) {
+          const value = parseFloat(numberMatch[1]);
+          let convertedValue;
+          
+          if (fromUnit === 'inches' && toUnit === 'cm') {
+            convertedValue = (value * 2.54).toFixed(1);
+            cell.textContent = convertedValue;
+          } else if (fromUnit === 'cm' && toUnit === 'inches') {
+            convertedValue = (value / 2.54).toFixed(0);
+            cell.textContent = convertedValue;
+          }
+        }
+      });
+    }    
+    viewToggle.addEventListener('change', updateToggleState);
+  });
+</script>
+
+<style>
+  .sizeguide-panel .side-panel-header span {
+    color: #000;
+    text-align: right;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+</style>

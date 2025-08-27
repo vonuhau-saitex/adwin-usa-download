@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_subcollections": true,
+        "make_heading_uppercase": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
+    },
+    "b0289ac2-b5b3-4682-a450-d96af535bb6a": {
+      "type": "main-collection-banner-edwin",
+      "settings": {
+        "heading": "",
+        "full_width": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "6101ef02-6831-449c-b094-728928701024": {
+      "type": "jeans-collection-sub-collection-slider",
+      "disabled": true,
+      "custom_css": [
+        "@media only screen and (min-width: 768px) {.section-spacing {margin-top: 20px; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "full_width": true,
+        "columns_desktop": 5,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "6db890f3-4a59-425f-89cf-9113a6c2726a": {
+      "type": "jeans-collection-sub-collections",
+      "settings": {
+        "heading": "",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main-collection-banner",
+    "b0289ac2-b5b3-4682-a450-d96af535bb6a",
+    "6101ef02-6831-449c-b094-728928701024",
+    "6db890f3-4a59-425f-89cf-9113a6c2726a"
+  ]
+}

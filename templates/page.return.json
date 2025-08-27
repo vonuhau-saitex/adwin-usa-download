@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "202feba0-2d9f-45b5-8510-aa4b2e90d2c8": {
+      "type": "main-return",
+      "custom_css": [
+        "img {height: 100%;}"
+      ],
+      "settings": {
+        "heading": "Return Request",
+        "description": "<p>We are working to streamline our returns process. In the meantime, please use the Return Request form below to initiate your return. Enter your order number and email below to submit your return request. Our team will respond within 24 hours to confirm your return and provide your return label.<\/p><p>We are also working to implement a better exchange program. For exchange requests, please contact us at contact@edwin-usa.com to initiate a return and process a new order. <\/p>",
+        "image": "shopify:\/\/shop_images\/contact-us.png",
+        "show_phone_number": false,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "202feba0-2d9f-45b5-8510-aa4b2e90d2c8"
+  ]
+}

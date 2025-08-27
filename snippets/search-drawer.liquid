@@ -1,0 +1,94 @@
+<div class="side-panel search-drawer" tabindex="-1" id="Search-Drawer">
+    <div class="side-panel-inner">
+        <div class="side-panel-header">
+            <div class="row full-width-row no-padding" style="width: 100%">
+                <div class="search-panel-logo medium-3 columns">
+                    {% if settings.logo_image %}
+                        <a class="logolink" href="{{ routes.root_url }}">
+                            <img
+                                    src="{{ settings.logo_image | image_url }}"
+                                    class="logoimg"
+                                    alt="{{ settings.logo_image.alt | default: shop.name | escape }}"
+                                    width="{{ settings.logo_image.width }}"
+                                    height="{{ settings.logo_image.height }}"
+                            >
+                        </a>
+                    {% else %}
+                        <a class="logolink text-logo" href="{{ routes.root_url }}">
+                            {{ shop.name }}
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="search-form-container medium-9 columns">
+                    <form role="search" method="get" class="searchform" action="{{ routes.search_url }}">
+                        <fieldset class="clearable-input">
+                            <button type="submit" class="thb-search-submit">{% render 'svg-icons' with 'search' %}</button>
+                            <label for="side-panel-search-input visually-hidden">{{ 'sections.header.search' | t }}</label>
+                            <input type="search" class="search-field"
+                                   placeholder="{{ 'sections.header.search_for' | t | escape }}"
+                                   value="{{ search.terms | replace: '*', '' }}" name="q" autocomplete="off">
+                            <button type="button" id="input_clear_button">&times;</button>
+                            <input type="hidden" name="type" value="product"> 
+                        </fieldset>
+                    </form>
+                    <side-panel-close class="side-panel-close">
+                        <span class="search-form-close-btn-txt">{{ 'search.cancel' | t }}</span>
+                    </side-panel-close>
+                </div>
+
+            </div>
+
+        </div>
+        {%- if settings.predictive_search_enabled -%}
+            <div class="side-panel-content side-panel-content--has-tabs">
+
+            </div>
+        {%- endif -%}
+        <div class="side-panel-content side-panel-content--initial">
+            <div class="thb-predictive-search">
+                {%- if settings.search_menu != blank -%}
+                    <div class="">
+
+                    </div>
+                    <div class="thb-predictive-search--popular small-12 medium-3 columns">
+                        <span class="thb-predictive-search--label">{{ 'sections.header.popular_searches' | t }}</span>
+                        <scroll-shadow1>
+                            <div>
+                                {%- for link in settings.search_menu.links -%}
+                                    <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title }}</a>
+                                {%- endfor -%}
+                            </div>
+                        </scroll-shadow1>
+                    </div>
+                {%- endif -%}
+
+                {%- if settings.search_product_collection -%}
+                    <div class="thb-predictive-search--promotion">
+                        <span class="thb-predictive-search--label">{{ settings.search_product_heading }}</span>
+                        <div class="thb-predictive-search--promotion-products">
+                            <ul class="products collection row small-up-1 medium-up-2">
+                                {%- for product in settings.search_product_collection.products limit: settings.search_product_collection_limit -%}
+                                    <li class="columns">
+                                        {% render 'product-card', product_card_product: product %}
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    </div>
+                {%- endif -%}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<link rel="stylesheet" href="{{ 'product-grid.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'search-drawer-custom.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>
+    {{ 'product-grid.css' | asset_url | stylesheet_tag }}
+    {{ 'predictive-search.css' | asset_url | stylesheet_tag }}
+</noscript>
+
+
+<script src="{{ 'search-drawer-custom.js' | asset_url }}" defer="defer"></script>

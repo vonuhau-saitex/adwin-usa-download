@@ -1,0 +1,178 @@
+{{- 'collection-page-ship-info.css' | asset_url | stylesheet_tag -}}
+
+{%- liquid
+    assign section_heading = section.settings.heading
+    assign full_width = section.settings.full_width
+    assign disable_top_spacing = section.settings.disable_top_spacing
+    assign disable_bottom_spacing = section.settings.disable_bottom_spacing -%}
+
+<div class="collection-page-ship-info section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
+    <div class="row{% if full_width %} full-width-row{% endif %}">
+        <div class="small-12 columns">
+            {% comment %}
+                {% render 'section-header', section_heading: section_heading %}
+            {% endcomment %}
+            <div class="collection-page-ship-info__container">
+
+                <div class="collection-page-ship-info__item_container">
+                    <div class="collection-page-ship-info__item_img_container">
+                        {% if section.settings.our_packaging_img %}
+                            <img src="{{ section.settings.our_packaging_img | image_url }}">
+                        {% else %}
+                            <img src="{{ 'our_packaging_img.png' | asset_url }}"/>
+                        {% endif %}
+                    </div>
+                    <div class="collection-page-ship-info__item_content_container">
+                        <div class="collection-page-ship-info__item_heading">
+                            {{ section.settings.our_packaging_heading }}
+                        </div>
+                        <div class="collection-page-ship-info__item_description">
+                            {{ section.settings.our_packaging_sub_heading }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-page-ship-info__item_container">
+                    <div class="collection-page-ship-info__item_img_container">
+                        {% if section.settings.free_online_exchange_img %}
+                            <img src="{{ section.settings.free_online_exchange_img | image_url }}">
+                        {% else %}
+                            <img src="{{ 'free_online_exchange_img.png' | asset_url }}"/>
+                        {% endif %}
+                    </div>
+                    <div class="collection-page-ship-info__item_content_container">
+                        <div class="collection-page-ship-info__item_heading">
+                            {{ section.settings.free_online_exchange_heading }}
+                        </div>
+                        <div class="collection-page-ship-info__item_description">
+                            {{ section.settings.free_online_exchange_sub_heading }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-page-ship-info__item_container">
+                    <div class="collection-page-ship-info__item_img_container">
+                        {% if section.settings.free_shipping_img %}
+                            <img src="{{ section.settings.free_shipping_img | image_url }}">
+                        {% else %}
+                            <img src="{{ 'free_shipping_img.png' | asset_url }}"/>
+                        {% endif %}
+                    </div>
+                    <div class="collection-page-ship-info__item_content_container">
+                        <div class="collection-page-ship-info__item_heading">
+                            {{ section.settings.free_shipping_heading }}
+                        </div>
+                        <div class="collection-page-ship-info__item_description">
+                            {{ section.settings.free_shipping_sub_heading }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection ShipInfo",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Collection Page - ShipInfo"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full width",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Shipping information"
+    },
+    {
+      "type": "text",
+      "id": "our_packaging_heading",
+      "label": "Our packaging heading",
+      "default": "Our packaging"
+    },
+    {
+      "type": "text",
+      "id": "our_packaging_sub_heading",
+      "label": "Our packaging sub-heading",
+      "default": "In a responsible recycled box"
+    },
+    {
+      "type": "image_picker",
+      "id": "our_packaging_img",
+      "label": "Our packaging image"
+    },
+    {
+      "type": "text",
+      "id": "free_online_exchange_heading",
+      "label": "Free online exchange heading",
+      "default": "Free online exchange"
+    },
+    {
+      "type": "text",
+      "id": "free_online_exchange_sub_heading",
+      "label": "Free online exchange sub-heading",
+      "default": "within 14 days"
+    },
+    {
+      "type": "image_picker",
+      "id": "free_online_exchange_img",
+      "label": "Free online exchange image"
+    },
+    {
+      "type": "text",
+      "id": "free_shipping_heading",
+      "label": "Free shipping heading",
+      "default": "Free shipping"
+    },
+    {
+      "type": "text",
+      "id": "free_shipping_sub_heading",
+      "label": "Free shipping sub-heading",
+      "default": "2-6 business days"
+    },
+    {
+      "type": "image_picker",
+      "id": "free_shipping_img",
+      "label": "Free shipping image"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_top_spacing",
+      "default": false,
+      "label": "Remove top spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_bottom_spacing",
+      "default": false,
+      "label": "Remove bottom spacing"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Page - ShipInfo",
+      "category": "EDWIN CUSTOMIZATION"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

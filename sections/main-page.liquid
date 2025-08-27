@@ -1,0 +1,39 @@
+<div class="section-spacing {% if section.settings.hide %}hidden{% endif %}">
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="blog-post-detail">
+				<div class="post-title">
+					<h1>{{ page.title }}</h1>
+				</div>
+				<div class="page-content-width rte">
+                  {% unless section.settings.hide2 %}
+					{{ page.content }}
+                  {% endunless %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{ 'page.css' | asset_url | stylesheet_tag }}
+{% schema %}
+{
+  "name": "Page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide",
+      "label": "Hide section (for H1 SEO)",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide2",
+      "label": "Hide content",
+      "info": "The content was created by Shogun make the site broken, should hide it or remove page content",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

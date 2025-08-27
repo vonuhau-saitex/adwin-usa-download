@@ -1,0 +1,172 @@
+<div class="color-list-pdp">
+  <div class="form__label">
+    COLOR: <span class="form__label__value">{{ title_tmp[1] }}</span>
+  </div>
+  {% if product.tags contains 'Bundles' %}
+  <div class="variations variations-custom">
+    <fieldset class="product-form__input product-form__input--block custom-sizeoption">
+		<div class="form__label" bis_skin_checked="1">
+          <div bis_skin_checked="1">{{ title_tmp[2] }} (Size): <span class="form__label__value">{{ title_tmp[3] }}</span></div>
+        </div>
+      <div class="list-item-radio list-item-radio-custom">
+        {% assign size_list = product.metafields.custom.color_list_navigation_handle %}        
+        <div class="ul">
+          {%- for link in linklists[size_list].links -%}             
+            <div class="li {% if link.url == product.url %}active{% endif %}"><a href="{% if link.url == product.url %}{% else %}{{ link.url }}{% endif %}">{{ link.title }}</a></div>
+          {% endfor %}
+        </div>
+      </div>
+    </fieldset>    
+  </div>
+  {% else %}
+    {%- liquid
+      assign custom_colors = settings.color_swatches | newline_to_br | split: '<br />'
+      assign key_array = ''
+      assign val_array = ''
+
+      for color in custom_colors
+        assign key = color | split: ':' | first | rstrip
+        assign value = color | split: ':' | last | lstrip
+        assign key_array = key_array | append: ',' | append: key
+        assign val_array = val_array | append: ',' | append: value
+      endfor
+
+      assign key_array = key_array | remove_first: ',' | strip_newlines | downcase | split: ','
+      assign val_array = val_array | remove_first: ',' | split: ','
+    -%}    
+    {% assign color_list = product.metafields.custom.color_list_navigation_handle %}     
+    {% comment %} {% if color_list != blank %}
+      <div class="color-list">
+      {%- for link in linklists[color_list].links -%}        
+          <a
+            class="color-swatch--rectangle swatch-{{forloop.index}} {% if link.object.handle == product.handle -%}active{%  endif %}"
+            href="{{ link.url }}"
+            title="{{ link.title }}"
+          >                                
+            {%- liquid              
+              assign color_value = link.title | downcase | escape
+              for custom_color in key_array
+                if custom_color == color_value
+                  assign color_value = val_array[forloop.index0]
+                endif
+              endfor
+              assign bg_value = empty
+              if color_value contains '.'
+                assign bg_value = color_value | file_url
+                assign color_value = 'var(--bg-body)'
+              endif
+            -%}
+            <img
+              class="plp_color_swatche"
+              src="{{ bg_value }}"
+              alt="{{ link.title }}"
+              width="20"
+              height="20"
+            >
+          </a>
+      {% endfor %}
+      </div>
+    {% endif %}   {% endcomment %}
+
+    {% assign family_collection = product.metafields.custom.product_family %}       
+    {%- for entry in shop.metaobjects.edwin_product_color.values -%}
+      
+    {%- endfor -%}
+    {% if family_collection != blank %}
+      <div class="color-list color-list-new family_collection-{{ family_collection.type }} collection-{{ collections[family_collection.value.handle].title }}">                         
+      {%- for product_color in collections[family_collection].products -%}          
+        {% assign product_color_name = product_color.title | split: '||' | last |  remove_first:' '  %}       
+        {%- for entry in shop.metaobjects.edwin_product_color.values -%}          
+          {% if entry.color_name == product_color_name %}                      
+            {% assign color_data_missing = entry.color_name_thumbnail | file_url %}
+            {%  break  %}
+          {% else %}
+            {% assign color_data_missing = '' %}            
+          {% endif %}
+        {%- endfor -%}
+        {% assign color_metaobject = product_color.metafields.custom.color %}           
+        {% if color_metaobject != blank %}
+          {% assign color_data = color_metaobject.value.color_name_thumbnail | file_url %}
+        {% else %}
+          {% assign color_data = '' %}
+        {% endif %}  
+        
+          <a
+            class="color-swatch--rectangle swatch-{{forloop.index}} {% if product_color.handle == product.handle -%}active{%  endif %}"
+            href="{{ product_color.url }}"
+            title="{{ product_color_name }}"
+          >                         
+            <img
+              class="plp_color_swatche"              
+              src="{% if color_data != '' %}{{color_data}}{% else %}{{color_data_missing}}{% endif %}"
+              alt="{{ product_color.title }}"
+              width="20"
+              height="20"
+            >
+          </a>
+      {% endfor %}
+      </div>
+    {% else %}      
+    {% else %}   
+    {% comment %} {% assign product_name = product.title | split: '||' | first %}     
+    {% for collection in collections %}
+      {{collection.title}}
+      {% if collection.title == product_name %}
+        {% assign family_collection = collection.handle %}
+        {% break %}
+      {% endif %}
+    {% endfor %} {% endcomment %}
+    {% endif %}
+  {% comment %}
+    {% if product.metafields.custom.color_group != blank %}
+      {% assign color_group = product.metafields.custom.color_group %}
+      {% assign color_group_handleize = product.metafields.custom.color_group | handleize %}
+
+      {% if product.metafields.custom.color_value -%}
+        <div class="variant-picker__option-info">
+          <div class="class h-stack gap-2">
+            <legend class="text-subdued">Color:</legend>
+            <span class="color-value">{{ product.metafields.custom.color_value }}</span>
+          </div>
+        </div>
+      {% endif %}
+      <div>
+        <div class="variant-picker__option-values wrap gap-2">
+          {%- for link in linklists[color_group_handleize].links -%}
+            <a
+              class="color-swatch--rectangle {% if link.url == product.url %}active{% endif %}"
+              href="{{ link.url }} "
+            >
+              {%- assign swatch_config = settings.color_swatch_config | newline_to_br | split: '<br />' -%}
+              {% assign product_color = link.object.title %}
+              {% assign product_handle = link.object.handle %}
+              {%- assign value_downcase = product_handle | downcase | remove: ' ' -%}
+              {%- assign swatch_style = '--swatch-background: ' | append: value_downcase -%}
+              {%- for swatch_item in swatch_config -%}
+                {%- assign swatch_parts = swatch_item | split: ':' -%}
+                {%- assign swatch_name = swatch_parts.first | downcase | strip -%}
+                {%- if value_downcase == swatch_name -%}
+                  {%- assign swatch_value = swatch_parts.last | strip -%}
+                  {%- if swatch_value contains '#' -%}
+                    {%- assign swatch_style = '--swatch-background: ' | append: swatch_value -%}
+                  {%- elsif images[swatch_value] != blank -%}
+                    {%- assign swatch_image = images[swatch_value] | image_url: width: 72 -%}
+                    {%- assign swatch_style = '--swatch-background: url(' | append: swatch_image | append: ')' -%}
+                  {%- endif -%}
+                  <img
+                    class="{{ value_downcase }}"
+                    src="{{ swatch_image }}"
+                    alt="{{ product_color }}"
+                    title="{{ link.title  }}"
+                  >
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endcomment %}
+  {% endif %}
+</div>

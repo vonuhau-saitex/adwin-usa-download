@@ -1,0 +1,312 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "homepage_banner_Q8wnMa": {
+      "type": "homepage-banner",
+      "blocks": {
+        "slide_aD3HX9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/LA_landscape_hd.jpg",
+            "slide_link": "",
+            "video_background": false,
+            "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "gap": 20,
+            "subheading": "MADE IN USA",
+            "heading": "Our Commitment to American Craft",
+            "heading_size": "h1-xlarge",
+            "fontsize1": 76,
+            "lineheight1": 86,
+            "gap1": 20,
+            "content": "",
+            "description_size": "medium",
+            "fontsize2": 14,
+            "lineheight2": 22,
+            "gap2": 20,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "content_size": "medium",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) 100%)",
+            "button_1_text": "",
+            "button_1_link": "",
+            "buton1_style": "button",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buton2_style": "button"
+          }
+        }
+      },
+      "block_order": [
+        "slide_aD3HX9"
+      ],
+      "name": "Edwin Slideshow",
+      "settings": {
+        "desktop_height": "desktop-height-full",
+        "mobile_height": "mobile-height-500",
+        "full_width": true,
+        "autoplay": true,
+        "autoplay_length": 5,
+        "transition": "swipe",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_UArMcw": {
+      "type": "rich-text",
+      "blocks": {
+        "text_wVHg7d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We make our denim in Los Angeles because we believe American makers create something exceptional. It's a choice that shapes everything—from the quality of our pieces to the relationships we build with the craftspeople who make them.</p>",
+            "size": "text-size-small"
+          }
+        }
+      },
+      "block_order": [
+        "text_wVHg7d"
+      ],
+      "custom_css": [
+        ".rte p:last-child {text-transform: uppercase;}",
+        ".full-width-row-full {height: 400px; align-items: center;}"
+      ],
+      "settings": {
+        "section_width": "full-width-row-full",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "image_with_text_overlay_homepage_etDkwP": {
+      "type": "image-with-text-overlay-homepage",
+      "blocks": {
+        "heading_686fCr": {
+          "type": "heading",
+          "settings": {
+            "text": "Why We Choose American Manufacturing",
+            "heading_size": "h1-xlarge"
+          }
+        },
+        "text_pAh4DQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Working with skilled makers at Saitex in Los Angeles means we can maintain the standards Edwin is known for. Every piece is cut, sewn, and finished by artisans who understand denim construction, using techniques refined over decades of American manufacturing.</p><p>Our partnership with Saitex ensures consistent quality and transparent production. Limited seasonal production reflects our commitment to thoughtful making over mass production.</p>",
+            "description_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_686fCr",
+        "text_pAh4DQ"
+      ],
+      "name": "Image with text overlay Homepage",
+      "settings": {
+        "section_width": "full-width-row-full",
+        "media_type": "image",
+        "image": "shopify://shop_images/manufacturing.jpg",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-650",
+        "mobile_height": "mobile-height-500",
+        "content_width": "medium",
+        "content_position": "bottom-center",
+        "text_alignment": "center",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false,
+        "break_text_desktop": true,
+        "break_text_mobile": true
+      }
+    },
+    "image_with_text_7GgdET": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_nVzebz": {
+          "type": "subheading",
+          "settings": {
+            "text": "What This Means for You"
+          }
+        },
+        "heading_HNMnwH": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Image with text",
+            "heading_size": "h3"
+          }
+        },
+        "text_MyLCtt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made in USA means pieces built to last, with attention to details that matter. Reinforced construction at stress points. Precise fits that come from experienced pattern-making. Consistent quality because we oversee every step of the process.</p><p>Legacy Club members receive lifetime repairs—because we stand behind clothes made to endure.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_nVzebz",
+        "heading_HNMnwH",
+        "text_MyLCtt"
+      ],
+      "custom_css": [
+        ".rte {font-size: 15px;}",
+        ".subheading {font-size: 14px; font-weight: 900;}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/312713624_503366038177439_4755938916333112102_n.jpg",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "video_controls": true,
+        "height": "large",
+        "desktop_image_width": "medium",
+        "section_width": "full-width-row-full",
+        "layout": "text_first",
+        "content_position": "text-left",
+        "color_bg": "#f7f7f3",
+        "color_text": "#151515",
+        "color_border": "#e2e2e2",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "image_with_text_YktL8Q": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_YTaany": {
+          "type": "subheading",
+          "settings": {
+            "text": "Our Manufacturing Philosophy"
+          }
+        },
+        "heading_BykPLX": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Image with text",
+            "heading_size": "h3"
+          }
+        },
+        "text_UmyjzP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe in supporting American workers and maintaining manufacturing skills in our communities. Responsible practices like zero-waste cutting and closed-loop water systems reflect our responsibility to both craft and environment.</p><p>Visit Saitex in Los Angeles and see our commitment in action. Meet the makers, understand the process, witness the care that goes into every piece.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_YTaany",
+        "heading_BykPLX",
+        "text_UmyjzP"
+      ],
+      "custom_css": [
+        ".rte {font-size: 15px;}",
+        ".subheading {font-size: 14px; font-weight: 900;}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/manufacturing_people.jpg",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "video_controls": true,
+        "height": "large",
+        "desktop_image_width": "medium",
+        "section_width": "full-width-row-full",
+        "layout": "image_first",
+        "content_position": "text-left",
+        "color_bg": "#f7f7f3",
+        "color_text": "#151515",
+        "color_border": "#e2e2e2",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "image_with_text_overlay_homepage_ebqqpk": {
+      "type": "image-with-text-overlay-homepage",
+      "blocks": {
+        "heading_XPaaFk": {
+          "type": "heading",
+          "settings": {
+            "text": "Built to Last",
+            "heading_size": "h1-xlarge"
+          }
+        },
+        "text_nQpQQa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This is Edwin's promise: denim made by skilled hands, using quality materials, with the kind of attention that only comes from makers who take pride in their work. Made in USA because we believe American manufacturing can compete on quality, craftsmanship, and innovation.</p><p><strong>See our commitment firsthand.</strong> Schedule a facility visit and meet the makers behind Edwin.</p>",
+            "description_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XPaaFk",
+        "text_nQpQQa"
+      ],
+      "custom_css": [
+        ".image-with-text-overlay--content {color: #121212; max-width: none;}",
+        ".heading {color: #121212;}"
+      ],
+      "name": "Image with text overlay Homepage",
+      "settings": {
+        "section_width": "full-width-row-full",
+        "media_type": "image",
+        "image": "shopify://shop_images/Frame_40903.jpg",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-450",
+        "mobile_height": "mobile-height-500",
+        "content_width": "medium",
+        "content_position": "middle-center",
+        "text_alignment": "center",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
+        "break_text_desktop": false,
+        "break_text_mobile": false
+      }
+    }
+  },
+  "order": [
+    "homepage_banner_Q8wnMa",
+    "shogun-helper",
+    "main",
+    "shogun-optimizer",
+    "rich_text_UArMcw",
+    "image_with_text_overlay_homepage_etDkwP",
+    "image_with_text_7GgdET",
+    "image_with_text_YktL8Q",
+    "image_with_text_overlay_homepage_ebqqpk"
+  ]
+}

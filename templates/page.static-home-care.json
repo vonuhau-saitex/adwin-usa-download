@@ -1,0 +1,313 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "d75a5ebd-b7aa-4408-9244-6a013d24e408": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19562996105523__d75a5ebd-b7aa-4408-9244-6a013d24e408-168688435594edfb54-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Home Care. Conscious Care Tips",
+            "size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--19562996105523__d75a5ebd-b7aa-4408-9244-6a013d24e408-168688435594edfb54-1"
+      ],
+      "custom_css": [
+        ".rich-text__inner h3 {text-align: left;}",
+        ".rich-text .rte {margin-bottom: 16px;}"
+      ],
+      "settings": {
+        "section_width": "full-width-row",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "collapsible_content_yELfiC": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_39MyXk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "LOWER THE TEMPERATURE",
+            "open": true,
+            "content": "<p>Turn your jeans inside out and wash them in cold water. This helps the denim keep its color and shape, plus using cold water saves energy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_LyNzPf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "USE ECO-FRIENDLY PRODUCTS",
+            "open": true,
+            "content": "<p>Use a natural laundry detergent and a washing bag, which prevents the release of harmful microplastics into our oceans.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_BBcMzd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "JUST ADD VINEGAR",
+            "open": true,
+            "content": "<p>Add a few drops of white vinegar when you wash your jeans for the first time after purchase, which helps denim maintain its color.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TxMUtY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "HANG CLOTHES TO DRY",
+            "open": true,
+            "content": "<p>Mindfully air-dry your jeans. The dryer and high heat is harsh on denim, while air-drying helps the fabric keep its shape and uses less energy.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_xJanph": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "WASH LESS",
+            "open": true,
+            "content": "<p>We recommend washing your jeans every 10 wears or longer for rigid denim; for stretch denim, wash to maintain fit.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MrmUwk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "SPOT TREAT OR FREEZE",
+            "open": true,
+            "content": "<p>In between washes, you can spot treat to remove stains. You can also put jeans in the freezer for a few hours to kill bacteria and neutralize odors.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_39MyXk",
+        "collapsible_tab_LyNzPf",
+        "collapsible_tab_BBcMzd",
+        "collapsible_tab_TxMUtY",
+        "collapsible_tab_xJanph",
+        "collapsible_tab_MrmUwk"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "8820918b-5d31-4c5a-a0c2-d08bae9ab412": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-1": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shipping-policy.png",
+            "image_full_width": true,
+            "retina": true,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        },
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-2": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image_full_width": false,
+            "retina": true,
+            "title": "",
+            "text": "<p>We offer Free Ground Shipping on U.S. orders.</p><p><br/>Free Shipping only applies to the contiguous United States, and does not apply to Puerto Rico, Hawaii or Alaska addresses. A valid street address is required — FedEx does not ship to P.O. Boxes or AFO/FPO addresses.</p><p><br/>For Free Ground Shipping, orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed before 2:00 p.m. EST will arrive in 4 to 7 business days, depending on your shipping address. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday.</p><p><br/>You can upgrade to expedited shipping at checkout, which will be delivered 2 business days after FedEx picks it up. Please note that if you return your order, the cost of expedited shipping is not refunded. Orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday.<br/>Please note that items in your order may be shipped in separate packages.</p><p><br/>If you have any shipping questions, please reach out to our Customer Service Department by email at <a href=\"mailto:contact@edwin-usa.com\" target=\"_blank\" title=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-1",
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".multicolumn {max-width: 1000px; margin: 0 auto;}",
+        "@media only screen and (min-width: 768px) {.row {padding: 0; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "display_type": "grid",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "text_alignment": "left",
+        "heading_size": "h3",
+        "mobile_swipe": false,
+        "header-50-50": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "bkg": "#ffffff"
+      }
+    },
+    "rich_text_8EpkNX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U3JmPX": {
+          "type": "heading",
+          "settings": {
+            "text": "More questions? Drop us a line",
+            "size": "h3"
+          }
+        },
+        "button_tMU69z": {
+          "type": "button",
+          "settings": {
+            "link_label": "contact us",
+            "link": "shopify://pages/contact-us",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_U3JmPX",
+        "button_tMU69z"
+      ],
+      "settings": {
+        "section_width": "full-width-row",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_MiDfnn": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_FEYwaB": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading for this section"
+          }
+        },
+        "heading_RjGnyr": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Talk about your brand",
+            "size": "h3"
+          }
+        },
+        "text_htL94w": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "button_KYbERT": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_label": "Learn More",
+            "link": "",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_FEYwaB",
+        "heading_RjGnyr",
+        "text_htL94w",
+        "button_KYbERT"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "featured_collection_G7mEpU": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".row .columns {padding: 0;}",
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal;}",
+        "@media (max-width: 768px) {.section-spacing {margin-top: 50px; }}"
+      ],
+      "settings": {
+        "heading": "BEST SELLER",
+        "heading_left": true,
+        "description": "",
+        "full_width": true,
+        "collection": "best-selling-products",
+        "display_type": "grid",
+        "product_limit": 8,
+        "columns_desktop": 4,
+        "show_view_all": true,
+        "mobile_swipe": true,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d75a5ebd-b7aa-4408-9244-6a013d24e408",
+    "collapsible_content_yELfiC",
+    "8820918b-5d31-4c5a-a0c2-d08bae9ab412",
+    "rich_text_8EpkNX",
+    "rich_text_MiDfnn",
+    "featured_collection_G7mEpU"
+  ]
+}

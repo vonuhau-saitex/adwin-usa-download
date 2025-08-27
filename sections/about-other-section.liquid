@@ -1,0 +1,53 @@
+{% schema %}
+  {
+    "name": "Other Section",
+    "tag": "section",
+    "class": "about-other-section",
+    "settings": [
+      {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "OTHER"
+    }
+    ],
+      "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+				"info": "720 x 550 .jpg recommended."
+        },
+			{
+				"type": "text",
+				"id": "heading",
+				"label": "Heading"
+			},			
+			{
+          "id": "link_label",
+          "type": "text",
+          "label": "Button label",
+          "default": "Explore",
+				"info": "Leave the label blank to hide the button."
+        },
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Button link"
+        }
+        
+      ]
+    }
+      ],
+    "presets": [
+    {
+      "name": "Other Section"
+    }
+  ]
+  }
+{% endschema %}
+

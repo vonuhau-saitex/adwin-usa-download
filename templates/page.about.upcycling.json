@@ -1,0 +1,284 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "fcd19618-2b29-40b2-bab5-356511f34bbc": {
+      "type": "about-header-section",
+      "settings": {
+        "heading": "Upcycling",
+        "heading2": "Our jeans never have to go to waste. When you’re done wearing your EDWIN USA jeans, or ANY jeans, you can send them back to us and we’ll give them new life. For helping us close the loop, we’ll send you $20 off your next EDWIN USA purchase.",
+        "bkg": "",
+        "text": "",
+        "small": false
+      }
+    },
+    "d3546f31-da47-40b8-a6eb-be8458a70143": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "section_width": "full-width-row-full",
+        "image": "shopify://shop_images/Group_39956.png",
+        "mobile_image": "shopify://shop_images/Group_39956_1.png",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-650",
+        "mobile_height": "mobile-height-195",
+        "content_width": "medium",
+        "content_position": "bottom-center",
+        "text_alignment": "center",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "84d7df51-402e-4a99-b535-c42494f54c66": {
+      "type": "multicolumn-custom-static",
+      "blocks": {
+        "template--19551161188659__84d7df51-402e-4a99-b535-c42494f54c66-16875061737c45d450-0": {
+          "type": "column",
+          "settings": {
+            "image_full_width": false,
+            "retina": true,
+            "title": "",
+            "text": "<p>We're working on a new and improved Upcycle Program to make it easier for you to make an impact and get paid to part with your old denim. Stay tuned!</p>",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        },
+        "template--19551161188659__84d7df51-402e-4a99-b535-c42494f54c66-16875061737c45d450-2": {
+          "type": "column-text",
+          "settings": {
+            "title": "How to upcycle your jeans",
+            "text-1": "If your jeans are beyond repair, or you no longer want to wear them, you can send them back to us to be upcycled.",
+            "text-2": "Just download this form, fill it out and send it to us with your jeans.",
+            "text-3": "Once we receive your jeans, we’ll email you a code for $20 off your next EDWIN USA purchase.",
+            "text-4": "We’ll send your jeans to STELAPOP, where they’ll be given new life as a tray, table or multipurpose panel.",
+            "link_label": "COMING SOON",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--19551161188659__84d7df51-402e-4a99-b535-c42494f54c66-16875061737c45d450-0",
+        "template--19551161188659__84d7df51-402e-4a99-b535-c42494f54c66-16875061737c45d450-2"
+      ],
+      "custom_css": [
+        ".column__container .rte p {font-size: 22px; line-height: 34px;}",
+        "@media only screen and (max-width: 767px) {.column__container .rte p {font-size: 16px; }}"
+      ],
+      "settings": {
+        "description": "",
+        "full_width": true,
+        "display_type": "grid",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "text_alignment": "left",
+        "heading_size": "h5",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "a1a5f9a2-a1ef-4b32-b284-3c688a235209": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19551161188659__a1a5f9a2-a1ef-4b32-b284-3c688a235209-168749161055f17813-0": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Group_39929.png",
+            "image_full_width": false,
+            "retina": true,
+            "title": "",
+            "text": "<p>    </p>",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        },
+        "template--19551161188659__a1a5f9a2-a1ef-4b32-b284-3c688a235209-168749161055f17813-1": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Red-Peony_RP101.png",
+            "image_full_width": false,
+            "retina": true,
+            "title": "",
+            "text": "<p>This chair was made from your jeans.</p>",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19551161188659__a1a5f9a2-a1ef-4b32-b284-3c688a235209-168749161055f17813-0",
+        "template--19551161188659__a1a5f9a2-a1ef-4b32-b284-3c688a235209-168749161055f17813-1"
+      ],
+      "custom_css": [
+        ".row {padding: 0;}",
+        ".row .columns {padding: 0; position: relative; margin-bottom: -4px;}",
+        ".row .columns:last-child {background-color: #f8f4f1;}",
+        ".multicolumn__image {margin-bottom: 0; margin-left: 15px;}",
+        ".rte {position: absolute; top: 0;}",
+        ".rte p {padding: 38px; line-height: 26px; font-size: 20px;}",
+        "@media only screen and (max-width: 767px) {.rte p {font-size: 12px; padding: 20px; line-height: 15px; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "display_type": "grid",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "text_alignment": "left",
+        "heading_size": "h5",
+        "mobile_swipe": false,
+        "header-50-50": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
+        "bkg": "#fff"
+      }
+    },
+    "ffbef044-8ed5-4378-8324-53c11ec44f32": {
+      "type": "rich-text",
+      "blocks": {
+        "416831f1-d9bf-401b-9e80-8784195771ed": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Reused_cotton.svg",
+            "retina": false
+          }
+        },
+        "template--19551161188659__ffbef044-8ed5-4378-8324-53c11ec44f32-1687501900fbfafeab-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>STELAPOP, an acronym for Save Trees, Eliminate Landfills and Protect Our Planet, will upcycle all of our textile waste at both the pre- and post-consumer levels. Using a proprietary binder, discarded EDWIN USA denim will be transformed into furniture or multipurpose panels that can be used in the place of wood to build furniture, helping to save trees and eliminate landfills for a regenerated future.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "template--19551161188659__ffbef044-8ed5-4378-8324-53c11ec44f32-1687501900fbfafeab-3": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_label": "start upcycling",
+            "link": "https://cdn.shopify.com/s/files/1/0267/5136/9271/files/Upcycling_form.pdf?v=1613548896",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "416831f1-d9bf-401b-9e80-8784195771ed",
+        "template--19551161188659__ffbef044-8ed5-4378-8324-53c11ec44f32-1687501900fbfafeab-2",
+        "template--19551161188659__ffbef044-8ed5-4378-8324-53c11ec44f32-1687501900fbfafeab-3"
+      ],
+      "custom_css": [
+        ".rich-text .rte p {font-size: 14px; line-height: 26px;}",
+        ".button {font-size: 16px; font-weight: 600; letter-spacing: 1.5px;}"
+      ],
+      "settings": {
+        "section_width": "full-width-row-full",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "#f7f7f7",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "234a335f-e04b-4972-a2dd-86b1f739ed2a": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19551161188659__234a335f-e04b-4972-a2dd-86b1f739ed2a-168749161055f17813-0": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/image_5.png",
+            "image_full_width": false,
+            "retina": true,
+            "title": "MATERIAL",
+            "text": "",
+            "link_label": "Read more",
+            "extra_class": "",
+            "link": "shopify://pages/materials"
+          }
+        },
+        "template--19551161188659__234a335f-e04b-4972-a2dd-86b1f739ed2a-168749161055f17813-1": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Rectangle_6_1.png",
+            "image_full_width": false,
+            "retina": true,
+            "title": "PRODUCTION",
+            "text": "",
+            "link_label": "Read more",
+            "extra_class": "",
+            "link": "shopify://pages/production"
+          }
+        },
+        "template--19551161188659__234a335f-e04b-4972-a2dd-86b1f739ed2a-168749161055f17813-2": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Rectangle_6.png",
+            "image_full_width": false,
+            "retina": true,
+            "title": "SUSTAINABLE",
+            "text": "",
+            "link_label": "View report",
+            "extra_class": "",
+            "link": "shopify://pages/sustainability"
+          }
+        }
+      },
+      "block_order": [
+        "template--19551161188659__234a335f-e04b-4972-a2dd-86b1f739ed2a-168749161055f17813-0",
+        "template--19551161188659__234a335f-e04b-4972-a2dd-86b1f739ed2a-168749161055f17813-1",
+        "template--19551161188659__234a335f-e04b-4972-a2dd-86b1f739ed2a-168749161055f17813-2"
+      ],
+      "settings": {
+        "heading": "OTHER",
+        "heading_left": true,
+        "description": "",
+        "full_width": true,
+        "display_type": "grid",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "text_alignment": "left",
+        "heading_size": "h5",
+        "mobile_swipe": true,
+        "header-50-50": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "bkg": "#fff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fcd19618-2b29-40b2-bab5-356511f34bbc",
+    "d3546f31-da47-40b8-a6eb-be8458a70143",
+    "84d7df51-402e-4a99-b535-c42494f54c66",
+    "a1a5f9a2-a1ef-4b32-b284-3c688a235209",
+    "ffbef044-8ed5-4378-8324-53c11ec44f32",
+    "234a335f-e04b-4972-a2dd-86b1f739ed2a"
+  ]
+}

@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-cart": {
+      "type": "main-cart",
+      "blocks": {
+        "afterpay_on_site_messaging_payments_messaging_jaH8xy": {
+          "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "right",
+            "margin_top": 5,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "afterpay_on_site_messaging_payments_messaging_jaH8xy"
+      ],
+      "settings": {
+        "cart_notes_enable": true
+      }
+    },
+    "alireviews-section-7e8c0b57-a74c-42c2-acdc-edf0600574af": {
+      "type": "apps",
+      "settings": {}
+    },
+    "alireviews-section-2c1d5fdc-f4a6-433d-9b0c-b0ec6b22bc74": {
+      "type": "apps",
+      "settings": {}
+    },
+    "1722594529c3eea732": {
+      "type": "apps",
+      "settings": {}
+    },
+    "879c9e0d-295a-401f-b772-f5bb43f30e0a": {
+      "type": "apps",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main-cart",
+    "alireviews-section-7e8c0b57-a74c-42c2-acdc-edf0600574af",
+    "alireviews-section-2c1d5fdc-f4a6-433d-9b0c-b0ec6b22bc74",
+    "1722594529c3eea732",
+    "879c9e0d-295a-401f-b772-f5bb43f30e0a"
+  ]
+}

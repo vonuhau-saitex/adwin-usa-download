@@ -1,0 +1,501 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "homepage_banner_p74gwY": {
+      "type": "homepage-banner",
+      "blocks": {
+        "slide_TyyiFx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/rebekah-haddock-60QjmmQvU3o-unsplash_1.jpg",
+            "slide_link": "",
+            "video_background": false,
+            "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "gap": 20,
+            "subheading": "FARM TO TABLE",
+            "heading": "The Difference You Can Feel",
+            "heading_size": "h1-xlarge",
+            "fontsize1": 76,
+            "lineheight1": 86,
+            "gap1": 20,
+            "content": "",
+            "description_size": "medium",
+            "fontsize2": 14,
+            "lineheight2": 22,
+            "gap2": 20,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "content_size": "medium",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) 100%)",
+            "button_1_text": "",
+            "button_1_link": "",
+            "buton1_style": "button",
+            "button_2_text": "",
+            "button_2_link": "",
+            "buton2_style": "button"
+          }
+        }
+      },
+      "block_order": [
+        "slide_TyyiFx"
+      ],
+      "name": "Edwin Slideshow",
+      "settings": {
+        "desktop_height": "desktop-height-650",
+        "mobile_height": "mobile-height-500",
+        "full_width": true,
+        "autoplay": true,
+        "autoplay_length": 5,
+        "transition": "swipe",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_UArMcw": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WdgYKE": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h1><strong>Farm to Table</strong></h1>",
+            "size": "text-size-regular"
+          }
+        },
+        "text_wVHg7d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The best denim starts with the best cotton—and the best cotton comes from soil that's been treated with care. Our Farm to Table collection uses regenerative cotton that creates fiber with exceptional hand-feel, deeper color absorption, and the kind of strength that improves with age. This isn't just better for the earth—it's better on your skin.</p>",
+            "size": "text-size-small"
+          }
+        },
+        "text_CPFQeh": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5><strong>Superior Fiber, Exceptional Results</strong></h5><p>We work with Staplcotn's regenerative farmers because healthier soil produces stronger, softer cotton fiber. <strong>Regenerative growing methods</strong> create cotton with longer staple lengths and natural resilience—the foundation of denim that feels substantial yet comfortable from the first wear.</p><p>Only a handful of brands use these advanced regenerative processes. The difference is immediate: richer indigo saturation, softer hand-feel, and that perfect balance of structure and movement. When farming works with nature, the cotton simply performs better.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "text_gjJh9W": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5><strong>Cleaner Process, Cleaner Feel</strong></h5><p>Most of our Farm to Table pieces are crafted without hydrosulfide—eliminating the harsh chemicals that can leave residue and stiffness in traditional denim. The result? Fabric that feels cleaner against your skin and develops the perfect broken-in softness naturally.</p><p>Working with Saitex's advanced <strong>closed-loop water systems</strong> and <strong>Blue sign approved processes</strong>, we achieve deeper, more consistent color while maintaining the pure cotton feel that improves with every wash. Clean manufacturing isn't just responsible—it creates superior denim.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "text_hyRLRj": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5><strong>Innovation That Lasts</strong></h5><p>Our Farm to Table collection carries <strong>Cradle to Cradle certification</strong>—ensuring these pieces are designed for continuous use cycles. But here's what matters to you: this framework pushes us to use only the highest-quality materials and processes, creating denim that ages beautifully rather than breaking down.</p><p><a href=\"https://c2ccertified.org/\"><span style=\"text-decoration:underline\">Learn more about Cradle to Cradle</span></a></p><p>The certification ensures every component—from thread to hardware—meets the highest standards for both performance and longevity.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "text_d3b8kY": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5><strong>Where Innovation Meets Responsibility</strong></h5><p>This is advanced denim manufacturing that most brands can't achieve. <strong>Chemical-free processes</strong> that preserve cotton's natural properties. <strong>Regenerative sourcing</strong> that produces exceptional fiber. <strong>Closed-loop systems</strong> that maintain consistency across every piece.</p><p>The result? Denim that feels incredible to wear and happens to be made responsibly. You've discovered something most fashion insiders don't know about yet.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "text_JHGC78": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "size": "text-size-regular"
+          }
+        },
+        "text_TEkCNF": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Discover what few others know.</strong> <a href=\"https://claude.ai/chat/farm-to-table-collection\"><span style=\"text-decoration:underline\">Shop the collection</span></a> or <a href=\"https://claude.ai/chat/factory-visit\"><span style=\"text-decoration:underline\">experience our exclusive processes</span></a> firsthand.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "button_h6b3eG": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_label": "Learn More",
+            "link": "",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "text_WdgYKE",
+        "text_wVHg7d",
+        "text_CPFQeh",
+        "text_gjJh9W",
+        "text_hyRLRj",
+        "text_d3b8kY",
+        "text_JHGC78",
+        "text_TEkCNF",
+        "button_h6b3eG"
+      ],
+      "custom_css": [
+        ".rte p:last-child {text-transform: uppercase;}",
+        ".full-width-row-full {height: 400px; align-items: center;}"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "image_with_text_e7RdXG": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_mm7XWL": {
+          "type": "subheading",
+          "settings": {
+            "text": "Superior Fiber, Exceptional Results"
+          }
+        },
+        "heading_CmFqRg": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Superior Fiber, Exceptional Results",
+            "heading_size": "h3"
+          }
+        },
+        "text_BjDMnQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We work with Staplcotn's regenerative farmers because healthier soil produces stronger, softer cotton fiber. Regenerative growing methods create cotton with longer staple lengths and natural resilience—the foundation of denim that feels substantial yet comfortable from the first wear. </p><p>Only a handful of brands use these advanced regenerative processes. The difference is immediate: richer indigo saturation, softer hand-feel, and that perfect balance of structure and movement. When farming works with nature, the cotton simply performs better.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_mm7XWL",
+        "heading_CmFqRg",
+        "text_BjDMnQ"
+      ],
+      "custom_css": [
+        ".rte {font-size: 15px;}",
+        ".subheading {font-size: 14px; font-weight: 900;}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/image_5.jpg",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "video_controls": true,
+        "height": "large",
+        "desktop_image_width": "medium",
+        "section_width": "full-width-row-full",
+        "layout": "text_first",
+        "content_position": "text-left",
+        "color_bg": "#f7f7f3",
+        "color_text": "#151515",
+        "color_border": "#e2e2e2",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "image_with_text_dLCeqg": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_FcbVmf": {
+          "type": "subheading",
+          "settings": {
+            "text": "Cleaner Process, Cleaner Feel"
+          }
+        },
+        "heading_apGfWD": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Superior Fiber, Exceptional Results",
+            "heading_size": "h3"
+          }
+        },
+        "text_pNHyXq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most of our Farm to Table pieces are crafted without hydrosulfide—eliminating the harsh chemicals that can leave residue and stiffness in traditional denim. The result? Fabric that feels cleaner against your skin and develops the perfect broken-in softness naturally.</p><p>Working with Saitex's advanced closed-loop water systems and bluesign approved processes, we achieve deeper, more consistent color while maintaining the pure cotton feel that improves with every wash. Clean manufacturing isn't just responsible—it creates superior denim.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_FcbVmf",
+        "heading_apGfWD",
+        "text_pNHyXq"
+      ],
+      "custom_css": [
+        ".rte {font-size: 15px;}",
+        ".subheading {font-size: 14px; font-weight: 900;}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/image_39.jpg",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "video_controls": true,
+        "height": "large",
+        "desktop_image_width": "medium",
+        "section_width": "full-width-row-full",
+        "layout": "image_first",
+        "content_position": "text-left",
+        "color_bg": "#f7f7f3",
+        "color_text": "#151515",
+        "color_border": "#e2e2e2",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "image_with_text_overlay_homepage_ERAyGf": {
+      "type": "image-with-text-overlay-homepage",
+      "blocks": {
+        "subheading_iwDHjc": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Add a tagline"
+          }
+        },
+        "heading_hna9mm": {
+          "type": "heading",
+          "settings": {
+            "text": "Innovation That Lasts",
+            "heading_size": "h1-xlarge"
+          }
+        },
+        "text_63zzFk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Farm to Table collection carries Cradle to Cradle certification—ensuring these pieces are designed for continuous use cycles. But here's what matters to you: this framework pushes us to use only the highest-quality materials and processes, creating denim that ages beautifully rather than breaking down.</p><p>The certification ensures every component—from thread to hardware—meets the highest standards for both performance and longevity.</p>",
+            "description_size": "small"
+          }
+        },
+        "button_BjUikc": {
+          "type": "button",
+          "settings": {
+            "button_text": "LEARN MORE ABOUT CRADLE TO CRADLE",
+            "button_link": "https://c2ccertified.org/the-standard",
+            "button_class_add": "remove",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_iwDHjc",
+        "heading_hna9mm",
+        "text_63zzFk",
+        "button_BjUikc"
+      ],
+      "name": "Image with text overlay Homepage",
+      "settings": {
+        "section_width": "full-width-row-full",
+        "media_type": "image",
+        "image": "shopify://shop_images/Rectangle_2626.jpg",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-650",
+        "mobile_height": "mobile-height-full",
+        "content_width": "medium",
+        "content_position": "middle-center",
+        "text_alignment": "center",
+        "overlay_opacity": 30,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
+        "break_text_desktop": false,
+        "break_text_mobile": false
+      }
+    },
+    "multicolumn_custom_homepage_GgCdC6": {
+      "type": "multicolumn-custom-homepage",
+      "blocks": {
+        "column_t7pEhn": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/image.jpg",
+            "ratio": "50",
+            "image_full_width": true,
+            "retina": true,
+            "title": "Where Innovation Meets Responsibility",
+            "text": "<p>This is advanced denim manufacturing that most brands can't achieve. Chemical-free processes that preserve cotton's natural properties. Regenerative sourcing that produces exceptional fiber. Closed-loop systems that maintain consistency across every piece.</p><p>The result? Denim that feels incredible to wear and happens to be made responsibly. You've discovered something most fashion insiders don't know about yet.</p>",
+            "link_label": "",
+            "white": false,
+            "link": ""
+          }
+        },
+        "column_jMJGwe": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Rectangle_2628.jpg",
+            "ratio": "50",
+            "image_full_width": true,
+            "retina": true,
+            "title": "Experience the Difference",
+            "text": "<p>Visit Saitex and see innovation in action. Witness the advanced systems that create cleaner, softer denim while respecting both craftspeople and environment. Feel the cotton quality difference yourself.</p>",
+            "link_label": "",
+            "white": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_t7pEhn",
+        "column_jMJGwe"
+      ],
+      "custom_css": [
+        ".multicolumn > .row > .columns {padding: 0;}",
+        "@media (max-width: 768px) {.row .row {margin-right: 1px; margin-left: 1px; } .multicolumn__image {margin-bottom: 10px; } .column-content .heading {margin-bottom: 10px; line-height: 38px; } .column-content {margin-bottom: 10px; } .multicolumn__column {margin-bottom: 30px; }}",
+        ".heading {font-size: 35px; line-height: 52px; margin-bottom: 10px;}",
+        ".text-button {margin-top: 0px;}",
+        ".rte p {line-height: 19px; margin-bottom: 5px; text-transform: none;}"
+      ],
+      "name": "Edwin Multicolumn",
+      "settings": {
+        "heading": "",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "full_width2": false,
+        "display_type": "grid",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "text_alignment": "left",
+        "heading_size": "h5",
+        "mobile_swipe": false,
+        "header-50-50": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "disable_center_spacing": false,
+        "display_on_image": false,
+        "bkg": "#f7f7f3"
+      }
+    },
+    "image_with_text_overlay_homepage_kYGzaE": {
+      "type": "image-with-text-overlay-homepage",
+      "blocks": {
+        "subheading_pfk6T7": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Add a tagline"
+          }
+        },
+        "heading_x7y6Eh": {
+          "type": "heading",
+          "settings": {
+            "text": "Discover what few others know.",
+            "heading_size": "h1-xlarge"
+          }
+        },
+        "text_fGwJDM": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Our Farm to Table collection carries Cradle to Cradle certification—ensuring these pieces are designed for continuous use cycles. But here's what matters to you: this framework pushes us to use only the highest-quality materials and processes, creating denim that ages beautifully rather than breaking down.</p><p>The certification ensures every component—from thread to hardware—meets the highest standards for both performance and longevity.</p>",
+            "description_size": "small"
+          }
+        },
+        "button_8AzxKB": {
+          "type": "button",
+          "settings": {
+            "button_text": "SHOP THE COLLECTION",
+            "button_link": "shopify://collections/all-categories",
+            "button_class_add": "remove",
+            "button_outline": false
+          }
+        },
+        "button_44pixU": {
+          "type": "button",
+          "settings": {
+            "button_text": "EXPERIENCE OUR EXCLUSIVE PROCESSES",
+            "button_link": "shopify://pages/farm-to-table",
+            "button_class_add": "remove",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_pfk6T7",
+        "heading_x7y6Eh",
+        "text_fGwJDM",
+        "button_8AzxKB",
+        "button_44pixU"
+      ],
+      "custom_css": [
+        ".image-with-text-overlay--content {color: #121212; max-width: none;}",
+        ".heading {color: #121212;}",
+        ".text-button {color: #121212;}"
+      ],
+      "name": "Image with text overlay Homepage",
+      "settings": {
+        "section_width": "full-width-row-full",
+        "media_type": "image",
+        "image": "shopify://shop_images/Frame_40903.jpg",
+        "image_parallax": false,
+        "desktop_height": "desktop-height-450",
+        "mobile_height": "mobile-height-500",
+        "content_width": "medium",
+        "content_position": "middle-center",
+        "text_alignment": "center",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
+        "break_text_desktop": false,
+        "break_text_mobile": true
+      }
+    }
+  },
+  "order": [
+    "homepage_banner_p74gwY",
+    "shogun-helper",
+    "main",
+    "shogun-optimizer",
+    "rich_text_UArMcw",
+    "image_with_text_e7RdXG",
+    "image_with_text_dLCeqg",
+    "image_with_text_overlay_homepage_ERAyGf",
+    "multicolumn_custom_homepage_GgCdC6",
+    "image_with_text_overlay_homepage_kYGzaE"
+  ]
+}

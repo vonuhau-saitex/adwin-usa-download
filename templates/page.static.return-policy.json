@@ -1,0 +1,133 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "1d441abe-ce66-4c4f-9359-588f2261acfd": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19811658105139__1d441abe-ce66-4c4f-9359-588f2261acfd-168835813196ac0247-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Return Policy",
+            "size": "h3"
+          }
+        },
+        "1d899558-ffdf-49ba-9334-d43a3e92b84e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you are not completely satisfied with an EDWIN USA purchase or gift for any reason, we gladly accept returns of merchandise for a full refund if we receive your return within 30 days of the date of purchase. If not returned or shipped to return within the 30 days since you received your purchase, unfortunately we can’t offer you a refund or exchange.</p><p>To initiate a return, access the order details on your Order Confirmation email. If you have any issues locating your Order Confirmation email, please feel free to contact us  for assistance in processing your return request - Contact@edwin-usa.com.</p><p>Once we receive the goods we will issue you a return. Refunds may take up to 3-7 business days to process from the date of merchandise receipt in our warehouse.</p><p>Please review our return, refund and exchange policies for edwin-usa.com purchases below. Merchandise must be returned in unworn, unused, and undamaged condition with all original tags attached. Please note that all returns are subject to validation and approval at Edwin’s discretion.</p><p></p><p>As of December 9th, 2024, all Sale items are final sale and cannot be returned for a refund or exchanged for another item. In the event you need to exchange your item for a different size, we can facilitate a same-style exchange pending stock availability. Please reach out to our Customer Care Team to help you with your exchange request - Contact@edwin-usa.com. </p>",
+            "size": "text-size-regular"
+          }
+        },
+        "8273a691-736d-42af-bc75-17ba1a9eeafb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In the case of incorrect items shipped or damaged during shipment, please contact our Customer Care Team at <a href=\"mailto:contact@edwin-usa.com\" title=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--19811658105139__1d441abe-ce66-4c4f-9359-588f2261acfd-168835813196ac0247-1",
+        "1d899558-ffdf-49ba-9334-d43a3e92b84e",
+        "8273a691-736d-42af-bc75-17ba1a9eeafb"
+      ],
+      "custom_css": [
+        ".rich-text__inner h3 {text-align: left;}",
+        ".rich-text__inner p {font-weight: 400; font-size: 14px; line-height: 22px;}",
+        ".rich-text .rte {margin-bottom: 10px;}"
+      ],
+      "settings": {
+        "section_width": "full-width-row",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "d8beca40-d160-462f-bd3d-6da5bc096e84": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returning Online Purchases",
+            "open": true,
+            "content": "<p>For edwin-usa.com orders shipped to a U.S. address, we gladly accept returns of merchandise for a full refund if we receive your return within 30 days of the date of purchase. Requests for refund must be accompanied by valid proof of purchase. Refunds will be made in the same form of payment as your purchase was made or store credit. We do not accept returns made after 30 days of purchase date. All worn, damaged, used, and final sale items cannot be returned or exchanged. If we receive worn, damaged or used items, or items without all original tags attached, or items returned more than 14 days post purchase, the items will be not be returned to you. As of December 9th, 2024, all Sale items are final sale. </p>",
+            "page": ""
+          }
+        },
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "U.S. Returns By Mail",
+            "open": false,
+            "content": "<p>Returns are accepted on all orders within 30 days of purchase.<br/><br/>Edwin-usa.com purchases shipped to a U.S. address can be easily returned by mail (follow the return procedures described below). Please note: Returns will not be accepted if mailed to a store location. Items shipped outside of the returns window may not be returned to you. EDWIN USA is not responsible for lost returns.</p>",
+            "page": ""
+          }
+        },
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Exchanging Online Purchases",
+            "open": false,
+            "content": "<p>For <a href=\"http://edwin-usa.com/\">edwin-usa.com </a>orders, we do not currently offer direct exchanges, a return may be placed and store credit may be issues. Please see return process instructions.<br/></p>",
+            "page": ""
+          }
+        },
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Return Process Instructions",
+            "open": false,
+            "content": "<p>To initiate a return, access the order details on your Order Confirmation email. If you have any issues locating your Order Confirmation email, please feel free to contact us  for assistance in processing your return request - Contact@edwin-usa.com.</p><p>Within 48 hours, you will receive an emailed prepaid return label (pre-paid label is sent by email only and not mailed out; label will be voided after 14 days). Please ensure the item(s) in original condition are packaged properly and affix the prepaid label to the outside of your package, make a note of the tracking number, and leave the package with chosen shipping courier (UPS or Fedex). Shipping charges are prepaid by Edwin-usa and no additional postage is required. </p><p>Please allow 5-7 days for processing. Additional delays may occur.</p><p> </p><p>*If you’ve submitted a return and have not received a slip within 72 hours, please check your email spam/junk folder as your return slip may have been sent here. We apologize for any inconvenience and can provide further assistance from our Customer Care Team at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-0",
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-1",
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-2",
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-3"
+      ],
+      "custom_css": [
+        ".accordion li,p {font-weight: 400; font-size: 14px; line-height: 22px;}",
+        ".accordion summary {font-weight: 500; font-size: 16px; line-height: 24px;}",
+        ".accordion {border: 0;}",
+        ".collapsible-content__inner {max-width: 1000px; padding: 0 20px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1d441abe-ce66-4c4f-9359-588f2261acfd",
+    "d8beca40-d160-462f-bd3d-6da5bc096e84"
+  ]
+}

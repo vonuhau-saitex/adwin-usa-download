@@ -1,0 +1,71 @@
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container {
+    width: 100%;
+}
+
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container {
+    /*display: inline-block;*/
+    margin-top: 50px;
+}
+
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_left_container {
+    /*float: left;*/
+    /*width: 25%;*/
+    /*padding: 10px;*/
+}
+
+@media only screen and (max-width: 768px) {
+    .jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_left_container {
+        margin-bottom: 30px;
+    }
+}
+
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_left_container .jeans-collection__sub-collection_title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 68px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_left_container .jeans-collection__sub-collection_description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_left_container .jeans-collection__sub-collection_description p {
+    margin-bottom: 0;
+}
+
+
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_left_container .jeans-collection__sub-collection_shop_btn_container {
+    margin-top: 20px;
+}
+
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_left_container .jeans-collection__sub-collection_shop_btn_container a {
+    background: #000000;
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 220px;
+    padding: 10px 20px;
+}
+
+
+.jeans-collection__sub-collections .jeans-collection__sub-collections-container .jeans-collection__sub-collection-container .jeans-collection__sub-collection_right_container {
+    /*float: left;*/
+    /*width: 75%;*/
+}
+
+
+
+
+

@@ -1,0 +1,91 @@
+<div class="section-spacing">
+  <div class="row full-width-row">
+    <div class="">
+      <div class="heading" bis_skin_checked="1">
+          <h2>{{ section.settings.title }}</h2>
+        </div>
+      <div class="edwin-loyalty size-{{ section.blocks.size }}">        
+      {% for block in section.blocks %}
+        <div class="el-inner">
+          <div class="el " style="background-color:{{ block.settings.color }}">
+            <div class="el-top">
+              {% if block.settings.subtitle != '' %}<div class="sub-title">{{ block.settings.subtitle }}</div>{% endif %}
+              {% if block.settings.icon %}<div class="icon"><img src="{{ block.settings.icon | img_url: 'master' }}" alt="image"/></div>{% endif %}
+            </div>
+            <div class="el-bottom">
+              {% if block.settings.Title != '' %}<div class="title">{{ block.settings.Title }}</div>{% endif %}
+              {% if block.settings.desc != '' %}<div class="desc">{{ block.settings.desc }}</div>{% endif %}
+              {% if block.settings.action != '' %}<a class="text-button" href="{{ block.settings.url }}">{{ block.settings.action }}</a>{% endif %}
+            </div>
+          </div>
+        </div>
+        {%  endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Edwin Loyalty",
+    "class": "section-edwin-loyalty",
+    "max_blocks": 4,
+    "settings": [
+      {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+        "default":"How to get?"
+                  }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Edwin Loyalty",
+        "settings": [
+                  {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Color BKG",
+                    "default":"#A7834C"
+                  },
+                  {
+                    "type": "text",
+                    "id": "subtitle",
+                    "label": "Sub Title"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Image"
+                  },
+                  {
+                    "type": "text",
+                    "id": "Title",
+                    "label": "Title"
+                  },
+                  {
+                    "type": "textarea",
+                    "id": "desc",
+                    "label": "Description"
+                  },
+                  {
+                    "type": "text",
+                    "id": "action",
+                    "label": "Action Text"
+                  },
+                  {
+                    "type": "url",
+                    "id": "url",
+                    "label": "Action Link"
+                  }
+				]
+			}
+		],
+  "presets": [
+    {
+      "name": "Edwin Loyalty"
+    }
+  ]
+  }
+{% endschema %}

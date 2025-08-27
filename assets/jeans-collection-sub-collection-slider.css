@@ -1,0 +1,22 @@
+.jeans-collection__sub-collection-slider
+  .jeans-collection__sub-collection-slider-container {
+  display: inline-block;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.jeans-collection__sub-collection-slider
+  .jeans-collection__sub-collection-slider-container
+  .sub-collection-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22.526px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 767px) {
+  .jeans-collection__sub-collection-slider .products.carousel .carousel__slide {
+    width: 50%;
+  }
+}

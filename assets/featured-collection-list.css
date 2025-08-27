@@ -1,0 +1,107 @@
+.featured-collection-list--button {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.section-featured-collection-list {
+  border-top : 1px solid #D5C3A7;
+}
+.featured-collection-list {
+  display: block;
+  position: relative;
+  padding: 15px;
+  padding: 80px 35px;
+}
+@media only screen and (min-width: 768px) {
+  .featured-collection-list {
+    padding: 100px 50px;
+  }
+}
+.featured-collection-list--inner {
+  display: flex;
+  position: relative;
+  z-index: 20;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  margin: 0 auto;
+}
+.featured-collection-list--inner--content {
+  max-width: 1000px;
+  width: 100%;
+}
+.featured-collection-list--button {
+  display: inline-flex;
+  line-height: 1.1;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+@media (hover: hover) {
+  .featured-collection-list--button:hover {
+    z-index: 5;
+  }
+  .featured-collection-list--button:hover .featured-collection-list--image {
+    opacity: 1;
+  }
+  .featured-collection-list--button:hover .featured-collection-list--span {
+    filter: contrast(0);
+  }
+}
+.featured-collection-list--span {
+  color: inherit;
+  padding: 20px 16px;
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  overflow: hidden;
+  mix-blend-mode: color-dodge;
+  font-family: "Imbue", sans-serif !important;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.featured-collection-list--span span {
+  display: block;
+  pointer-events: none;
+}
+.js .animations-true .featured-collection-list--span span {
+  transform: translateY(110%);
+}
+.featured-collection-list--image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform, opacity;
+  opacity: 0;
+  z-index: 2;
+  width: 320px;
+  height: 300px;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.featured-collection-list--image img {
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@media only screen and (min-width: 768px) and (hover: hover) {
+  .featured-collection-list--image {
+    display: block;
+  }
+}
+.featured-collection-list .heading-small h6 {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .featured-collection-list .heading-small h6 {
+    margin-bottom: 50px;
+  }
+  .featured-collection-list--span {
+    font-size: 54px;
+  }
+}
+.featured-collection-title h2 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}

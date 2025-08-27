@@ -1,0 +1,256 @@
+.content-login-page,
+.content-register-page {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-login-left,
+.form-login-right,
+.image-register-left,
+.form-register-right {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-login-left,
+  .form-login-right,
+  .image-register-left,
+  .form-register-right {
+    width: 50%;
+  }
+}
+
+.form-login-right,
+.form-register-right {
+  padding: 25px;
+}
+
+.thb-form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .thb-form-container {
+    padding: 70px 0;
+  }
+}
+
+@media only screen and (min-width: 1068px) {
+  .thb-form-container {
+    padding: 100px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .thb-form-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.thb-form-container #recover {
+  display: none;
+}
+
+.thb-form-container #recover:target {
+  display: block;
+}
+
+.thb-form-container #recover:target + #login {
+  display: none;
+}
+
+.thb-form-container .thb-login-form,
+.thb-form-container .thb-register-form {
+  width: 100%;
+  flex: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .thb-form-container .thb-login-form,
+  .thb-form-container .thb-register-form {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1068px) {
+  .thb-form-container .thb-login-form,
+  .thb-form-container .thb-register-form {
+    padding: 0 60px;
+  }
+}
+
+.thb-form-container .thb-login-form .form-notification,
+.thb-form-container .thb-register-form .form-notification {
+  margin-bottom: 15px;
+}
+
+.thb-form-container .thb-login-form + .thb-register-form {
+  margin-top: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .thb-form-container .thb-login-form + .thb-register-form {
+    margin-top: 0;
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+.thb-form-container h4 {
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#page-login .thb-form-container h4 {
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 68px;
+  margin-bottom: 0px;
+}
+#page-register .thb-form-container h4 {
+  text-transform: none;
+  text-align: left;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 68px;
+  margin-bottom: 0px;
+}
+
+.thb-form-container p {
+  font-size: 0.875rem;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+#page-login .thb-form-container,
+#page-register .thb-form-container {
+  display: block;
+}
+
+#page-login .thb-form-container .thb-login-form,
+#page-register .thb-form-container .thb-register-form {
+  margin: 0px;
+}
+
+#page-login .thb-form-container p,
+#page-register .thb-form-container p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 32px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+.thb-form-container input {
+  margin-bottom: 10px;
+}
+
+#page-login .thb-form-container input,
+#page-register .thb-form-container input {
+  margin-bottom: 20px;
+}
+
+.thb-form-container .button {
+  margin-top: 10px;
+}
+
+#page-login .thb-form-container .button {
+  margin-top: 20px;
+}
+
+#page-register .thb-form-container .button {
+  margin-top: 0px;
+}
+
+.thb-form-container .switch-login-section {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  margin-top: 15px;
+}
+
+#page-login .thb-form-container .switch-login-section,
+#page-register .thb-form-container .switch-login-section {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 16px;
+  color: var(--color-black);
+}
+
+.thb-form-container .switch-login-section .text-button {
+  display: inline;
+  font-size: inherit;
+  margin-right: 0;
+}
+#page-login .thb-form-container .switch-login-section .custom-button-cancel {
+  width: 100%;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  margin-top: 0;
+  display: inline-flex;
+  cursor: pointer;
+  padding: 7px 30px;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: color 0.25s cubic-bezier(0.104, 0.204, 0.492, 1),
+    background-color 0.25s cubic-bezier(0.104, 0.204, 0.492, 1),
+    border-color 0.25s cubic-bezier(0.104, 0.204, 0.492, 1);
+}
+@media screen and (hover: hover) {
+  #page-login
+    .thb-form-container
+    .switch-login-section
+    .custom-button-cancel:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.thb-form-container .switch-login-section div {
+  margin-top: 5px;
+}
+
+.account-activate-buttons {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+}
+
+.account-activate-buttons .button {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .account-activate-buttons {
+    flex-direction: row;
+  }}
+  @media only screen and (max-width: 767px) {
+  #page-login .thb-form-container h4,
+#page-register .thb-form-container h4 {
+  font-size: 26px;
+}
+}
+#page-reset_password input, #page-reset_password button {
+  width: 100%;
+}

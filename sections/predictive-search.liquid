@@ -1,0 +1,84 @@
+{%- if predictive_search.performed -%}
+    {%- liquid
+        assign predictive_search_products = predictive_search.resources.products
+        assign predictive_search_articles = predictive_search.resources.articles
+        assign predictive_search_queries = predictive_search.resources.queries -%}
+
+    {% assign columns_desktop = 3 %}
+    {% assign columns_class = 'medium-6 large-4' %}
+    {% assign show_date = true %}
+    {% assign show_excerpt = true %}
+    {% assign image_ratio = 'landscape' %}
+
+    <div class="row full-width-row no-padding" style="width: 100%">
+        <div class="small-12 medium-3 columns">
+            {%- if predictive_search_queries.size > 0 -%}
+                <div class="thb-predictive-search--popular">
+                    <span class="thb-predictive-search--label">{{ 'sections.header.suggestions' | t }}</span>
+                    <scroll-shadow>
+                        <div>
+                            {%- for query in predictive_search_queries -%}
+                                <a href="{{ query.url }}" class="predictive-search__item link link--text"
+                                   tabindex="-1">{{ query.styled_text }}</a>
+                            {%- endfor -%}
+                        </div>
+                    </scroll-shadow>
+
+                </div>
+
+                <div class="thb-predictive-search--view-all-results">
+                    <div class="side-panel-content--search-footer">
+                        <button class="button full" id="search-results-submit">
+                            <span>{{ 'sections.header.view_all_results' | t }}</span></button>
+                    </div>
+                    <span class="loading-overlay">{%- render 'svg-icons' with 'thb-loading' -%}</span>
+                </div>
+
+            {%- endif -%}
+        </div>
+
+        <div class="small-12 medium-9 columns">
+
+            <side-panel-content-tabs class="side-panel-content--tabs prod-{{ predictive_search_products.size }} art-{{ predictive_search_articles.size }} query-{{  }}">
+                {%- if predictive_search_products.size != 0 -%}
+                    <button class="tab-active">{{ 'sections.header.products' | t }}</button>
+                {%- endif -%}
+                {%- if predictive_search_articles.size != 0 -%}
+                    <button>{{ 'sections.header.articles' | t }}</button>
+                {%- endif -%}
+            </side-panel-content-tabs>
+
+            <scroll-shadow>
+                <div class="side-panel-content--inner">
+                    {%- if predictive_search_products.size != 0 -%}
+                        <div class="side-panel-content--tab-panel tab-active size-{{ predictive_search_products.size }}">
+                            <ul id="product-grid-{{ section.id }}" data-id="{{ section.id }}"
+                                class="products carousel row small-up-2 medium-up-{{ columns_desktop }}">
+                                {%- for predictive_product in predictive_search_products -%}
+                                    <li class="{{ columns_class }} columns carousel__slide">
+                                        {% render 'product-card', product_card_product: predictive_product %}
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+                    {%- endif -%}
+                    {%- if predictive_search_articles.size != 0 -%}
+                        <div class="side-panel-content--tab-panel{% if predictive_search_products.size == 0 -%} tab-active{%- endif -%}">
+                            <div class="row full-width-row no-padding">
+                                {%- for predictive_article in predictive_search_articles -%}
+                                    <div class="small-12 {{ columns_class }} columns">
+                                        {% render 'blog-post', article: predictive_article, show_date: show_date, show_excerpt: show_excerpt, image_ratio: image_ratio %}
+                                    </div>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                    {%- endif -%}
+                </div>
+            </scroll-shadow>
+
+        </div>
+
+
+    </div>
+
+{%- endif -%}

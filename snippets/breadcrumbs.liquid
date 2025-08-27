@@ -1,0 +1,51 @@
+{{ 'breadcrumbs.css' | asset_url | stylesheet_tag }}
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <a href="{{ routes.root_url }}">{{ 'sections.breadcrumbs.home' | t  }} - </a>
+  {% if collection.url %}
+  {% assign parent_collection = collection.metafields.custom.parent_collection.value  %}
+{% if parent_collection %}
+<a style="padding-left: 3px;" href="{{ parent_collection.url }}"> {{ parent_collection.title | upcase }} - </a> 
+{% endif %}
+    <span style=" font-weight: 700; padding-left: 3px;">
+      {% if collection.title == 'Products' %}
+              All Categories
+            {%  else %}
+            {{ collection.title | truncatewords: 5, "..." }}
+            {%  endif %}
+    </span>
+  {% endif %}
+	{% if template contains 'cart' %}
+    <span class="target">SHOPPING CART</span>
+  {% endif %}
+  {% if template contains 'product' %}
+     - 
+    {{ product.title }}
+  {% endif %}
+  {% if template contains 'blog' %}
+		{% if current_tags %}
+			<i>/</i>
+	    <a href="{{ blog.url }}">{{ blog.title }}</a>
+			<i>/</i>
+			{{ current_tags }}
+		{% else %}
+			<i>/</i>
+			{{ blog.title }}
+		{% endif %}
+  {% endif %}
+	{% if template contains 'article' %}
+    <i>/</i>
+    <a href="{{ blog.url }}" title="{{ blog.title | escape }}">{{ blog.title }}</a>
+    <i>/</i>
+    {{ article.title }}
+  {% endif %}
+  {% if template contains 'page' %}
+    <i>/</i>
+    {{ page.title }}
+  {% endif %}
+	{% if template contains 'search' %}
+    <span style=" font-weight: 700; padding-left: 3px;">{{ 'sections.breadcrumbs.search' | t }}</span>
+  {% endif %}
+	{% if template contains 'customers' %}
+    {{ 'sections.breadcrumbs.my_account' | t }}
+  {% endif %}
+</nav>

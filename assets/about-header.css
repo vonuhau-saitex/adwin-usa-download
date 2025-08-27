@@ -1,0 +1,141 @@
+.heading-about {
+  background: #1e1e1e;
+  min-height: 250px;
+  max-width: none;
+}
+.heading-about div.heading {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 62px;
+  text-transform: uppercase;
+  color: #ffffff;
+  align-items: top;
+  display: flex;
+  font-family: 'Imbue', sans-serif !important;
+}
+.heading-about div.description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: #ffffff;
+  align-items: top;
+  display: flex;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .heading-about{
+    padding: 50px 15px;
+  }
+  .heading-about div.heading {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .heading-about div.description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.heading-about .columns{
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 80px;
+}
+
+.template-page-about .row.full-width-row > .columns{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.template-page-about .footer .row.full-width-row > .columns{
+  padding: 0 15px;
+}
+
+.template-page-about .custom-multicolumn-homepage{
+  background-color: #ffffff;
+}
+
+.template-page-about .heading-about > div:last-child{
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 540px) {
+  .template-page-about .heading-about > div:last-child{
+    padding-left: 0px;
+  }
+  .template-page-about .multicolumn {
+    margin-top: 0px !important;
+  }
+  .template-page-about .gallery__item{
+    width: 100%;
+  }
+  #shopify-section-template--22658220359987__1661619177029ffd60 .gallery__inner{
+    grid-template-columns: 100% !important;
+    grid-auto-flow: initial !important;    
+  }
+  #shopify-section-template--22658220359987__1661619177029ffd60 .gallery__item{
+    height: auto !important;
+  }
+}
+
+.template-page-about .multicolumn .about-col-right{
+  padding-left: 15px;
+}
+
+.multicolumn__column h4{
+  margin-bottom: 15px !important;
+}
+
+.row.full-width-row.full-width {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden;
+}
+
+.row.full-width-row.full-width .column-content{
+  padding: 0 35px !important;
+}
+
+.row.full-width-row.full-width.block-1 .column-content{
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .row.full-width-row.full-width.block-1 .column-content{
+    width: 100%;
+  }
+}
+
+.template-page-about .custom-multicolumn-homepage{
+  background-color: #F7F7F3;
+}
+
+@media only screen and (min-width: 768px) {
+  .template-page .small-box{
+    min-height: 120px;
+    margin-top: 60px;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .template-page-about-sustainability .heading-about.small-box
+  {
+    min-height: 170px;
+  }  
+  .template-page-about-material .heading-about.small-box,
+  .template-page-about-production .heading-about.small-box
+  {
+    min-height: 200px;
+  } 
+}
+
+.template-page-about-sustainability .multicolumn__column{
+  margin-bottom: -7px !important;
+}
+
+.template-page-about-sustainability .section-multicolumn-cutom-static .multicolumn__column.right-area{
+  padding-left: 15px !important;
+}

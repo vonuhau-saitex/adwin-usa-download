@@ -1,0 +1,86 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<div class="size-list-list">
+  <div class="size-list">
+    {%- unless product.has_only_default_variant -%}      
+      {%- for option in product.options_with_values -%}        
+        <div class="size-list-element">
+          <div class="is-list">
+            {% assign variant_active = true %}
+            {% for variant in product.variants %}                                    
+              <span
+                class="variant-value {% unless variant.available %}disable{%  endunless %} selectsize-pick {% if variant_active and variant.available %}is-select{%  endif %}"
+                data-selectsize2-pick
+                data-variant-id="{{ variant.id }}"
+                data-variantid="{{ variant.id }}"
+                onclick=""
+              >
+                {{ variant.title }}
+              </span>
+              {% if variant.available %}{% assign variant_active = false %}{%  endif %} 
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    {% endunless %}
+  </div>
+
+  <!-- Addtocart Form -->
+  <product-form
+    class="product-form"
+    data-section="{{ section.id }}{{ product.id }}"
+    data-hide-errors="{{ gift_card_recipient_feature_active }}"
+  >
+    <div class="product-form__error-message-wrapper form-notification error" role="alert" hidden>
+      {% render 'svg-icons' with 'thb-error' %}
+      <span class="product-form__error-message"></span>
+    </div>
+    {%- assign product_form_id = 'product-form-' | append: section.id | append: product.id -%}
+    {% capture formclass %}form newquickaddform form-{{ product.id }}{% endcapture %}
+    {%- form 'product',
+      product,
+      id: product_form_id,
+      class: formclass,
+      novalidate: 'novalidate',
+      data-type: 'add-to-cart-form'
+    -%}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <div class="product-add-to-cart-container">
+        <div class="form-notification error" style="display:none;"></div>
+        <div class="add_to_cart_holder">
+          <button
+            type="submit"
+            name="add"
+            id="AddToCart-{{ product.id }}"
+            class="single-add-to-cart-button-{{ product.id }} text-button outline {% unless product.selected_or_first_available_variant.available %}sold-out{% endunless %}"
+            {% if product.selected_or_first_available_variant.available == false %}
+              disabled
+            {% endif %}
+          >
+            <span class="single-add-to-cart-button--text">
+              {%- if product.selected_or_first_available_variant.available -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- else -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- endif -%}
+            </span>
+            <span class="loading-overlay">
+              {% render 'svg-icons' with 'thb-loading' %}
+            </span>
+          </button>
+        </div>
+      </div>
+    {%- endform -%}
+  </product-form>
+</div>
+
+<script>    
+    $('[data-selectsize2-pick]').on('click', function (event) {        
+        var $this = $(this);
+        var variantID = $this.attr('data-variant-id');        
+        var variantvalue = $this.closest('.product-card-info').find('.variant-value');        
+        var form = $this.closest('.product-card-info').find('form');
+        variantvalue.removeClass('is-select');
+        $this.addClass('is-select');
+        form.find('input[name=id]').val(variantID);
+      });
+</script>

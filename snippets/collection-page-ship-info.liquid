@@ -1,0 +1,78 @@
+{{- 'collection-page-ship-info.css' | asset_url | stylesheet_tag -}}
+
+{%- liquid
+  assign full_width = true
+  assign disable_top_spacing = false
+  assign disable_bottom_spacing = false
+-%}
+
+<div class="collection-page-ship-info section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
+  <div class="row{% if full_width %} full-width-row{% endif %}">
+    <div class="info_columns">
+      <div class="collection-page-ship-info__container">
+        <div class="collection-page-ship-info__item_container small-6 medium-3 columns">
+          <div class="collection-page-ship-info__item_img_container">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Layer 1">
+              <g id="Group">
+              <path id="Vector" d="M32.9722 19.6472H30.9562V0.743164H10.0442V19.6472H0.596191V40.5512H40.4042V19.6472H32.9642H32.9722ZM30.9722 21.6472V25.5832H28.9402V21.6472H30.9562H30.9722V21.6472ZM21.5162 2.74316V6.67916H19.4842V2.74316H21.5162ZM12.0522 2.74316H17.4922V8.67916H23.5242V2.74316H28.9642V19.6472H21.5082V16.8312H19.5082V19.6472H17.5402V16.8312H15.5402V19.6472H12.0522V2.74316V2.74316ZM10.0522 21.6472H12.0682V25.5832H10.0362V21.6472H10.0522V21.6472ZM12.0522 38.5512V35.5512H10.0522V38.5512H8.08419V35.5512H6.08419V38.5512H2.59619V21.6472H8.03619V27.5832H14.0682V21.6472H19.5082V38.5512H12.0442H12.0522ZM38.4122 38.5512H30.9562V35.5512H28.9562V38.5512H26.9882V35.5512H24.9882V38.5512H21.5002V21.6472H26.9402V27.5832H32.9722V21.6472H38.4122V38.5512V38.5512Z" fill="black"/>
+              </g>
+              </g>
+            </svg>
+          </div>
+          <div class="collection-page-ship-info__item_content_container">
+            <div class="collection-page-ship-info__item_heading">FREE SHIPPING ON ALL<br/>U.S. ORDERS</div>
+          </div>
+        </div>
+
+        <div class="collection-page-ship-info__item_container small-6 medium-3 columns">
+          <div class="collection-page-ship-info__item_img_container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="37" viewBox="0 0 40 37" fill="none">
+              <g clip-path="url(#clip0_4792_16627)">
+              <path d="M37.1851 7.82148L31.6281 4.63299L25.9924 1.39948C22.2572 -0.743867 17.6007 1.9526 17.6007 6.26019V6.98536C17.6007 7.38252 17.813 7.74912 18.157 7.94689L20.7715 9.44707C21.4967 9.86352 22.4019 9.33934 22.4019 8.50323V6.78437C22.4019 5.93379 23.3217 5.39996 24.0597 5.82445L29.2114 8.77979L34.3471 11.7271C35.0884 12.1532 35.0884 13.2224 34.3471 13.6485L29.2114 16.5958L24.0597 19.5512C23.3217 19.9741 22.4003 19.4418 22.4019 18.5913V17.7375C22.4019 13.4299 17.7454 10.7334 14.0102 12.8767L8.37452 16.1103L2.81758 19.2987C-0.935286 21.4517 -0.935286 26.8656 2.81758 29.0202L8.37452 32.2087L14.0102 35.4422C17.7454 37.5855 22.4019 34.889 22.4019 30.5815V29.8531C22.4019 29.4559 22.1897 29.0893 21.8456 28.8915L19.2311 27.3914C18.506 26.9749 17.6007 27.4991 17.6007 28.3352V30.0557C17.6007 30.9063 16.681 31.4401 15.943 31.0156L10.7912 28.0603L5.65554 25.113C4.91429 24.6869 4.91429 23.6176 5.65554 23.1915L10.7912 20.2442L15.943 17.2889C16.681 16.866 17.6007 17.3982 17.6007 18.2488V19.1026C17.6007 23.4102 22.2572 26.1066 25.9924 23.9633L31.6281 20.7298L37.1851 17.5413C40.9379 15.3883 40.9379 9.97447 37.1851 7.81987V7.82148Z" fill="black"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_4792_16627">
+              <rect width="40" height="35.5429" fill="white" transform="translate(0 0.646973)"/>
+              </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="collection-page-ship-info__item_content_container">
+            <div class="collection-page-ship-info__item_heading">INTEREST FREE<br/>PAYMENT</div>
+          </div>
+        </div>
+
+        <div class="collection-page-ship-info__item_container small-6 medium-3 columns">
+          <div class="collection-page-ship-info__item_img_container">
+            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Group">
+              <g id="Group_2">
+              <path id="Vector" d="M29.5639 9.18316L26.7799 4.35916C25.4679 2.09516 23.1239 0.743164 20.4999 0.743164C17.8759 0.743164 15.5319 2.09516 14.2199 4.36716L9.25193 12.9752L8.45993 9.97516L6.52393 10.4872L8.18793 16.7992L14.4999 15.1352L13.9879 13.1992L10.9639 13.9992L15.9479 5.36716C16.8999 3.72716 18.5959 2.74316 20.4919 2.74316C22.3879 2.74316 24.0919 3.72716 25.0359 5.36716L27.8199 10.1912L29.5559 9.19116L29.5639 9.18316Z" fill="black"/>
+              <path id="Vector_2" d="M39.1479 25.783L34.1719 17.159L37.1879 17.975L37.7159 16.047L31.4199 14.335L29.7079 20.631L31.6359 21.159L32.4519 18.159L37.4279 26.775C38.3799 28.415 38.3799 30.383 37.4279 32.023C36.4759 33.663 34.7799 34.647 32.8839 34.647H27.3159V36.647H32.8839C35.5079 36.647 37.8519 35.295 39.1639 33.023C40.4759 30.751 40.4759 28.047 39.1639 25.775L39.1479 25.783Z" fill="black"/>
+              <path id="Vector_3" d="M15.8919 32.439L18.0919 34.655H8.13192C6.23592 34.655 4.53192 33.671 3.58792 32.031C2.63592 30.391 2.63592 28.423 3.58792 26.783L6.37192 21.959L4.63592 20.959L1.85192 25.783C0.53992 28.055 0.53992 30.759 1.85192 33.031C3.16392 35.303 5.50792 36.655 8.13192 36.655H18.0759L15.8759 38.839L17.2839 40.255L21.9159 35.655L17.3159 31.023L15.8919 32.431V32.439Z" fill="black"/>
+              </g>
+              </g>
+            </svg>
+          </div>
+          <div class="collection-page-ship-info__item_content_container">
+            <div class="collection-page-ship-info__item_heading">20$ OFF For<br/>UPCYCLING</div>
+          </div>
+        </div>
+
+        <div class="collection-page-ship-info__item_container small-6 medium-3 columns">
+            <div class="collection-page-ship-info__item_img_container">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group">
+                    <path id="Vector" d="M29.964 19.647H11.036C6.37202 19.647 2.57202 15.847 2.57202 11.183C2.57202 6.51899 6.37202 2.71899 11.036 2.71899C15.7 2.71899 19.5 6.51899 19.5 11.183V11.951L17.3 9.73499L15.876 11.143L20.476 15.775L25.108 11.175L23.7 9.75899L21.5 11.943V11.175C21.5 5.41499 16.804 0.718994 11.036 0.718994C5.26802 0.718994 0.572021 5.41499 0.572021 11.183C0.572021 16.951 5.26802 21.647 11.036 21.647H29.964C34.628 21.647 38.428 25.447 38.428 30.111C38.428 34.775 34.628 38.575 29.964 38.575C25.3 38.575 21.5 34.775 21.5 30.111V29.343L23.7 31.559L25.124 30.151L20.524 25.519L15.892 30.119L17.3 31.535L19.508 29.351V30.119C19.508 35.887 24.204 40.583 29.972 40.583C35.74 40.583 40.436 35.887 40.436 30.119C40.436 24.351 35.74 19.655 29.972 19.655L29.964 19.647Z" fill="black"/>
+                    </g>
+                    </svg>                    
+            </div>
+            <div class="collection-page-ship-info__item_content_container">
+              <div class="collection-page-ship-info__item_heading">HASSLE-FREE<br/>RETURN</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

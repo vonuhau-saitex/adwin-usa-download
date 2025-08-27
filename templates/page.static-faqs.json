@@ -1,0 +1,926 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "d75a5ebd-b7aa-4408-9244-6a013d24e408": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19562996105523__d75a5ebd-b7aa-4408-9244-6a013d24e408-168688435594edfb54-1": {
+          "type": "heading",
+          "settings": {
+            "text": "F.A.Q.",
+            "size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--19562996105523__d75a5ebd-b7aa-4408-9244-6a013d24e408-168688435594edfb54-1"
+      ],
+      "custom_css": [
+        ".rich-text__inner h3 {text-align: left;}",
+        ".rich-text .rte {margin-bottom: 16px;}"
+      ],
+      "settings": {
+        "section_width": "full-width-row",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "collapsible_content_yELfiC": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_39MyXk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Help! I have an issue with my order.",
+            "open": true,
+            "content": "<p>We want you to love the denim you’re in, and love the process too. Our customer service team is available between 9am-5pm, Monday-Friday (Holidays excluded) to process any requests or answer any questions. Please contact us at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>. We can’t wait to hear from you.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_LyNzPf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping policy",
+            "open": false,
+            "content": "<p>We offer Free Ground Shipping on U.S. orders.Free Shipping only applies to the contiguous United States, and does not apply to Puerto Rico, Hawaii or Alaska addresses. A valid street address is required — FedEx does not ship to P.O. Boxes or AFO/FPO addresses.</p><p>For Free Ground Shipping, orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed before 2:00 p.m. EST will arrive in 4 to 7 business days, depending on your shipping address. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday.</p><p>You can upgrade to expedited shipping at checkout, which will be delivered 2 business days after FedEx picks it up. Please note that if you return your order, the cost of expedited shipping is not refunded. Orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday. Please note that items in your order may be shipped in separate packages.</p><p>If you have any shipping questions, please reach out to our Customer Service Department by email at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_BBcMzd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What is your return policy?",
+            "open": false,
+            "content": "<p>If you are not completely satisfied with an EDWIN USA purchase or gift for any reason, please review our return, refund and exchange policies for edwin-usa.com purchases. Merchandise must be returned in unworn, unused, and undamaged condition with all original tags attached. Please note that all returns are subject to validation and approval at Edwin’s discretion.</p><p>In the case of incorrect items shipped or damaged during shipment, please contact our Customer Care Team at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TxMUtY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "My Product Didn’t Fit. What Size Should I Try next?",
+            "open": false,
+            "content": "<p>We strive to make consistently fantastic fits. But sometimes the fit just isn't a fit. We know that can feel disappointing, but we're here to help! Reach out to us at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com </a>and we’ll help process a return/exchange or find a style that’s perfect for you. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_xJanph": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returning online purchases.",
+            "open": false,
+            "content": "<p>For edwin-usa.com orders shipped to a U.S. address, we gladly accept returns of merchandise for a full refund if we receive your return within 30 days of the date of purchase. Requests for refund must be accompanied by valid proof of purchase. Refunds will be made in the same form of payment as your purchase was made or store credit. We do not accept returns made after 30 days of purchase date. All worn, damaged, used, and final sale items cannot be returned or exchanged. If we receive worn, damaged or used items, or items without all original tags attached, or items returned more than 14 days post purchase, the items will not be returned to you.</p><p>Returns are accepted on all orders within 30 days of purchase.</p><p>Edwin-usa.com purchases shipped to a U.S. address can be easily returned by mail (follow the return procedures described below). Please note: Returns will not be accepted if mailed to a store location. Items shipped outside of the returns window may not be returned to you. EDWIN USA is not responsible for lost returns.</p><p>Please navigate to your Order history page to initiate the return process. You will need your order number and email to start your return, select the item(s) you wish to return, list the reason, and select a refund tender. Within 48 hours, you will receive an emailed prepaid return label (pre-paid label is sent by email only and not mailed out; label will be voided after 30 days). Please ensure the item(s) in original condition are packaged properly and affix the prepaid label to the outside of your package, make a note of the tracking number, and leave the package with chosen shipping courier (UPS or Fedex). Shipping charges are prepaid by Edwin-usa and no additional postage is required. Please allow 5-7 days for processing. Additional delays may occur.</p><p> </p><p>*If you’ve submitted a return and have not received a slip within 72 hours, please check your email spam/junk folder as your return slip may have been sent here. </p><p>If you need further assistance from our Customer Care Team, please contact us at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MrmUwk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Exchanging online purchases.",
+            "open": false,
+            "content": "<p>For<a href=\"http://edwin-usa.com/\"> edwin-usa.com </a>orders, we do not currently offer direct exchanges, a return may be placed and store credit may be issued. Please contact us to initiate your return, <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TeehRY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "DO YOU CHARGE SALES TAX?",
+            "open": false,
+            "content": "<p>Sales tax is calculated based on the full invoice and may include charges for shipping and handling if required by law. Customers are responsible for the payment of any state and local sales or use taxes that may apply to each order. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_zRK4zX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "HOW DO I CHECK ON AN ORDER I HAVE PLACED?",
+            "open": false,
+            "content": "<p>After your order has shipped, you will receive a Shipping Confirmation email with tracking information so you can track the status of the order at your convenience. Please allow approximately 2-4 days for the processing and shipping of all orders. If you have questions about your order, please <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>, our Customer Support Team is available to assist you Monday through Friday.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TRF8RD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "WHAT CAN I DO IF MY PAYMENT IS DECLINED?",
+            "open": false,
+            "content": "<p>Our Customer Support team is available to assist you with any questions or issues you may have. Please contact <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_imQbPt": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "WHY WAS MY ORDER CANCELED?",
+            "open": false,
+            "content": "<p>rders may be canceled for a few reasons. Our stock may have insufficient inventory to fulfill your order, in which case we will email you an estimated delivery date of re-stock. In some cases, orders may be canceled due to incomplete payment details. In these instances you can contact <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>, and our team will assist you in placing your order. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_8PfWhb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What if my package is lost? My tracking states my package was delivered, but I did not receive it. How long do I have to claim non-delivery on my package?",
+            "open": false,
+            "content": "<p>Our partnership with FedEx allows Edwin to have a 7-day window policy from delivery date where our team can start a trace/file a claim with FedEx. Anything outside the 7th day, will result in a loss. Please note that Edwin is not liable for any lost or stolen packages that have been confirmed delivered to the address associated with your order. For additional information, please contact <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_hVf6mm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How quickly will my return be processed? /When will I receive my refund?",
+            "open": false,
+            "content": "<p>Returns are typically processed for shipping within 1-2 business days of order placement, holidays notwithstanding. Please allow 5-7 business days from the time of confirmation of your return to see your refund reflected on your bank statement or credited back to your credit card or other method of payment.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_9CbGqi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How Do I Get Help With Damages & Defects",
+            "open": false,
+            "content": "<p>If you receive an item that is damaged, please contact customer service with your order number and photos of the damages. Many products, particularly those with distressed styling, do wear out or develop holes with regular wear and tear over time. Defects that prevent wear will be reviewed and addressed case by case.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_3DE3Yp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Will you match the price of an item that I see marked down elsewhere?",
+            "open": false,
+            "content": "<p>If you see your recently purchased product available elsewhere at a lower price, we will match the lower price of an item seen elsewhere in the exact style, color and size. Your purchase must be within 30 days and you must present evidence of the item being sold elsewhere at the lower price.</p><ul><li>Documentation must be provided showing the product with the listed lower price.</li><li>A price match must occur at the time an order is placed.</li><li>Please contact us at contact@edwin-usa.com, and we’ll adjust the current selling price to match the documented selling price.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Dp3nQA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Where are your products made?",
+            "open": false,
+            "content": "<p>Edwin denim is manufactured in Vernon, California on premium fabrics responsibly sourced from around the world. All of our denim is made from organic cotton. In contrast to conventional cotton, which uses genetically modified organisms (GMOs) and toxic pesticides and fertilizers that degrade the soil, organic cotton is grown without harmful chemicals, and the soil is enriched through crop rotation, intercropping and composting. Because the soil is healthier and it retains water more efficiently, organic cotton uses 91% less water and emits 46% less greenhouse gas than conventional cotton. It is also better for the health of the farmers who grow it and their communities.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_zj4pV6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What forms of payment does Edwin use?",
+            "open": false,
+            "content": "<p>We accept all major credit cards through our merchant processor Stripe. We also accept Apple Pay, Google Pay, Paypal and Shop Pay. We also offer interest free installments via Klarna. If you have questions about our payment methods or have trouble placing your order please contact us at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_wGrWxh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Fabric & Care",
+            "open": false,
+            "content": "<p>We do our best to provide fabric content and measurements for each of our products on our website. Don’t see what you’re looking for? Please reach out to us at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com </a>and we will assist you. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_qY9cJm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Size & Fit ",
+            "open": false,
+            "content": "<p>We know there is nothing better than a great-fitting pair of jeans. We strive to perfect the fit of each style. You can find fit notes and a size guide on each product page. Still have questions or concerns about a style? Please contact <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com </a>and we will do our best to answer all your questions. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_39MyXk",
+        "collapsible_tab_LyNzPf",
+        "collapsible_tab_BBcMzd",
+        "collapsible_tab_TxMUtY",
+        "collapsible_tab_xJanph",
+        "collapsible_tab_MrmUwk",
+        "collapsible_tab_TeehRY",
+        "collapsible_tab_zRK4zX",
+        "collapsible_tab_TRF8RD",
+        "collapsible_tab_imQbPt",
+        "collapsible_tab_8PfWhb",
+        "collapsible_tab_hVf6mm",
+        "collapsible_tab_9CbGqi",
+        "collapsible_tab_3DE3Yp",
+        "collapsible_tab_Dp3nQA",
+        "collapsible_tab_zj4pV6",
+        "collapsible_tab_wGrWxh",
+        "collapsible_tab_qY9cJm"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "collapsible_content_eRJPfh": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_PB8agH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What is a Pre-Order?",
+            "open": false,
+            "content": "<p>Sometimes, we offer highly anticipated styles for purchase before they are in stock. As soon as they arrive to us, we’ll ship your order out to you within 1–3 business days. You’ll receive an email notification at purchase and a shipping confirmation when the item(s) depart our facilities.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_AaBBJi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping dates",
+            "open": false,
+            "content": "<p>The estimated shipping dates for pre-order item(s) are indicated on the product page, at checkout, and in your order confirmation email. We always do our best to ship by the listed date but sometimes things can take a little longer than expected and the estimated shipping date can change — if it does we’ll email you with changes.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_pWDKi4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "​​​​​​​​Order edits or cancellations",
+            "open": false,
+            "content": "<p>Once your order is placed we can’t make any edits to the size or color, but should you need to cancel your preorder just email us at <a href=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_iH4eY3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Payment",
+            "open": false,
+            "content": "<p>You’ll be charged for the full order amount at the time you place the order. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_bhdzmm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Returns & exchanges Of Pre-orders",
+            "open": false,
+            "content": "<p>Didn't fit? Pre Orders fall under the same return and exchange policy as regular purchases.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_PB8agH",
+        "collapsible_tab_AaBBJi",
+        "collapsible_tab_pWDKi4",
+        "collapsible_tab_iH4eY3",
+        "collapsible_tab_bhdzmm"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "What Is A Pre-Order And How Does It Work?",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "collapsible_content_eRJPfi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_Pxripg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the best wide-leg jeans for women available?",
+            "open": false,
+            "content": "<p>Some of the best wide-leg jeans for women include Levi's Ribcage Wide-Leg Jeans and Madewell's Wide-Leg Crop Jeans. Both offer a flattering fit, with a modern twist on the classic wide-leg style, perfect for adding movement and comfort to your wardrobe.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Bcg8h4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer jeans for tall women in different styles?",
+            "open": false,
+            "content": "<p>Yes, we offer a variety of jeans for tall women, including styles like straight-leg, bootcut, and skinny jeans. Many options feature longer inseams to ensure a great fit, with brands like Everlane and AG Jeans offering tall sizes that blend style and comfort.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_fnWRtQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the top straight-leg jeans for women in your collection?",
+            "open": false,
+            "content": "<p>Top straight-leg jeans include the Levi's 501 Original Fit and the Everlane The Straight Jean. These styles provide a classic, versatile look, with a comfortable fit that works for most body types, offering both style and durability.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XGTp89": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do I choose the best women's denim jeans for my body type?",
+            "open": false,
+            "content": "<p>To choose the best women's denim for your body type, focus on high-rise jeans for a flattering, elongating effect or opt for stretch denim for more comfort. For curvier figures, a bootcut or wide-leg style can help balance proportions, while straight-leg jeans work well for an overall sleek look.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XDyBm6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you have black skinny jeans for women in stock?",
+            "open": false,
+            "content": "<p>Yes, we have black skinny jeans for women in stock, including popular options like the AG Farrah Skinny Jeans. These jeans offer a sleek, form-fitting design that can be dressed up or down, making them a wardrobe staple for various occasions.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_Pxripg",
+        "collapsible_tab_Bcg8h4",
+        "collapsible_tab_fnWRtQ",
+        "collapsible_tab_XGTp89",
+        "collapsible_tab_XDyBm6"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "Denim",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "collapsible_content_eRJPfj": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_ULtKWT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the best crop tops for women in your collection?",
+            "open": false,
+            "content": "<p>Some of the best crop tops for women include options like the Everlane The Ribbed Tank and Madewell's The Slim Fit Crop Top. These tops are known for their comfortable fit and versatile style, making them perfect for pairing with high-waisted jeans or skirts.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_rQKKzR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer non-denim tops for women for casual occasions?",
+            "open": false,
+            "content": "<p>Yes, we offer a variety of non-denim tops for casual occasions, including cotton blouses, graphic tees, and cozy knit sweaters. These pieces are perfect for a relaxed yet stylish look, ideal for running errands or enjoying a laid-back weekend.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_gi6jri": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do your women's workwear options differ from casual wear?",
+            "open": false,
+            "content": "<p>Our women's workwear options typically feature more structured pieces, such as tailored blouses, blazers, and dress pants, designed for a professional look. In contrast, casual wear includes relaxed, comfortable styles like tees, casual blouses, and joggers, offering more freedom and ease.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_VExQpi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are your women's low-rise bootcut jeans styles available in non-denim materials?",
+            "open": false,
+            "content": "<p>Yes, we offer women's low-rise bootcut jeans in various non-denim materials, including cotton blends and corduroy. These options provide the same stylish fit as denim, but with added texture and comfort for different seasons and occasions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_G3Upmk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Can vintage jeans womens styles be paired with non-denim tops?",
+            "open": false,
+            "content": "<p>Absolutely! Vintage women’s jeans styles, like high-rise or straight-leg jeans, pair beautifully with non-denim tops such as flowy blouses, knit sweaters, or even graphic tees. This combination creates a stylish, balanced look that blends retro denim with modern casual wear.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_ULtKWT",
+        "collapsible_tab_gi6jri",
+        "collapsible_tab_VExQpi",
+        "collapsible_tab_G3Upmk"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "Non Denim",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "collapsible_content_eRJPfk": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_RxpJPm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you have denim tops for women in vintage styles?",
+            "open": false,
+            "content": "<p>Yes, we offer denim tops for women in vintage-inspired styles, including classic button-up shirts and cropped jackets. These pieces give a retro vibe while maintaining a modern fit, perfect for creating a nostalgic look with contemporary flair.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Kfwgmm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How can I style a women's cropped denim jacket with your tops?",
+            "open": false,
+            "content": "<p>A women's cropped denim jacket can be styled with various tops, like a simple white tee or a fitted tank. For a more layered look, pair it with a cozy sweater or a button-up blouse to add texture and contrast while keeping things chic and comfortable.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TdhXjx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are your crop tops for women available in petite and tall sizes?",
+            "open": false,
+            "content": "<p>Yes, our crop tops for women are available in both petite and tall sizes, ensuring a great fit for all body types. These options provide the same stylish and comfortable designs, with different lengths and proportions to suit your shape.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_b6XeV3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the best tops for pairing with wide-leg jeans women?",
+            "open": false,
+            "content": "<p>The best tops for pairing with wide-leg jeans include fitted t-shirts, tucked-in blouses, and cropped sweaters. These styles help balance the volume of the wide-leg jeans, creating a flattering silhouette without overwhelming the frame.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_7g3qKg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How can denim jeans denim be styled with your tops?",
+            "open": false,
+            "content": "<p>Denim jeans can be styled with a variety of tops depending on the look you're going for. Pair them with a casual tee or tank for an everyday outfit, or elevate the look with a button-up blouse or a tailored jacket for a more polished, stylish vibe.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_RxpJPm",
+        "collapsible_tab_Kfwgmm",
+        "collapsible_tab_TdhXjx",
+        "collapsible_tab_b6XeV3",
+        "collapsible_tab_7g3qKg"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "Tops",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "collapsible_content_eRJPfl": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_4G6774": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you carry women's cropped denim jackets in different washes?",
+            "open": false,
+            "content": "<p>Yes, we carry women's cropped denim jackets in a variety of washes, including light, medium, and dark denim. These options allow you to find the perfect jacket to match your personal style, whether you prefer a more faded or rich, deeper tone.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_grgjWr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How does a women's cropped denim jacket complement a casual look?",
+            "open": false,
+            "content": "<p>A women’s cropped denim jacket complements a casual look by adding a relaxed, stylish layer to simple outfits. Pair it with a basic t-shirt and jeans or a dress to instantly elevate the look with a touch of laid-back coolness.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_wembDe": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are your jackets inspired by vintage denim styles?",
+            "open": false,
+            "content": "<p>Yes, many of our jackets are inspired by vintage denim styles, featuring classic details like distressed finishes, oversized fits, and timeless button-up designs. These jackets bring a retro vibe to modern-day fashion while offering a versatile, timeless wardrobe staple.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_tTqjMz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What outerwear pairs best with wide-leg jeans women?",
+            "open": false,
+            "content": "<p>The best outerwear to pair with wide-leg jeans includes cropped jackets, tailored blazers, and oversized coats. These styles help maintain balance, enhancing the flowy silhouette of the jeans while adding structure to your overall look.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_gjiVUr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there jackets designed for jeans for tall women outfits?",
+            "open": false,
+            "content": "<p>Yes, we offer jackets designed for tall women’s outfits, including longer-length options that provide better coverage and proportions for taller frames. These jackets complement jeans and other styles, ensuring both fit and style for tall women.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_4G6774",
+        "collapsible_tab_grgjWr",
+        "collapsible_tab_wembDe",
+        "collapsible_tab_tTqjMz",
+        "collapsible_tab_gjiVUr"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "Jackets/Outerwear",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "collapsible_content_eRJPfm": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_weQgbF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer high-rise relaxed denim shorts for women?",
+            "open": false,
+            "content": "<p>Yes, we offer high-rise relaxed denim shorts for women, designed for a comfortable fit with a laid-back, casual vibe. These shorts provide the perfect balance between relaxed styling and flattering high-rise design, ideal for warm weather.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Lq9CEN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What skirts pair well with wide-leg jeans women styles?",
+            "open": false,
+            "content": "<p>While skirts and wide-leg jeans are typically worn separately, you can create a stylish layered look by pairing a flowy midi skirt with a tucked-in top and wide-leg jeans underneath for a unique combination. Alternatively, a denim skirt can complement a fitted top paired with wide-leg jeans, balancing textures and adding a chic, multi-layered outfit.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_HEFeXx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there shorts designed for jeans for tall women?",
+            "open": false,
+            "content": "<p>Yes, we offer shorts designed for tall women, with longer inseams and tailored cuts to ensure a flattering fit. These denim shorts are crafted to provide both comfort and style, perfect for tall women looking for the right fit in casual, summerwear.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_pEeCQY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do your skirts compare to denim jeans denim?",
+            "open": false,
+            "content": "<p>Our skirts and denim jeans both offer timeless, versatile styles, but skirts provide a lighter, more feminine option while denim jeans offer structure and durability. Skirts can be worn for more casual or dressier occasions, while jeans typically provide more warmth and can be dressed up or down.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_wQRtUT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there vintage denim shorts in your collection?",
+            "open": false,
+            "content": "<p>Yes, we carry vintage denim shorts in our collection, featuring classic cuts, frayed hems, and faded washes. These shorts offer a nostalgic, retro vibe while maintaining modern comfort and fit, perfect for creating a timeless summer look.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_weQgbF",
+        "collapsible_tab_Lq9CEN",
+        "collapsible_tab_HEFeXx",
+        "collapsible_tab_pEeCQY",
+        "collapsible_tab_wQRtUT"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "Shorts/Skirts",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "collapsible_content_eRJPfn": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_Ge8HP7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What makes your women's workwear stand out?",
+            "open": false,
+            "content": "<p>Our women’s workwear stands out because it combines professional styling with comfort and durability. We focus on pieces that maintain a polished look while offering flexibility and ease of movement, making them ideal for long workdays and dynamic environments.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_7tXgCD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Can slim-fit jeans for women be worn as workwear?",
+            "open": false,
+            "content": "<p>Yes, slim-fit jeans for women can be worn as workwear, especially if styled with a tailored blouse, blazer, or smart jacket. Opt for darker washes and clean, minimal designs to keep the look professional while still maintaining comfort.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MgBAjW": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer vintage denim styles in workwear?",
+            "open": false,
+            "content": "<p>Yes, we offer vintage denim styles in workwear, including classic denim jackets, button-down shirts, and high-waisted jeans. These pieces combine timeless designs with a professional twist, providing a versatile addition to your work wardrobe.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_6CnPnf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there denim tops for women suitable for workwear?",
+            "open": false,
+            "content": "<p>Yes, we offer denim tops for women that are suitable for workwear, such as tailored denim blouses and button-up shirts. These pieces provide a smart yet relaxed look, perfect for pairing with professional bottoms like trousers or skirts.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_c9fFmB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How can I style womens cropped denim jackets for work?",
+            "open": false,
+            "content": "<p>To style women’s cropped denim jackets for work, pair them with high-waisted trousers, a blouse, or a sleek top for a polished look. Opt for darker washes and avoid overly distressed styles to keep the outfit professional and appropriate for the office.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_Ge8HP7",
+        "collapsible_tab_7tXgCD",
+        "collapsible_tab_MgBAjW",
+        "collapsible_tab_6CnPnf",
+        "collapsible_tab_c9fFmB"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "Workwear",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "8820918b-5d31-4c5a-a0c2-d08bae9ab412": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-1": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shipping-policy.png",
+            "image_full_width": true,
+            "retina": true,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        },
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-2": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image_full_width": false,
+            "retina": true,
+            "title": "",
+            "text": "<p>We offer Free Ground Shipping on U.S. orders.</p><p><br/>Free Shipping only applies to the contiguous United States, and does not apply to Puerto Rico, Hawaii or Alaska addresses. A valid street address is required — FedEx does not ship to P.O. Boxes or AFO/FPO addresses.</p><p><br/>For Free Ground Shipping, orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed before 2:00 p.m. EST will arrive in 4 to 7 business days, depending on your shipping address. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday.</p><p><br/>You can upgrade to expedited shipping at checkout, which will be delivered 2 business days after FedEx picks it up. Please note that if you return your order, the cost of expedited shipping is not refunded. Orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday.<br/>Please note that items in your order may be shipped in separate packages.</p><p><br/>If you have any shipping questions, please reach out to our Customer Service Department by email at <a href=\"mailto:contact@edwin-usa.com\" target=\"_blank\" title=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com</a>.</p>",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-1",
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".multicolumn {max-width: 1000px; margin: 0 auto;}",
+        "@media only screen and (min-width: 768px) {.row {padding: 0; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "display_type": "grid",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "text_alignment": "left",
+        "heading_size": "h3",
+        "mobile_swipe": false,
+        "header-50-50": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "bkg": "#ffffff"
+      }
+    },
+    "rich_text_8EpkNX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_U3JmPX": {
+          "type": "heading",
+          "settings": {
+            "text": "More questions? Drop us a line",
+            "size": "h3"
+          }
+        },
+        "button_tMU69z": {
+          "type": "button",
+          "settings": {
+            "link_label": "contact us",
+            "link": "shopify://pages/contact-us",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_U3JmPX",
+        "button_tMU69z"
+      ],
+      "settings": {
+        "section_width": "full-width-row",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_MiDfnn": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_FEYwaB": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading for this section"
+          }
+        },
+        "heading_RjGnyr": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Talk about your brand",
+            "size": "h3"
+          }
+        },
+        "text_htL94w": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "button_KYbERT": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_label": "Learn More",
+            "link": "",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_FEYwaB",
+        "heading_RjGnyr",
+        "text_htL94w",
+        "button_KYbERT"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d75a5ebd-b7aa-4408-9244-6a013d24e408",
+    "collapsible_content_yELfiC",
+    "collapsible_content_eRJPfh",
+    "collapsible_content_eRJPfi",
+    "collapsible_content_eRJPfj",
+    "collapsible_content_eRJPfk",
+    "collapsible_content_eRJPfl",
+    "collapsible_content_eRJPfm",
+    "collapsible_content_eRJPfn",
+    "8820918b-5d31-4c5a-a0c2-d08bae9ab412",
+    "rich_text_8EpkNX",
+    "rich_text_MiDfnn"
+  ]
+}

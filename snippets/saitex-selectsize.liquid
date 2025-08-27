@@ -1,0 +1,142 @@
+<div class="select-size-popup size-popup-{{ product.id }}">
+  <div class="size-content">
+    <div class="size-list">
+      {%- unless product.has_only_default_variant -%}
+        {% comment %}
+          {%- for option in product.options_with_values -%}
+            {% assign first_color = 1 %}
+            {%- if option.name == 'Color' -%}
+              {%- for value in option.values -%}
+                <div class="size-list-element p{{ product.id }}-{{ value | downcase | handleize }} {% if first_color == 1 %}color-show{%  else %}color-hide{%  endif %}">
+                  <div class="is-list">
+                    {% for variant in product.variants %}
+                      {% assign varianttitle = variant.title | split: ' /' %}
+                      {% if varianttitle[0] == value %}
+                        <span
+                          class="variant-value {% unless variant.available %}disable{%  endunless %}"
+                          data-selectsize-pick
+                          data-variant-id="{{ variant.id }}"
+                        >
+                          {{ varianttitle[1] }}
+                        </span>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+                {% assign first_color = first_color | plus: 1 %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endcomment %}
+
+        {%- for option in product.options_with_values -%}
+          <div class="size-list-element">
+            <div class="is-list">
+              {% for variant in product.variants %}
+                <span
+                  class="variant-value {% unless variant.available %}disable{%  endunless %} selectsize-pick"
+                  data-selectsize-pick
+                  data-variant-id="{{ variant.id }}"
+                  data-variantid="{{ variant.id }}"
+                >
+                  {{ variant.title }}
+                </span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      {% endunless %}
+    </div>
+
+    <!-- Addtocart Form -->
+    <product-form
+      class="product-form"
+      data-section="{{ section.id }}{{ product.id }}"
+      data-hide-errors="{{ gift_card_recipient_feature_active }}"
+    >
+      <div class="product-form__error-message-wrapper form-notification error" role="alert" hidden>
+        {% render 'svg-icons' with 'thb-error' %}
+        <span class="product-form__error-message"></span>
+      </div>
+      {%- assign product_form_id = 'product-form-' | append: section.id | append: product.id -%}
+      {% capture formclass %}form newquickaddform form-{{ product.id }}{% endcapture %}      
+      {%- form 'product',
+        product,
+        id: product_form_id,
+        class: formclass,
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+      -%}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <div class="product-add-to-cart-container">
+          <div class="form-notification error" style="display:none;"></div>
+          <div class="add_to_cart_holder">
+            <button
+              type="submit"
+              name="add"
+              id="AddToCart"
+              class="single-add-to-cart-button button outline {% unless product.selected_or_first_available_variant.available %}sold-out{% endunless %}"
+              {% if product.selected_or_first_available_variant.available == false %}
+                disabled
+              {% endif %}
+            >
+              <span class="single-add-to-cart-button--text">
+                {%- if product.selected_or_first_available_variant.available -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- else -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- endif -%}
+              </span>
+              <span class="loading-overlay">
+                {% render 'svg-icons' with 'thb-loading' %}
+              </span>
+            </button>
+          </div>
+        </div>
+      {%- endform -%}
+    </product-form>
+  </div>
+  <div class="select-size-bottom">
+    <div class="select-size-guide">
+      {% comment %}
+      <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ product.id }}">
+        <button
+          id="ProductPopup-{{ product.id }}"
+          class="product-popup-modal__button"
+          type="button"
+          aria-haspopup="dialog"
+        >
+          <span>Size guide</span>
+        </button>
+      </modal-opener>
+      <modal-dialog id="PopupModal-{{ product.id }}" class="product-popup-modal">
+        <div
+          role="dialog"
+          aria-label="Size guide"
+          aria-modal="true"
+          class="product-popup-modal__content"
+          tabindex="-1"
+        >
+          <div class="product-popup-modal__content-header">
+            <h5>Size guide</h5>
+            <button
+              id="ModalClose-{{ product.id }}"
+              type="button"
+              class="product-popup-modal__toggle"
+              aria-label="{{ 'accessibility.close' | t }}"
+            >
+              {% render 'svg-icons' with 'close' %}
+            </button>
+          </div>
+          <scroll-shadow>
+            <div class="product-popup-modal__content-info">
+              {{ pages['sizing-guide'].content }}
+            </div>
+          </scroll-shadow>
+        </div>
+      </modal-dialog>
+      {%  endcomment %}
+    </div>
+    <div class="select-size-close">Close</div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "d75a5ebd-b7aa-4408-9244-6a013d24e408": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19562996105523__d75a5ebd-b7aa-4408-9244-6a013d24e408-168688435594edfb54-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Shipping Policy",
+            "size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "template--19562996105523__d75a5ebd-b7aa-4408-9244-6a013d24e408-168688435594edfb54-1"
+      ],
+      "custom_css": [
+        ".rich-text__inner h3 {text-align: left;}",
+        ".rich-text .rte {margin-bottom: 16px;}"
+      ],
+      "settings": {
+        "section_width": "full-width-row",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "8820918b-5d31-4c5a-a0c2-d08bae9ab412": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-1": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify:\/\/shop_images\/shipping-policy.png",
+            "image_full_width": true,
+            "retina": true,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        },
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-2": {
+          "type": "column",
+          "settings": {
+            "media_type": "image",
+            "image_full_width": false,
+            "retina": true,
+            "title": "",
+            "text": "<p>We offer Free Ground Shipping on U.S. orders.<\/p><p><br\/>Free Shipping only applies to the contiguous United States, and does not apply to Puerto Rico, Hawaii or Alaska addresses. A valid street address is required — FedEx does not ship to P.O. Boxes or AFO\/FPO addresses.<\/p><p><br\/>For Free Ground Shipping, orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed before 2:00 p.m. EST will arrive in 4 to 7 business days, depending on your shipping address. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday.<\/p><p><br\/>You can upgrade to expedited shipping at checkout, which will be delivered 2 business days after FedEx picks it up. Please note that if you return your order, the cost of expedited shipping is not refunded. Orders ship on business days, Monday through Friday, excluding U.S. Federal holidays. Orders placed after 2:00 p.m. EST on Friday — or over the weekend — will ship on Monday.<br\/>Please note that items in your order may be shipped in separate packages.<\/p><p><br\/>If you have any shipping questions, please reach out to our Customer Service Department by email at <a href=\"mailto:contact@edwin-usa.com\" target=\"_blank\" title=\"mailto:contact@edwin-usa.com\">contact@edwin-usa.com<\/a>.<\/p>",
+            "link_label": "",
+            "extra_class": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-1",
+        "template--21767643332915__8820918b-5d31-4c5a-a0c2-d08bae9ab412-column-2"
+      ],
+      "custom_css": [
+        ".multicolumn {max-width: 1000px; margin: 0 auto;}",
+        "@media only screen and (min-width: 768px) {.row {padding: 0; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "display_type": "grid",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "text_alignment": "left",
+        "heading_size": "h3",
+        "mobile_swipe": false,
+        "header-50-50": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d75a5ebd-b7aa-4408-9244-6a013d24e408",
+    "8820918b-5d31-4c5a-a0c2-d08bae9ab412"
+  ]
+}

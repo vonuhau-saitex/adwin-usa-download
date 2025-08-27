@@ -1,0 +1,45 @@
+{{- 'about-header.css' | asset_url | stylesheet_tag -}}
+<div class="row heading-about {% if section.settings.small %}small-box{%  endif %}" style="background-color:{{ section.settings.bkg }}; color:{{ section.settings.text }}; ">
+  <div class="medium-6 small-12 columns heading" style="color:{{ section.settings.text }}">{{ section.settings.heading }}</div>
+  <div class="medium-6 small-12 columns description" style="color:{{ section.settings.text }}">{{ section.settings.heading2 }}</div>
+</div>
+{% schema %}
+{
+  "name": "Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Gallery Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading2",
+      "label": "Heading",
+      "default": "Gallery Heading"
+    },
+    {
+      "type": "color",
+      "id": "bkg",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "text",
+      "label": "Text Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "small",
+      "label": "Small Height",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "About header"
+    }
+  ]
+}
+{% endschema %}

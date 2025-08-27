@@ -1,0 +1,92 @@
+{{ 'login-register.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+	assign image = section.settings.image
+	assign disable_top_spacing = section.settings.disable_top_spacing
+	assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+
+	assign ratio = 1
+	if height == 'adapt' and image != blank
+		assign ratio = image.aspect_ratio
+	endif
+
+-%}
+
+<div class="row full-width-row-full">
+	<div class="small-12 columns">
+    <div class="content-register-page">
+      <div class="image-register-left">
+        {%- if image != blank -%}
+          {%- liquid
+            assign small_height = image.src.height | times: '690' | divided_by: image.src.width
+            assign mid_height = image.src.height | times: '1340' | divided_by: image.src.width
+            assign master_width = image.src.width | append: 'x' | append: image.src.height
+            assign width = '690x' | append: small_height | append: ',' | append: '1340x' | append: mid_height | append: ',' | append: master_width
+          -%}
+          {%- render 'responsive-image', image: image, sizes: width -%}
+        {%- endif -%}
+      </div>
+      <div class="form-register-right">
+        <div class="thb-form-container">
+          <div class="thb-register-form">
+            {% form 'create_customer', novalidate: 'novalidate' %}
+              <h4>{{ 'customer.login_page.create_account' | t }}</h4>
+              <p>{{ 'customer.login_page.create_account_description' | t }}</p>
+              {% if form.errors %}
+              <div class="form-notification error">
+                {% render 'svg-icons' with 'thb-error' %} {{ form.errors | default_errors }}
+              </div>
+              {% endif %}
+              <div class="field">
+                <input type="text" name="customer[first_name]" class="full" value="{% if form.first_name %}{{ form.first_name }}{% endif %}" placeholder="{{ 'customer.login_page.first_name' | t }}" />
+                <label for="first_name">{{ 'customer.login_page.first_name' | t }}</label>
+            </div>
+              <div class="field">
+                <input type="text" name="customer[last_name]" class="full" value="{% if form.last_name %}{{ form.last_name }}{% endif %}" placeholder="{{ 'customer.login_page.last_name' | t }}" />
+                <label for="last_name">{{ 'customer.login_page.last_name' | t }}</label>
+              </div>
+              <div class="field">
+                <input type="email" name="customer[email]" class="full {% if form.errors contains 'email' %}invalid{% endif %}" value="" placeholder="{{ 'customer.login_page.email' | t }}" />
+                <label for="email">{{ 'customer.login_page.email' | t }}</label>
+              </div>
+              <div class="field">
+                <input type="password" name="customer[password]" class="full" value="" placeholder="{{ 'customer.login_page.password' | t }}" />
+                <label for="password">{{ 'customer.login_page.password' | t }}</label>
+              </div>
+              <button type="submit" class="button full"><span>{{ 'customer.login_page.submit_register' | t }}</span></button>
+            {% endform %}
+            {% comment %} <div class="switch-login-section">
+              {{ 'customer.login_page.already_have_an_account' | t }} <a href="{{ routes.account_login_url }}" class="text-button">{{ 'customer.login_page.login' | t }}</a>
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Register page",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "disable_top_spacing",
+        "default": false,
+        "label": "Remove top spacing"
+      },
+      {
+        "type": "checkbox",
+        "id": "disable_bottom_spacing",
+        "default": false,
+        "label": "Remove bottom spacing"
+      }
+    ]
+  }
+  {% endschema %}
+  

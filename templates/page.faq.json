@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "16618629918566dc27": {
+      "type": "rich-text",
+      "blocks": {
+        "1661862991ee6f499c-1": {
+          "type": "heading",
+          "settings": {
+            "text": "F.A.Q.",
+            "size": "h1"
+          }
+        },
+        "1661862991ee6f499c-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "1661862991ee6f499c-1",
+        "1661862991ee6f499c-2"
+      ],
+      "settings": {
+        "section_width": "grid",
+        "text_width": "medium",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "166186303682d7c655": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 15,
+        "spacer_desktop": 35,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "a82c71ab-5eef-4ac6-8278-42c4bf4565d6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How Long Does An Order Take To Arrive?",
+            "open": true,
+            "content": "<p>International orders normally arrive within 2-4 weeks of shipping. Please note that these orders need to pass through the customs office in your country before it will be released for final delivery, which can occasionally cause additional delays. Once an order leaves our warehouse, carrier shipping delays may occur due to factors outside our control. We, unfortunately, can’t control how quickly an order arrives once it has left our warehouse. Contacting the carrier is the best way to get more insight into your package’s location and estimated delivery date.</p>",
+            "page": ""
+          }
+        },
+        "aa70895f-8889-4293-8c7d-ff7bc2b81c57": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How Do I Set Up A Subscription Order?",
+            "open": false,
+            "content": "<p>We will deliver products to you as soon as reasonably possible. Orders are usually dispatched between 1-3 days from the date of the order being placed. Please contact us our customer service team if your delivery has not been received within the dates described.</p>",
+            "page": ""
+          }
+        },
+        "72f09ca5-4337-4a0b-bcd2-0a7af9183034": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How To Return My Items?",
+            "open": false,
+            "content": "<p>We do not currently offer free returns to overseas customers. You will therefore need to cover all costs of returning any items to us yourself. We advise that you mark your package ‘returned goods’ to avoid further duties. Remember: We strongly recommend that you return any items via a registered trackable service and obtain and retain proof of posting as we do not accept responsibility for items that fail to arrive with us.</p>",
+            "page": ""
+          }
+        },
+        "d8b3ed5d-d5cf-4b20-9bed-893f2be8497f": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How Can I Choose The Right Size For Me?",
+            "open": false,
+            "content": "<p>Habitat has created a universal sizing system that aims to provide a unique reference for all countries. You can easily spot the best size for you by referring to our Size Guide that provides a conversion table to all major country size systems. </p><p>The Size Guide is conveniently available on the page of each product.</p>",
+            "page": ""
+          }
+        },
+        "5f34dba8-15e0-4aac-91f7-5a103657361d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Which Payment Methods Do You Accept?",
+            "open": false,
+            "content": "<p>Habitat accepts the following payment methods for online purchases:<br/><br/>• All major credit cards, as shown at checkout</p><p>• PayPal: if you do not have an account yet, you can create one while shopping with us</p><p>• Apple Pay, Google Pay, Samsung Pay</p><p>Please note that your billing address must match the address on your credit card statement.</p>",
+            "page": ""
+          }
+        },
+        "fa2985e2-4983-462b-80c8-596d4ae47540": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How Can I Track My Order?",
+            "open": false,
+            "content": "<p>Once you place your order online, you will be able to see the details of the purchase, follow its preparation, and see shipping updates in the My Account area.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Pxripg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the best wide-leg jeans for women available?",
+            "open": false,
+            "content": "<p>Some of the best wide-leg jeans for women include Levi's Ribcage Wide-Leg Jeans and Madewell's Wide-Leg Crop Jeans. Both offer a flattering fit, with a modern twist on the classic wide-leg style, perfect for adding movement and comfort to your wardrobe.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Bcg8h4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer jeans for tall women in different styles?",
+            "open": false,
+            "content": "<p>Yes, we offer a variety of jeans for tall women, including styles like straight-leg, bootcut, and skinny jeans. Many options feature longer inseams to ensure a great fit, with brands like Everlane and AG Jeans offering tall sizes that blend style and comfort.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_fnWRtQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the top straight-leg jeans for women in your collection?",
+            "open": false,
+            "content": "<p>Top straight-leg jeans include the Levi's 501 Original Fit and the Everlane The Straight Jean. These styles provide a classic, versatile look, with a comfortable fit that works for most body types, offering both style and durability.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XGTp89": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do I choose the best women's denim jeans for my body type?",
+            "open": false,
+            "content": "<p>To choose the best women's denim for your body type, focus on high-rise jeans for a flattering, elongating effect or opt for stretch denim for more comfort. For curvier figures, a bootcut or wide-leg style can help balance proportions, while straight-leg jeans work well for an overall sleek look.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_XDyBm6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you have black skinny jeans for women in stock?",
+            "open": false,
+            "content": "<p>Yes, we have black skinny jeans for women in stock, including popular options like the AG Farrah Skinny Jeans. These jeans offer a sleek, form-fitting design that can be dressed up or down, making them a wardrobe staple for various occasions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_ULtKWT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the best crop tops for women in your collection?",
+            "open": false,
+            "content": "<p>Some of the best crop tops for women include options like the Everlane The Ribbed Tank and Madewell's The Slim Fit Crop Top. These tops are known for their comfortable fit and versatile style, making them perfect for pairing with high-waisted jeans or skirts.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_rQKKzR": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer non-denim tops for women for casual occasions?",
+            "open": false,
+            "content": "<p>Yes, we offer a variety of non-denim tops for casual occasions, including cotton blouses, graphic tees, and cozy knit sweaters. These pieces are perfect for a relaxed yet stylish look, ideal for running errands or enjoying a laid-back weekend.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_gi6jri": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do your women's workwear options differ from casual wear?",
+            "open": false,
+            "content": "<p>Our women's workwear options typically feature more structured pieces, such as tailored blouses, blazers, and dress pants, designed for a professional look. In contrast, casual wear includes relaxed, comfortable styles like tees, casual blouses, and joggers, offering more freedom and ease.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_VExQpi": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are your women's low-rise bootcut jeans styles available in non-denim materials?",
+            "open": false,
+            "content": "<p>Yes, we offer women's low-rise bootcut jeans in various non-denim materials, including cotton blends and corduroy. These options provide the same stylish fit as denim, but with added texture and comfort for different seasons and occasions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_G3Upmk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Can vintage jeans womens styles be paired with non-denim tops?",
+            "open": false,
+            "content": "<p>Absolutely! Vintage women’s jeans styles, like high-rise or straight-leg jeans, pair beautifully with non-denim tops such as flowy blouses, knit sweaters, or even graphic tees. This combination creates a stylish, balanced look that blends retro denim with modern casual wear.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_RxpJPm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you have denim tops for women in vintage styles?",
+            "open": false,
+            "content": "<p>Yes, we offer denim tops for women in vintage-inspired styles, including classic button-up shirts and cropped jackets. These pieces give a retro vibe while maintaining a modern fit, perfect for creating a nostalgic look with contemporary flair.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Kfwgmm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How can I style a women's cropped denim jacket with your tops?",
+            "open": false,
+            "content": "<p>A women's cropped denim jacket can be styled with various tops, like a simple white tee or a fitted tank. For a more layered look, pair it with a cozy sweater or a button-up blouse to add texture and contrast while keeping things chic and comfortable.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_TdhXjx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are your crop tops for women available in petite and tall sizes?",
+            "open": false,
+            "content": "<p>Yes, our crop tops for women are available in both petite and tall sizes, ensuring a great fit for all body types. These options provide the same stylish and comfortable designs, with different lengths and proportions to suit your shape.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_b6XeV3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What are the best tops for pairing with wide-leg jeans women?",
+            "open": false,
+            "content": "<p>The best tops for pairing with wide-leg jeans include fitted t-shirts, tucked-in blouses, and cropped sweaters. These styles help balance the volume of the wide-leg jeans, creating a flattering silhouette without overwhelming the frame.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_7g3qKg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How can denim jeans denim be styled with your tops?",
+            "open": false,
+            "content": "<p>Denim jeans can be styled with a variety of tops depending on the look you're going for. Pair them with a casual tee or tank for an everyday outfit, or elevate the look with a button-up blouse or a tailored jacket for a more polished, stylish vibe.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_4G6774": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you carry women's cropped denim jackets in different washes?",
+            "open": false,
+            "content": "<p>Yes, we carry women's cropped denim jackets in a variety of washes, including light, medium, and dark denim. These options allow you to find the perfect jacket to match your personal style, whether you prefer a more faded or rich, deeper tone.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_grgjWr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How does a women's cropped denim jacket complement a casual look?",
+            "open": false,
+            "content": "<p>A women’s cropped denim jacket complements a casual look by adding a relaxed, stylish layer to simple outfits. Pair it with a basic t-shirt and jeans or a dress to instantly elevate the look with a touch of laid-back coolness.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_wembDe": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are your jackets inspired by vintage denim styles?",
+            "open": false,
+            "content": "<p>Yes, many of our jackets are inspired by vintage denim styles, featuring classic details like distressed finishes, oversized fits, and timeless button-up designs. These jackets bring a retro vibe to modern-day fashion while offering a versatile, timeless wardrobe staple.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_tTqjMz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What outerwear pairs best with wide-leg jeans women?",
+            "open": false,
+            "content": "<p>The best outerwear to pair with wide-leg jeans includes cropped jackets, tailored blazers, and oversized coats. These styles help maintain balance, enhancing the flowy silhouette of the jeans while adding structure to your overall look.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_gjiVUr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there jackets designed for jeans for tall women outfits?",
+            "open": false,
+            "content": "<p>Yes, we offer jackets designed for tall women’s outfits, including longer-length options that provide better coverage and proportions for taller frames. These jackets complement jeans and other styles, ensuring both fit and style for tall women.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_weQgbF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer high-rise relaxed denim shorts for women?",
+            "open": false,
+            "content": "<p>Yes, we offer high-rise relaxed denim shorts for women, designed for a comfortable fit with a laid-back, casual vibe. These shorts provide the perfect balance between relaxed styling and flattering high-rise design, ideal for warm weather.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Lq9CEN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What skirts pair well with wide-leg jeans women styles?",
+            "open": false,
+            "content": "<p>While skirts and wide-leg jeans are typically worn separately, you can create a stylish layered look by pairing a flowy midi skirt with a tucked-in top and wide-leg jeans underneath for a unique combination. Alternatively, a denim skirt can complement a fitted top paired with wide-leg jeans, balancing textures and adding a chic, multi-layered outfit.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_HEFeXx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there shorts designed for jeans for tall women?",
+            "open": false,
+            "content": "<p>Yes, we offer shorts designed for tall women, with longer inseams and tailored cuts to ensure a flattering fit. These denim shorts are crafted to provide both comfort and style, perfect for tall women looking for the right fit in casual, summerwear.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_pEeCQY": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How do your skirts compare to denim jeans denim?",
+            "open": false,
+            "content": "<p>Our skirts and denim jeans both offer timeless, versatile styles, but skirts provide a lighter, more feminine option while denim jeans offer structure and durability. Skirts can be worn for more casual or dressier occasions, while jeans typically provide more warmth and can be dressed up or down.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_wQRtUT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there vintage denim shorts in your collection?",
+            "open": false,
+            "content": "<p>Yes, we carry vintage denim shorts in our collection, featuring classic cuts, frayed hems, and faded washes. These shorts offer a nostalgic, retro vibe while maintaining modern comfort and fit, perfect for creating a timeless summer look.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Ge8HP7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What makes your women's workwear stand out?",
+            "open": false,
+            "content": "<p>Our women’s workwear stands out because it combines professional styling with comfort and durability. We focus on pieces that maintain a polished look while offering flexibility and ease of movement, making them ideal for long workdays and dynamic environments.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_7tXgCD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Can slim-fit jeans for women be worn as workwear?",
+            "open": false,
+            "content": "<p>Yes, slim-fit jeans for women can be worn as workwear, especially if styled with a tailored blouse, blazer, or smart jacket. Opt for darker washes and clean, minimal designs to keep the look professional while still maintaining comfort.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_MgBAjW": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer vintage denim styles in workwear?",
+            "open": false,
+            "content": "<p>Yes, we offer vintage denim styles in workwear, including classic denim jackets, button-down shirts, and high-waisted jeans. These pieces combine timeless designs with a professional twist, providing a versatile addition to your work wardrobe.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_6CnPnf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Are there denim tops for women suitable for workwear?",
+            "open": false,
+            "content": "<p>Yes, we offer denim tops for women that are suitable for workwear, such as tailored denim blouses and button-up shirts. These pieces provide a smart yet relaxed look, perfect for pairing with professional bottoms like trousers or skirts.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_c9fFmB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How can I style womens cropped denim jackets for work?",
+            "open": false,
+            "content": "<p>To style women’s cropped denim jackets for work, pair them with high-waisted trousers, a blouse, or a sleek top for a polished look. Opt for darker washes and avoid overly distressed styles to keep the outfit professional and appropriate for the office.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "a82c71ab-5eef-4ac6-8278-42c4bf4565d6",
+        "aa70895f-8889-4293-8c7d-ff7bc2b81c57",
+        "72f09ca5-4337-4a0b-bcd2-0a7af9183034",
+        "d8b3ed5d-d5cf-4b20-9bed-893f2be8497f",
+        "5f34dba8-15e0-4aac-91f7-5a103657361d",
+        "fa2985e2-4983-462b-80c8-596d4ae47540",
+        "collapsible_tab_Pxripg",
+        "collapsible_tab_Bcg8h4",
+        "collapsible_tab_fnWRtQ",
+        "collapsible_tab_XGTp89",
+        "collapsible_tab_XDyBm6",
+        "collapsible_tab_ULtKWT",
+        "collapsible_tab_rQKKzR",
+        "collapsible_tab_gi6jri",
+        "collapsible_tab_VExQpi",
+        "collapsible_tab_G3Upmk",
+        "collapsible_tab_RxpJPm",
+        "collapsible_tab_Kfwgmm",
+        "collapsible_tab_TdhXjx",
+        "collapsible_tab_b6XeV3",
+        "collapsible_tab_7g3qKg",
+        "collapsible_tab_4G6774",
+        "collapsible_tab_grgjWr",
+        "collapsible_tab_wembDe",
+        "collapsible_tab_tTqjMz",
+        "collapsible_tab_gjiVUr",
+        "collapsible_tab_weQgbF",
+        "collapsible_tab_Lq9CEN",
+        "collapsible_tab_HEFeXx",
+        "collapsible_tab_pEeCQY",
+        "collapsible_tab_wQRtUT",
+        "collapsible_tab_Ge8HP7",
+        "collapsible_tab_7tXgCD",
+        "collapsible_tab_MgBAjW",
+        "collapsible_tab_6CnPnf",
+        "collapsible_tab_c9fFmB"
+      ],
+      "settings": {
+        "heading": "",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "16618629918566dc27",
+    "166186303682d7c655",
+    "faq"
+  ]
+}

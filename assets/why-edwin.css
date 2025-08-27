@@ -1,0 +1,79 @@
+.why-edwin {
+    width: 100%;
+    min-height: 255px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #000000;
+    background-color: #F5F5F5;
+    padding-top: 80px;
+}
+
+.why-edwin .why-edwin__left_container .why-edwin__left_container-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+}
+
+.why-edwin .why-edwin__left_container .why-edwin__left_container-desc {
+    max-width: 400px;
+}
+.why-edwin .why-edwin_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 35px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.why-edwin .why-edwin__right_container .why-edwin__right_container-subscribe-form-desc {
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+.why-edwin .why-edwin__right_container .why-edwin__right_container-subscribe-form-container {
+    max-width: 100%;
+}
+
+.why-edwin .why-edwin__right_container .why-edwin__right_container-subscribe-form-container .why-edwin__subscribe-form input {
+    background: #FFFFFF;
+    border-radius: 6px;
+    border-width: 0;
+}
+
+.why-edwin .why-edwin__right_container .why-edwin__right_container-subscribe-form-container .why-edwin__subscribe-form button {
+    width: 80px !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+@media only screen and (max-width: 768px) {
+    .why-edwin{
+        padding-top: 10px;
+    }
+    .why-edwin_container{
+        flex-direction: column-reverse;
+
+    }
+    .why-edwin .why-edwin_container .why-edwin__left_container {
+        text-align: center;
+        padding: 45px 0;
+    }
+    .why-edwin .why-edwin_container .why-edwin__right_container {
+        text-align: center;
+        padding: 75px 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+    }
+    .why-edwin .why-edwin__right_container .why-edwin__right_container-subscribe-form-container .why-edwin__subscribe-form button {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .why-edwin .why-edwin__right_container .why-edwin__right_container-subscribe-form-container .why-edwin__subscribe-form label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

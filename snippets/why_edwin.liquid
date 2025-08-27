@@ -1,0 +1,38 @@
+{{- 'why-edwin.css' | asset_url | stylesheet_tag -}}
+
+{%- liquid
+    assign section_heading = 'Why EDWIN?'
+    assign full_width = true
+    assign disable_top_spacing = true
+    assign disable_bottom_spacing = true -%}
+
+<div class="why-edwin section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
+    <div class="row{% if full_width %} full-width-row{% endif %}">
+        <div class="small-12 columns why-edwin_container">
+            <div class="why-edwin__left_container">
+                <div class="why-edwin__left_container-title">
+                    {%- render 'section-header', section_heading: section_heading -%}
+                </div>
+                <div class="why-edwin__left_container-desc">
+                  True to its heritage, EDWIN combines thoughtfully designed jeans and innovation in sustainable manufacturing methods.
+                </div>
+                <div class="why-edwin-social">
+                    <ul>
+                        <li class=""><a href="https://www.instagram.com/edwinusa/" target="_blank">Instagram</a></li>
+                        <li class=""><a href="https://www.facebook.com/edwinusa/" target="_blank">Facebook</a></li>
+                        <li class=""><a href="https://www.pinterest.com/edwinusa_/" target="_blank">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="why-edwin__right_container">
+                <div class="why-edwin__right_container-subscribe-form-desc">
+                  Subscribe to receive EDWIN updates and access to exclusive offers.
+                </div>
+                <div class="why-edwin__right_container-subscribe-form-container">
+                    {% render 'why-edwin-email-signup-form' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

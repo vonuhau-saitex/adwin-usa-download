@@ -1,0 +1,239 @@
+.merbership-text{
+  color: #876229;
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.add_to_cart_holder{
+   margin-bottom: 10px !important; 
+}
+
+.badge.clearance{
+  background: #a3150c;
+}
+
+.product-title-container .badge {
+    margin-bottom: 30px;
+    padding-left: 10px !important;
+    border-radius: 5px;
+}
+
+.product-title-container .badge.clearance{
+  margin-right: 3px;
+}
+
+.thb-full-menu .menu-item-has-children .sub-menu li a{
+  text-transform: none;
+}
+
+.needsclick.kl-private-reset-css-Xuajs1{
+  
+}
+
+.measurement-container table th, .measurement-container table td{
+  padding: 10px 5px!important; 
+}
+
+#Side-Panel-sizeguide.side-panel{
+  max-width: 600px !important;
+}
+
+.measurement-container table tr:first-child td strong{
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .measurement-container{
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+  .measurement-container table th, .measurement-container table td{
+    padding: 10px 10px!important; 
+  }
+  
+  .measurement-container table tr:first-child td strong{
+    font-size: 13px;
+  }
+
+  .measurement-container table{
+    width: 170% !important;
+  }
+}
+
+.collection-banner-edwin__right_container{
+  display: block !important; 
+}
+
+.collection-banner-edwin__main-container .collection-banner-edwin__right_container{
+  font-size: 13px !important;
+  max-width: 400px !important;
+}
+
+.collection-banner-edwin__main-title h1{
+  margin-bottom: 0 !important;
+}
+
+.collection-banner-edwin__main-container{
+  align-items: center;
+}
+
+.collection-banner-edwin__right_container p{
+  margin-bottom: 0 !important;
+}
+
+.merbership-text a{
+  color: #876229;
+}
+
+.abs-link{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.badge.onsale,
+.badge.clearance{
+  display: none !important;
+}
+
+.template-page-newsletter-subscribe .needsclick.kl-private-reset-css-Xuajs1{  
+  display: flex !important;
+}
+
+.template-page-newsletter-subscribe .needsclick.kl-private-reset-css-Xuajs1 button{
+  line-height: 50px !important;
+}
+
+.newsletter-subscribe-bkg{
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover !important;
+  display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .newsletter-subscribe-bkg{
+    display: block !important;
+  }
+
+  .template-page-newsletter-subscribe .footer{
+    position: relative;
+  }
+  
+  form.klaviyo-form-version-cid_1.go3279073480 .kl-private-reset-css-Xuajs1{    
+    background: #fff;
+  }
+
+  #shopify-section-template--19816641396951__custom_liquid_WTYdWU{
+    margin-top:150px; 
+    margin-bottom:150px;
+  }
+
+  .newsletter-subscribe-bkg-desktop{
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  form.klaviyo-form-version-cid_1.go3279073480 .kl-private-reset-css-Xuajs1{    
+    background: #fff;
+    margin: 0 !important;
+  }
+
+  #shopify-section-template--19816641396951__custom_liquid_WTYdWU{
+    margin-top:100px; 
+    margin-bottom:100px;
+  }
+
+  .newsletter-subscribe-bkg-desktop{
+    display: block !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover !important;
+  }
+}
+
+.bogo-text{
+  margin-top: 15px;
+}
+
+.products.row.grid .columns{
+  padding: 0px;
+}
+
+#product-grid .column,
+.products .columns{
+  padding: 0px !important;
+}
+
+.products.collection,
+#Search-Drawer .products.carousel{
+  gap: 15px;
+}
+
+@media print, screen and (min-width: 66.75em) {
+    .products .large-3 {
+        max-width: calc(25% - 11.5px);
+    }
+
+    .products.collection .column,
+    .products.collection .columns{
+       max-width: calc(20% - 12px);
+    }
+
+  #Search-Drawer .products.carousel .columns{
+    max-width: calc(33.33333% - 10px);
+  }
+}
+
+@media print, screen and (max-width: 1069px) {
+   .products .large-3 {
+        max-width: calc(50% - 13px);
+    }
+
+    .products.collection .column,
+    .products.collection .columns{
+       max-width: calc(50% - 13px);
+    }
+
+  #Search-Drawer .products.carousel .columns{
+    max-width: calc(50% - 13px);
+  }
+
+  .template-index .featured-collection .row.full-width-row{
+    padding-right: 0px;
+  }
+}
+
+table.no-borders tfoot td:first-child{
+  vertical-align: top;
+}
+
+.mobile-app{
+  display: none;
+}
+
+.edwin-tab{
+     margin-top: 30px !important; 
+  }
+
+@media print, screen and (max-width: 768px) {
+  .mobile-app{
+    display: block;
+  }
+}

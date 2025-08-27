@@ -1,0 +1,54 @@
+.contact-page-container .right {
+  padding: 40px 0 0 30px;
+}
+.contact-page-container .left {
+  position: relative;
+}
+.contact-page-container .right .main-label {
+  color: #000000;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.contact-page-container .right input,
+.contact-page-container .right textarea {
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+}
+.contact-page-container .left .image-content {
+  position: absolute;
+  color: #fff;
+  left: 5%;
+  bottom: 0;
+  transform: translate(10px, 0px);
+  font-size: 14px;
+}
+.return-page .heading h2 {
+  margin-bottom: 0;
+}
+.contact-page-container .right .row p {
+  font-size: 14px;
+}
+.contact-page-container .right .row h2 {
+  font-weight: 400;
+  font-size: 50px;
+  line-height:68px;
+}
+.return-page .heading {
+  display: flex;
+  flex-direction: column;
+}
+.return-page .detail {
+  margin-top: 100px;
+}
+.return-page .detail a {
+  color: #3857FB;
+  text-decoration-line: underline;
+}
+@media only screen and (max-width: 600px) {
+  .contact-page-container .right {
+  padding: 20px 0 0 0;
+}
+}
+

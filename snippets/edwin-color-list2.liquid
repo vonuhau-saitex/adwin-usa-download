@@ -1,0 +1,63 @@
+<div class="color-list product-card__info">
+  {%- for option in product.options_with_values -%}
+    {%- if option.name == 'Color' -%}
+      {%- liquid
+        assign first_color = 1
+        assign custom_colors = settings.color_swatches | newline_to_br | split: '<br />'
+        assign key_array = ''
+        assign val_array = ''
+
+        for color in custom_colors
+          assign key = color | split: ':' | first | rstrip
+          assign value = color | split: ':' | last | lstrip
+          assign key_array = key_array | append: ',' | append: key
+          assign val_array = val_array | append: ',' | append: value
+        endfor
+
+        assign key_array = key_array | remove_first: ',' | strip_newlines | downcase | split: ','
+        assign val_array = val_array | remove_first: ',' | split: ','
+      -%}
+      {%- for value in option.values -%}
+        {% for variant in product.variants %}
+          {% assign vartitle = variant.title | split: ' /' %}
+          {% if vartitle[0] == value and variant.available %}
+            <span
+              class="color-swatch--rectangle swatch-{{first_color}} {%  if first_color == 1 %}active{%  endif %}"
+              data-color-element
+              {% if variant.featured_image %}
+                data-image="{{ variant.featured_image | img_url: '600x600' }}"
+              {% endif %}
+              title="{{ vartitle[0] }}"
+              data-color=".p{{ product.id }}-{{ vartitle[0] | handleize }}"
+              data-variantid="{{ variant.id }}"
+              data-varianttitle="{{ variant.title }}"
+            >
+              {%- liquid
+                assign color_value = value | downcase | escape
+                for custom_color in key_array
+                  if custom_color == color_value
+                    assign color_value = val_array[forloop.index0]
+                  endif
+                endfor
+                assign bg_value = empty
+                if color_value contains '.'
+                  assign bg_value = color_value | file_url
+                  assign color_value = 'var(--bg-body)'
+                endif
+              -%}
+              <img
+                class="plp_color_swatche"
+                src="{{ bg_value }}"
+                alt="{{ vartitle[0] }}"
+                width="20"
+                height="20"
+              >
+            </span>
+            {% assign first_color = first_color | plus: 1 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>

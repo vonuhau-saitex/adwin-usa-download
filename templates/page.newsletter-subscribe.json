@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_liquid_WTYdWU": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"background:url(https://cdn.shopify.com/s/files/1/0267/5136/9271/files/DSC4207.jpg?v=1751251359);\" class=\"newsletter-subscribe-bkg\"></div>\n\n<div style=\"background:url(https://cdn.shopify.com/s/files/1/0267/5136/9271/files/DSC4207.jpg?v=1751251359);\" class=\"newsletter-subscribe-bkg-desktop\"></div>\n\n\n<div class=\"klaviyo-form-RKDEpR\"></div>\n<script>\n<script type=\"text/javascript\">\ndocument.querySelector('.klaviyo-form-version-cid_1 go3279073480').addEventListener('click', function (){\nwindow._klOnsite = window._klOnsite || []; \t\twindow._klOnsite.push(['openForm', 'RKDEpR']);\nfbq('track', 'Lead');\nfbq('trackCustom', 'EmailSubscribe');\n});\n</script>\n</script>"
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "main",
+    "shogun-optimizer",
+    "custom_liquid_WTYdWU"
+  ]
+}

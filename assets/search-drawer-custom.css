@@ -1,0 +1,91 @@
+#Search-Drawer {
+    right: 0 !important;
+    /*     left: 0 !important; */
+    max-width: none !important;
+    max-height: 750px !important;
+    width: 100%;
+}
+
+#Search-Drawer scroll-shadow {
+    width: 100% !important;
+}
+
+#Search-Drawer .searchform {
+    max-width: 672px !important;
+}
+
+#Search-Drawer .searchform input {
+    background: #F7F7F7;
+    border-radius: 6px;
+    padding: 8px 50px;
+}
+
+#Search-Drawer .searchform .thb-search-submit {
+    right: unset !important;
+}
+
+#Search-Drawer .search-form-close-btn-txt {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+#Search-Drawer #input_clear_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 8px 10px;
+    line-height: 1em;
+    cursor: pointer;
+}
+#Search-Drawer .blog-post h5 {
+    text-transform: uppercase;
+}
+#Search-Drawer .products.carousel {
+    flex-wrap: wrap;
+}
+
+/* X-Small (xsm) - 0–576px. Ex- mobiles. */
+@media only screen and (max-width: 575px) {
+    #Search-Drawer .search-panel-logo {
+        display: none;
+    }
+
+    #Search-Drawer .thb-predictive-search--view-all-results {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: #fff;
+        z-index: 999;
+    }
+    .side-panel-content.side-panel-content--has-tabs .side-panel-content--inner {
+        height: 570px !important;
+    }
+}
+
+/* Small (sm) - 576px and greater screen sizes use small breakpoints. Ex- mobiles. */
+@media only screen and (min-width: 576px) {
+
+}
+
+/* Medium (md) - 768px and greater screen sizes use the medium breakpoints. Ex-tablets. */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large (lg) - 992px and greater screen sizes use the large breakpoints. Ex- laptops. */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra-large (xl) - 1200px and greater screen sizes use the extra-large breakpoints. Ex: Desktops. */
+@media only screen and (min-width: 1200px) {
+
+}
+

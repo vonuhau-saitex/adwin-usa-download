@@ -1,0 +1,55 @@
+{%- if section_heading != blank or section_description != blank -%}
+	<div class="section-header section-header-left--{{ section_heading_left }}">
+		<div class="section-header--content {% if header-50-50 %}custom-50-50{% endif %}">
+			{%- if section_heading and section_is_hide_heading != true -%}
+				<h2 class="h3">{{ section_heading }}</h2>
+			{%- endif -%}
+			{%- if section_description != blank -%}
+				<div class="rte">
+					{{ section_description }}
+				</div>
+			{%- endif -%}
+			{%- if blocks -%}
+			<scroll-shadow>
+				<collection-tabs class="collection-tabs__list" data-target="product-grid-{{ section_id }}">
+					{%- for block in blocks -%}
+						{%- if block.settings.collection != blank -%}
+							<button type="button" data-collection="{{ block.settings.collection.handle }}" class="collection-tabs__list-link{% if forloop.first == true %} active{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.collection.title }}</button>
+						{%- else -%}
+							<button type="button" data-collection="collection-{{ block.id }}" class="collection-tabs__list-link{% if forloop.first == true %} active{% endif %}" {{ block.shopify_attributes }}>Collection {{ forloop.index }}</button>
+						{%- endif -%}
+						{%- unless forloop.last -%} <span>/</span>{%- endunless -%}
+					{%- endfor -%}
+				</collection-tabs>
+			</scroll-shadow>
+			{%- endif -%}
+		</div>
+		{%- if blocks and section_heading_button -%}
+		<div class="section-header--button has--tabs">
+			{%- for block in blocks -%}
+				{%- if block.settings.collection != blank -%}
+					{%- if block.settings.collection.title == "NEW IN" -%}
+						<a class="text-button linked-to-tab{% if forloop.first == true %} active{% endif %}" href="{{ block.settings.collection.url }}">{{ 'sections.featured_collection.shop_collection' | t: collection: 'New In' }}</a>
+					{%- else -%}
+						<a class="text-button linked-to-tab{% if forloop.first == true %} active{% endif %}" href="{{ block.settings.collection.url }}">{{ 'sections.featured_collection.shop_collection' | t: collection: block.settings.collection.title }}</a>
+					{%  endif %}
+				{%- else -%}
+					<a class="text-button linked-to-tab{% if forloop.first == true %} active{% endif %}" href="#">{{ 'sections.featured_collection.shop_collection' | t: collection: 'Collection' }}</a>
+				{%- endif -%}
+			{%- endfor -%}
+		</div>
+		{%- elsif section_heading_button -%}
+		<div class="section-header--button">
+			<a class="text-button" href="{{ section_heading_button.url }}">{{ 'sections.featured_collection.shop_now' | t }}</a>
+		</div>
+		{%- elsif show_view_all_button -%}
+		<div class="section-header--button">
+			<a class="text-button linked-to-tab{% if forloop.first == true %} active{% endif %}" href="{{ collection_parent.url }}">{% if custom_viewall != ''%}{{custom_viewall}}{% else %}{{ 'sections.featured_collection.shop_collection' | t: collection: collection_parent.metafields.custom.displaying_name.value }}{%  endif %}</a>
+		</div>
+		{%- elsif section_heading_button_blog -%}
+		<div class="section-header--button">
+			<a class="text-button" href="{{ section_heading_button_blog.url }}">{{ 'sections.featured_blog.view_all' | t }}</a>
+		</div>
+		{%- endif -%}
+	</div>
+{%- endif -%}

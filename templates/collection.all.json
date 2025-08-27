@@ -1,0 +1,226 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_image": true,
+        "show_collection_description": true,
+        "show_subcollections": true,
+        "make_heading_uppercase": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 40
+      }
+    },
+    "b26b5504-0aba-4f3d-aee3-2ef20b867830": {
+      "type": "main-collection-banner-edwin",
+      "custom_css": [],
+      "settings": {
+        "heading": "",
+        "full_width": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "f6f0763e-3348-4795-967c-3c049c502588": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 40,
+        "spacer_desktop": 80,
+        "border_separator": true,
+        "border_separator_full": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "promotion_4VqCr4": {
+          "type": "promotion",
+          "settings": {
+            "promotion_collection": "new-in",
+            "promotion_position": 10,
+            "promotion_width": "1",
+            "promotion_type": "image",
+            "image": "shopify://shop_images/20190808-_DSC3914_1.jpg",
+            "title": "Spring '25",
+            "text": "PAIR SOME DISTRESSED DENIM WITH THAT DON'T-CARE STARE.",
+            "link_label": "SHOP NOW",
+            "link": "shopify://collections/spring-24",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "promotion_ePzyUF": {
+          "type": "promotion",
+          "settings": {
+            "promotion_collection": "",
+            "promotion_position": 19,
+            "promotion_width": "1",
+            "promotion_type": "image",
+            "image": "shopify://shop_images/MicrosoftTeams-image_9.jpg",
+            "title": "Shorts Story",
+            "text": "THINGS ARE HEATING UP. SHOP SHORTS.",
+            "link_label": "SHOP NOW",
+            "link": "shopify://collections/edwin-shorts",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "promotion_PyGWEb": {
+          "type": "promotion",
+          "settings": {
+            "promotion_collection": "edwin-jackets",
+            "promotion_position": 28,
+            "promotion_width": "1",
+            "promotion_type": "image",
+            "image": "shopify://shop_images/MicrosoftTeams-image_11.jpg",
+            "title": "Everywhere Wear",
+            "text": "OUTERWEAR THAT GOES WITH EVERYTHING.",
+            "link_label": "SHOP NOW",
+            "link": "shopify://collections/edwin-jackets",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "promotion_QQaRnb": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "promotion_collection": "",
+            "promotion_position": 31,
+            "promotion_width": "1",
+            "promotion_type": "image",
+            "image": "shopify://shop_images/MicrosoftTeams-image_12.jpg",
+            "title": "Keep Things Light",
+            "text": "SHOP WHITES AND LIGHT WASHES.",
+            "link_label": "SHOP NOW",
+            "link": "shopify://collections/lights-whites-for-longer-days",
+            "use_text_button": false,
+            "block_link": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "promotion_4VqCr4",
+        "promotion_ePzyUF",
+        "promotion_PyGWEb",
+        "promotion_QQaRnb"
+      ],
+      "settings": {
+        "full_width": true,
+        "products_per_page": 41,
+        "columns_desktop": 5,
+        "pagination_type": "paginated",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "show_counts": true,
+        "filter_color_swatches": true,
+        "facets_desktop": "drawer"
+      }
+    },
+    "166366972953e881f5": {
+      "type": "collection-list",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "is_show_view_all": false,
+        "show_view_all": "Shop All Women’s Jeans",
+        "collection_parent": "",
+        "collection_list": [
+          "clothing",
+          "denim",
+          "dresses",
+          "knitwear",
+          "long",
+          "pants"
+        ],
+        "image_ratio": "square",
+        "video": false,
+        "layout": "grid",
+        "style": "style1",
+        "columns_desktop": 6,
+        "columns_mobile": "1",
+        "show_progress_bar": true,
+        "mobile_swipe": true,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "166367231494317262": {
+      "type": "rich-text",
+      "blocks": {
+        "1fc06b12-e359-41a2-b694-099a6a7d4133": {
+          "type": "heading",
+          "settings": {
+            "text": "USE IT TO ADD SEO TEXT",
+            "size": "h4"
+          }
+        },
+        "16636723131a14a571-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Doing collections, doing fashion is like a non-stop dialogue. War taught me that not everything is glamorous. Luxury will be always around, no matter what happens in the world. I don't care about money. I really don't care. I just want to do what I do. I love to design things that people can actually buy. I'm staggered by what a boot costs today.</p>",
+            "size": "text-size-small"
+          }
+        }
+      },
+      "block_order": [
+        "1fc06b12-e359-41a2-b694-099a6a7d4133",
+        "16636723131a14a571-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_width": "full-width-row-full",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "166367228131c52c01": {
+      "type": "spacer",
+      "disabled": true,
+      "settings": {
+        "spacer_mobile": 35,
+        "spacer_desktop": 40,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    }
+  },
+  "order": [
+    "main-collection-banner",
+    "b26b5504-0aba-4f3d-aee3-2ef20b867830",
+    "f6f0763e-3348-4795-967c-3c049c502588",
+    "product-grid",
+    "166366972953e881f5",
+    "166367231494317262",
+    "166367228131c52c01"
+  ]
+}

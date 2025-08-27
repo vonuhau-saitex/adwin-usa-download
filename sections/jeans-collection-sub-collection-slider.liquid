@@ -1,0 +1,139 @@
+{{- 'product-grid.css' | asset_url | stylesheet_tag -}}
+{{- 'collection-tabs.css' | asset_url | stylesheet_tag -}}
+{{- 'jeans-collection-sub-collection-slider.css' | asset_url | stylesheet_tag -}}
+
+{%- liquid
+    assign section_heading = section.settings.heading
+    assign full_width = section.settings.full_width
+    assign disable_top_spacing = section.settings.disable_top_spacing
+    assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+
+    assign columns_desktop = section.settings.columns_desktop
+    assign sub_collections_limit = 100
+
+    assign columns_class = 'small-6 medium-6 large-4'
+    assign more_in_collection = false
+    case columns_desktop
+    when 2
+    assign columns_class = 'small-6 medium-6'
+    when 3
+    assign columns_class = 'vmedium-4'
+    when 4
+    assign columns_class = 'small-6 medium-6 large-3'
+    when 5
+    assign columns_class = 'small-6 medium-6 large-2_5'
+    endcase -%}
+
+{% if collection %}
+    {% assign mainloop = true %}
+    {% assign sub_collection_count = 0 %}
+    {% for sub_collection in collection.metafields.custom.sub_collections.value %}
+        {% assign sub_collection_count = sub_collection_count | plus: 1 %}
+    {% endfor %}
+    <div class="jeans-collection__sub-collection-slider collection-tabs section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
+        <div class="row{% if full_width %} full-width-row{% endif %}">
+            <div class="small-12 columns">
+                {% render 'section-header', section_heading: section_heading %}
+                {% if collection.metafields.custom.sub_collections.value %}
+                    <div class="jeans-collection__sub-collection-slider-container">
+                        <ul id="product-grid-{{ section.id }}" data-id="{{ section.id }}"
+                            class="products carousel row small-up-2 medium-up-{{ columns_desktop }}">
+                            {% for sub_collection in collection.metafields.custom.sub_collections.value %}
+                                {%  if sub_collection.products_count > 0 %}
+                                <li class="{{ columns_class }} columns{% if mainloop == true %} carousel__slide{% endif %}"
+                                    data-collection="jeans-collection-sub_collection-slider">
+                                    {% render 'jeans-collection-sub-collection-slider-card', sub_collection: sub_collection %}
+                                </li>
+                                {%  endif %}
+                            {% endfor %}
+
+                            {%- if sub_collection_count > columns_desktop -%}
+                                <div class="flickity-nav flickity-prev"
+                                     tabindex="0">{% render 'svg-icons' with 'edwin-arrow-left' %}</div>
+                                <div class="flickity-nav flickity-next"
+                                     tabindex="0">{% render 'svg-icons' with 'edwin-arrow-right' %}</div>
+                            {%- endif -%}
+
+                        </ul>
+
+
+                    </div>
+                {% endif %}
+
+                {% comment %}
+                    {% if collection.metafields.custom.sub_collections.value %}
+                        <div class="jeans-collection__sub-collection-slider-container">
+                            {% for sub_collection in collection.metafields.custom.sub_collections.value %}
+                                <div class="jeans-collection__sub-collection-container">
+                                    <div class="jeans-collection__sub-collection-image-container">
+                                        <img src="{{ sub_collection.image | image_url }}"
+                                             alt="{{ sub_collection.image.alt | escape }}"/>
+                                    </div>
+                                    <div class="jeans-collection__sub-collection-title">
+                                        {{ sub_collection.metafields.custom.displaying_name.value }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endcomment %}
+
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+<script src="{{ 'jeans-collection-sub-collection-slider.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+    "name": "Jeans-col Sub-col Slider",
+    "settings": [{
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Jeans Collection - Sub-Collection Slider"
+        }, {
+            "type": "checkbox",
+            "id": "full_width",
+            "label": "Make section full width",
+            "default": true
+        }, {
+            "type": "header",
+            "content": "Slider displays"
+        }, {
+            "type": "range",
+            "id": "columns_desktop",
+            "min": 2,
+            "max": 5,
+            "step": 1,
+            "default": 5,
+            "label": "Number of columns on desktop"
+        }, {
+            "type": "header",
+            "content": "Spacing"
+        }, {
+            "type": "checkbox",
+            "id": "disable_top_spacing",
+            "default": false,
+            "label": "Remove top spacing"
+        }, {
+            "type": "checkbox",
+            "id": "disable_bottom_spacing",
+            "default": false,
+            "label": "Remove bottom spacing"
+        }
+    ],
+    "presets": [{
+            "name": "Jeans Collection - Sub-Collection Slider",
+            "category": "EDWIN CUSTOMIZATION"
+        }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

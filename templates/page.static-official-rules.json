@@ -1,0 +1,188 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide": true,
+        "hide2": true
+      }
+    },
+    "1d441abe-ce66-4c4f-9359-588f2261acfd": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19811658105139__1d441abe-ce66-4c4f-9359-588f2261acfd-168835813196ac0247-1": {
+          "type": "heading",
+          "settings": {
+            "text": "EDWIN Store Credit Giveaway Official Rules",
+            "size": "h3"
+          }
+        },
+        "1d899558-ffdf-49ba-9334-d43a3e92b84e": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>NO PURCHASE OR PAYMENT OF ANY KIND IS NECESSARY TO ENTER OR WIN. </strong></p><p>A PURCHASE OR PAYMENT OF ANY KIND WILL NOT INCREASE YOUR CHANCES OF WINNING. VOID WHERE PROHIBITED.</p><p>This Sweepstakes is in no way sponsored, endorsed, administered by, or associated with Facebook, Instagram, Twitter or Tiktok. References to any third-party entity or trademark do not constitute or imply an endorsement of this Sweepstakes, the Sponsor, or EDWIN. This Sweepstakes may only be entered from the fifty (50) United States (including Rhode Island) and the District of Columbia. Entries originating from any other jurisdiction are not eligible. You are not authorized to participate in the Sweepstakes if you are not located within the fifty (50) United States (including Rhode Island) and the District of Columbia. This Sweepstakes is governed by U.S. law.</p>",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "template--19811658105139__1d441abe-ce66-4c4f-9359-588f2261acfd-168835813196ac0247-1",
+        "1d899558-ffdf-49ba-9334-d43a3e92b84e"
+      ],
+      "custom_css": [
+        ".rich-text__inner h3 {text-align: left;}",
+        ".rich-text__inner p {font-weight: 400; font-size: 14px; line-height: 22px;}",
+        ".rich-text .rte {margin-bottom: 10px;}"
+      ],
+      "settings": {
+        "section_width": "full-width-row",
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "left",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": true
+      }
+    },
+    "d8beca40-d160-462f-bd3d-6da5bc096e84": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "ELIGIBILITY",
+            "open": true,
+            "content": "<p>The EDWIN Store Credit Giveaway (“Sweepstakes”) is open solely to legal residents of the the fifty (50) United States (including Rhode Island) and the District of Columbia, who are at least eighteen (18) years of age and over the age of majority in their jurisdiction of residence at the time of entry. Entrants must have a valid social security number or U.S. tax identification number to participate. Employees, officers, and directors of EDWIN USA (“Sponsor”), their subsidiaries, affiliates, partners, advertising or promotion agencies, or any of their immediate families (parents, children, siblings, spouse) or members of the same household (whether related or not) are not eligible to enter. The Sweepstakes is subject to all federal, state, and local laws and regulations and is void where prohibited.</p>",
+            "page": ""
+          }
+        },
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "SWEEPSTAKES ENTRY PERIOD",
+            "open": false,
+            "content": "<p>This Sweepstakes begins at 11:00 a.m. Eastern Time on Oct 23,2024 and ends at 11:59 p.m. Eastern Time on Oct 30, 2024 (“Sweepstakes Period”). Sponsor’s computer is the official time-keeping device for this Sweepstakes.</p>",
+            "page": ""
+          }
+        },
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "HOW TO ENTER",
+            "open": false,
+            "content": "<p>During the Sweepstakes Period, visit EDWIN’s page, located at EDWIN-USA.com, enter your name and email address, and click “submit.” You must have an email address to enter. By entering the Sweepstakes, you agree to these Official Rules and Sponsor’s privacy policy (available at <a href=\"https://edwin-usa.com/pages/privacy-policy\" title=\"https://edwin-usa.com/pages/privacy-policy\">Privacy Policy</a>). Limit one (1) entry per person per email address. Use of automated systems to enter is prohibited and will result in disqualification.</p>",
+            "page": ""
+          }
+        },
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "PRIZE SELECTION / ODDS",
+            "open": false,
+            "content": "<p>One (1) winner will be chosen in a random drawing from all eligible entries received during the Sweepstakes Period. The drawing will be conducted on or about Oct 30, 2024. Odds of winning depend on the number of eligible entries received.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_kADBWq": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "WINNER NOTIFICATION",
+            "open": false,
+            "content": "<p>The potential winner will be notified via email at the address provided at the time of entry. The winner must respond within 48 hours of the notification. If the winner does not respond within this timeframe, an alternate winner may be selected. The potential winner may be required to sign and return an Affidavit of Eligibility and a Liability/Publicity Release within 48 hours.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_6f9riE": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "PRIZE",
+            "open": false,
+            "content": "<p>One (1) winner will receive a $1,000 EDWIN Store Credit to use on <a href=\"https://edwin-usa.com/\" title=\"https://edwin-usa.com/\">EDWIN-usa.com</a> for online purchases. The prize is non-transferable and no cash alternative will be offered. Sponsor reserves the right to substitute a prize of equal or greater value if necessary. The winner is responsible for any federal, state, or local taxes associated with prize acceptance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_qbggkf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "GENERAL CONDITIONS",
+            "open": false,
+            "content": "<p>By participating, entrants agree to be bound by these Official Rules and the decisions of the Sponsor, which are final. Sponsor reserves the right to disqualify any entrant it believes has violated these rules.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_aGyzrQ": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "LIMITATION OF LIABILITY",
+            "open": false,
+            "content": "<p>Sponsor is not responsible for lost, late, misdirected entries, or technical failures of any kind. Sponsor reserves the right to suspend, modify, or terminate the Sweepstakes if it believes the integrity of the Sweepstakes has been compromised.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_xK8Qg7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "USE OF DATA",
+            "open": false,
+            "content": "<p>Sponsor will collect personal data about entrants in accordance with its privacy policy. By entering the Sweepstakes, entrants agree to Sponsor’s collection and usage of their personal information.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_7Yx4di": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "SPONSOR",
+            "open": false,
+            "content": "<p>EDWIN USA is based in LA, Ca with HQ offices at 6074 Malburg Way Los Angeles, Los Angeles 90058.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-0",
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-1",
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-2",
+        "template--19811658105139__d8beca40-d160-462f-bd3d-6da5bc096e84-16883582368eb1692c-3",
+        "collapsible_tab_kADBWq",
+        "collapsible_tab_6f9riE",
+        "collapsible_tab_qbggkf",
+        "collapsible_tab_aGyzrQ",
+        "collapsible_tab_xK8Qg7",
+        "collapsible_tab_7Yx4di"
+      ],
+      "custom_css": [
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal; padding-bottom: 0px;}",
+        ".accordion h2 {font-size: 14px; font-weight: 700; line-height: normal; margin-bottom: 0rem;}",
+        ".accordion__content p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".accordion summary {padding: 15px 40px 15px 0px;}",
+        ".rte p {font-size: 14px; font-weight: 400; line-height: normal;}",
+        ".rte ul {font-size: 14px; font-weight: 400; line-height: normal; text-align: left;}",
+        ".collapsible-content__inner {max-width: 960px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "description": "",
+        "uppercase_heading": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1d441abe-ce66-4c4f-9359-588f2261acfd",
+    "d8beca40-d160-462f-bd3d-6da5bc096e84"
+  ]
+}

@@ -1,0 +1,321 @@
+{{- 'in-the-press.css' | asset_url | stylesheet_tag -}}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<div>
+  <div class="heading">
+    <h2>{{ section.settings.heading }}</h2>
+  </div>
+  <div class="container">
+    <div class="container_content">
+      <div class="text1 active-text">
+        <p>{{ section.settings.content }}</p>
+      </div>
+      <div class="text2 inactive-text">
+        <p>{{ section.settings.content1 }}</p>
+      </div>
+      <div class="text3 inactive-text">
+        <p>{{ section.settings.content2 }}</p>
+      </div>
+      <div class="text4 inactive-text">
+        <p>{{ section.settings.content3 }}</p>
+      </div>
+      <div class="text5 inactive-text">
+        <p>{{ section.settings.content4 }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-image ">
+    <div class="container_image-list">
+      {%- if section.settings.image_inactive != blank -%}
+        <div class="item">
+          <img
+            class="image-channel1"
+            src="{{ section.settings.image_inactive | image_url: height: 26 }}"
+            height="26px"
+            width="auto"
+            alt="image"
+          >
+        </div>
+      {% endif %}
+      {%- if section.settings.image_inactive1 != blank -%}
+        <div class="item">
+          <img
+            class="image-channel2"
+            src="{{ section.settings.image_inactive1 | image_url: height: 26 }}"
+            height="26px"
+            width="auto"
+            alt="image"
+          >
+        </div>
+      {% endif %}
+      {%- if section.settings.image_inactive2 != blank -%}
+        <div class="item">
+          <img
+            class="image-channel3"
+            src="{{ section.settings.image_inactive2 | image_url: height: 26 }}"
+            height="26px"
+            width="auto"
+            alt="image"
+          >
+        </div>
+      {% endif %}
+      {%- if section.settings.image_inactive3 != blank -%}
+        <div class="item">
+          <img
+            class="image-channel4"
+            src="{{ section.settings.image_inactive3 | image_url: height: 26 }}"
+            height="26px"
+            width="auto"
+            alt="image"
+          >
+        </div>
+      {% endif %}
+      {%- if section.settings.image_inactive4 != blank -%}
+        <div class="item">
+          <img
+            class="image-channel5"
+            src="{{ section.settings.image_inactive4 | image_url: height: 26 }}"
+            height="26px"
+            width="auto"
+            alt="image"
+          >
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<script>
+   $(document).ready(function(){
+     $('.image-channel1').addClass('active-img');
+     $('.image-channel1').attr('src','{{ section.settings.image_active | image_url: height: 26  }}');
+      $('.image-channel1').click(function(){
+     $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+     $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+     $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+     $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+     $('.active-img').removeClass('active-img');
+        $('.active-text').addClass('inactive-text');
+     $('.active-text').removeClass('active-text');
+      $(this).attr('src','{{ section.settings.image_active | image_url: height: 26  }}');
+      $(this).addClass('active-img');
+        $('.text1').removeClass('inactive-text');
+      $('.text1').addClass('active-text');
+  });
+
+  $('.image-channel2').click(function(){
+    $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+     $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+     $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+     $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+    $('.active-img').removeClass('active-img');
+     $('.active-text').addClass('inactive-text');
+     $('.active-text').removeClass('active-text');
+      $(this).attr('src','{{ section.settings.image_active1 | image_url: height: 26  }}');
+      $(this).addClass('active-img');
+    $('.text2').removeClass('inactive-text');
+      $('.text2').addClass('active-text');
+    });
+
+  $('.image-channel3').click(function(){
+    $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+     $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+     $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+     $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+    $('.active-img').removeClass('active-img');
+     $('.active-text').addClass('inactive-text');
+     $('.active-text').removeClass('active-text');
+      $(this).attr('src','{{ section.settings.image_active2 | image_url: height: 26  }}');
+      $(this).addClass('active-img');
+    $('.text3').removeClass('inactive-text');
+      $('.text3').addClass('active-text');
+    });
+  $('.image-channel4').click(function(){
+    $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+     $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+     $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+     $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+    $('.active-img').removeClass('active-img');
+     $('.active-text').addClass('inactive-text');
+     $('.active-text').removeClass('active-text');
+      $(this).attr('src','{{ section.settings.image_active3 | image_url: height: 26  }}');
+      $(this).addClass('active-img');
+    $('.text4').removeClass('inactive-text');
+      $('.text4').addClass('active-text');
+    });
+  $('.image-channel5').click(function(){
+    $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+     $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+     $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+     $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+     $('.active-img').removeClass('active-img');
+     $('.active-text').addClass('inactive-text');
+     $('.active-text').removeClass('active-text');
+      $(this).attr('src','{{ section.settings.image_active4 | image_url: height: 26  }}');
+      $(this).addClass('active-img');
+     $('.text5').removeClass('inactive-text');
+      $('.text5').addClass('active-text');
+    });
+     $( ".image-channel1" ).hover(
+      function() {
+         $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+         $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+         $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+         $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+         $(this).attr('src','{{ section.settings.image_active | image_url: height: 26  }}');
+         $('.active-img').removeClass('active-img');
+         $('.active-text').addClass('inactive-text');
+         $('.active-text').removeClass('active-text');
+         $(this).addClass('active-img');
+         $('.text1').removeClass('inactive-text');
+         $('.text1').addClass('active-text');
+      });
+     $( ".image-channel2" ).hover(
+      function() {
+         $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+         $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+         $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+         $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+         $(this).attr('src','{{ section.settings.image_active1 | image_url: height: 26  }}');
+         $('.active-img').removeClass('active-img');
+         $('.active-text').addClass('inactive-text');
+         $('.active-text').removeClass('active-text');
+         $(this).addClass('active-img');
+         $('.text2').removeClass('inactive-text');
+         $('.text2').addClass('active-text');
+      });
+     $( ".image-channel3" ).hover(
+      function() {
+         $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+         $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+         $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+         $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+         $(this).attr('src','{{ section.settings.image_active2 | image_url: height: 26  }}');
+         $('.active-img').removeClass('active-img');
+         $('.active-text').addClass('inactive-text');
+         $('.active-text').removeClass('active-text');
+         $(this).addClass('active-img');
+         $('.text3').removeClass('inactive-text');
+         $('.text3').addClass('active-text');
+      });
+     $( ".image-channel4" ).hover(
+      function() {
+         $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+         $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+         $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+         $('.image-channel5').attr('src','{{ section.settings.image_inactive4 | image_url: height: 26  }}');
+         $(this).attr('src','{{ section.settings.image_active3 | image_url: height: 26  }}');
+         $('.active-img').removeClass('active-img');
+         $('.active-text').addClass('inactive-text');
+         $('.active-text').removeClass('active-text');
+         $(this).addClass('active-img');
+         $('.text4').removeClass('inactive-text');
+         $('.text4').addClass('active-text');
+      });
+     $( ".image-channel5" ).hover(
+      function() {
+         $('.image-channel1').attr('src','{{ section.settings.image_inactive | image_url: height: 26  }}');
+         $('.image-channel3').attr('src','{{ section.settings.image_inactive2 | image_url: height: 26  }}');
+         $('.image-channel4').attr('src','{{ section.settings.image_inactive3 | image_url: height: 26  }}');
+         $('.image-channel2').attr('src','{{ section.settings.image_inactive1 | image_url: height: 26  }}');
+         $(this).attr('src','{{ section.settings.image_active4 | image_url: height: 26  }}');
+         $('.active-img').removeClass('active-img');
+         $('.active-text').addClass('inactive-text');
+         $('.active-text').removeClass('active-text');
+         $(this).addClass('active-img');
+         $('.text5').removeClass('inactive-text');
+         $('.text5').addClass('active-text');
+      });
+  });
+</script>
+{% schema %}
+{
+  "name": "In The Press",
+  "tag": "section",
+  "class": "in_the_press",
+  "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+              "label": "Heading"
+          },
+        {
+            "type": "text",
+            "id": "content",
+            "label": "Content Show"
+          },
+         {
+           "type": "image_picker",
+           "id": "image_active",
+           "label": "Image Active"
+         },
+        {
+           "type": "image_picker",
+           "id": "image_inactive",
+           "label": "Image Inactive"
+         },
+        {
+            "type": "text",
+            "id": "content1",
+            "label": "Content Show 1"
+          },
+         {
+           "type": "image_picker",
+           "id": "image_active1",
+           "label": "Image Active 1"
+         },
+        {
+           "type": "image_picker",
+           "id": "image_inactive1",
+           "label": "Image Inactive 1"
+         },
+        {
+            "type": "text",
+            "id": "content2",
+            "label": "Content Show 2"
+          },
+         {
+           "type": "image_picker",
+           "id": "image_active2",
+           "label": "Image Active 2"
+         },
+        {
+           "type": "image_picker",
+           "id": "image_inactive2",
+           "label": "Image Inactive 2"
+         },
+        {
+            "type": "text",
+            "id": "content3",
+            "label": "Content Show 3"
+          },
+         {
+           "type": "image_picker",
+           "id": "image_active3",
+           "label": "Image Active 3"
+         },
+        {
+           "type": "image_picker",
+           "id": "image_inactive3",
+           "label": "Image Inactive 3"
+         },
+        {
+            "type": "text",
+            "id": "content4",
+            "label": "Content Show 4"
+          },
+         {
+           "type": "image_picker",
+           "id": "image_active4",
+           "label": "Image Active 4"
+         },
+        {
+           "type": "image_picker",
+           "id": "image_inactive4",
+           "label": "Image Inactive 4"
+         }
+  ],
+  "presets": [{
+    "name": "In The Press",
+    "category": "Text"
+  }]
+}
+{% endschema %}

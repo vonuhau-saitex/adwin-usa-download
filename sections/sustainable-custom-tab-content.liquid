@@ -1,0 +1,224 @@
+{{- 'sustainable-custom.css' | asset_url | stylesheet_tag -}}
+<script src="{{ 'tabbed-content.js' | asset_url }}" defer="defer"></script>
+{%- liquid
+	assign section_heading = section.settings.heading
+	assign section_description = section.settings.description
+
+	assign text_width = section.settings.text_width
+	assign tab_alignment = section.settings.tab_alignment
+	assign text_alignment = section.settings.text_alignment
+
+	assign color_bg = section.settings.color_bg
+	assign color_text = section.settings.color_text
+	assign color_tabs = section.settings.color_tabs
+	assign color_border = section.settings.color_border
+
+	assign disable_top_spacing = section.settings.disable_top_spacing
+	assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+-%}
+<div class="tabbed-content-wrapper section-spacing-padding{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" style="--color-bg: {{ color_bg }}; --bg-body-rgb: {{ color_bg.rgb | replace: ' ' , ',' }}; --color-body: {{ color_text }}; --color-tabs: {{ color_tabs.rgb | replace: ' ' , ',' }}; --color-border: {{ color_border }};">
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="section-header-sus section-header-left--true">
+        		<div class="section-header--content custom">
+        			{%- if section_heading and section_is_hide_heading != true -%}
+        				<h2 class="h3">{{ section_heading }}</h2>
+        			{%- endif -%}
+        			{%- if section_description != blank -%}
+        				<div class="rte">
+        					{{ section_description }}
+        				</div>
+        			{%- endif -%}
+                </div>
+            </div>
+			<tabbed-content class="tabbed-content text-width-{{ text_width }} tabs-{{ tab_alignment }}" selected-index="0">
+              {%- for block in section.blocks -%}
+					<div class="tabbed-content--content text-{{ text_alignment }}{% if forloop.index == 1 %} active{%- endif -%}" style="--columns: {{ block.settings.text_columns }};">
+                 <img src= "{{ block.settings.image |image_url }}" width="auto" height="auto"/>
+					</div>
+				{%- endfor -%}
+				<scroll-shadow class="tabbed-content--scroll">
+					<div class="tabbed-content--tabs tabs-{{ tab_alignment }}">
+						{%- for block in section.blocks -%}
+						<button class="{% if forloop.index == 1 %} active{%- endif -%}" {{ block.shopify_attributes }}> {{ block.settings.tab_label }} </button>
+						{%- endfor -%}
+					</div>
+				</scroll-shadow>				
+			</tabbed-content>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Tabbed content custom",
+		"class": "section-tabbed-content-custom",
+    "settings": [
+			{
+				"type": "text",
+				"id": "heading",
+				"label": "Heading",
+				"default": "Tabbed content"
+			},
+			{
+				"type": "richtext",
+				"id": "description",
+				"label": "Description",
+				"default": "<p>Add a short description for this section</p>"
+			},
+			{
+				"type": "select",
+				"id": "text_width",
+				"label": "Content width",
+				"options": [
+					{
+						"value": "small",
+						"label": "Small"
+					},
+					{
+						"value": "medium",
+						"label": "Medium"
+					},
+					{
+						"value": "large",
+						"label": "Large"
+					},
+					{
+						"value": "grid",
+						"label": "Grid"
+					}
+				],
+				"default": "medium"
+			},
+			{
+				"type": "select",
+				"id": "tab_alignment",
+				"label": "Tab alignment",
+				"options": [
+					{
+						"value": "left",
+						"label": "Left"
+					},
+					{
+						"value": "center",
+						"label": "Center"
+					},
+					{
+						"value": "right",
+						"label": "Right"
+					}
+				],
+				"default": "left"
+			},
+			{
+				"type": "select",
+				"id": "text_alignment",
+				"label": "Content alignment",
+				"options": [
+					{
+						"value": "left",
+						"label": "Left"
+					},
+					{
+						"value": "center",
+						"label": "Center"
+					},
+					{
+						"value": "right",
+						"label": "Right"
+					}
+				],
+				"default": "left"
+			},
+			{
+	      "type": "header",
+	      "content": "Colors"
+	    },
+			{
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+			{
+        "type": "color",
+        "id": "color_tabs",
+        "label": "Tabs",
+        "default": "#151515"
+      },
+			{
+        "type": "color",
+        "id": "color_text",
+        "label": "Text",
+        "default": "#151515"
+      },
+			{
+        "type": "color",
+        "id": "color_border",
+        "label": "Border",
+        "default": "#e2e2e2"
+      },
+			{
+	      "type": "header",
+	      "content": "Spacing"
+	    },
+			{
+				"type": "checkbox",
+				"id": "disable_top_spacing",
+				"default": false,
+				"label": "Remove top spacing"
+			},
+			{
+				"type": "checkbox",
+				"id": "disable_bottom_spacing",
+				"default": false,
+				"label": "Remove bottom spacing"
+			}
+    ],
+    "blocks": [
+      {
+        "type": "tab",
+        "name": "Tab",
+        "settings": [
+					{
+						"type": "text",
+						"id": "tab_label",
+						"default": "Tab label",
+						"label": "Label"
+					},
+          {
+				"type": "image_picker",
+				"id": "image",
+				"label": "Image"
+			},
+					{
+						"type": "select",
+						"id": "text_columns",
+						"label": "Desktop columns",
+						"options": [
+							{
+								"value": "1",
+								"label": "One column"
+							},
+							{
+								"value": "2",
+								"label": "Two columns"
+							},
+							{
+								"value": "3",
+								"label": "Three columns"
+							}
+						],
+						"default": "1"
+					}
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Tabbed content custom"
+				
+      }
+    ]
+  }
+{% endschema %}

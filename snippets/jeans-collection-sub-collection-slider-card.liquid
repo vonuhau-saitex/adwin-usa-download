@@ -1,0 +1,36 @@
+{%- if sub_collection and sub_collection != empty -%}
+    {% liquid
+        assign products_hover_images = settings.products_hover_images
+        assign products_hover_images_count = settings.products_hover_images_count
+        assign product_aspect_ratio = settings.product_aspect_ratio
+        assign sub_collection_featured_image = sub_collection.image
+        assign ratio = 1
+        assign sizes = '375x375,770x770'
+
+
+        if product_aspect_ratio == 'adapt'
+        assign ratio = sub_collection_featured_image.aspect_ratio
+        assign sizes = '375x0,770x0'
+        elsif product_aspect_ratio == 'portrait'
+        assign ratio = 1 | divided_by: 1.25
+        assign sizes = '375x350,770x700'
+        elsif product_aspect_ratio == 'landscape'
+        assign ratio = 1 | divided_by: 0.75
+        assign sizes = '375x250,770x500'
+        endif
+        assign product_content_alignment = settings.product_content_alignment -%}
+    <product-card class="product-card text-{{ product_content_alignment }}">
+        <figure class="product-featured-image">
+            <a onclick="move_to_subcollection_container('{{ sub_collection.id }}');" title="{{ sub_collection.title | escape }}"
+               class="product-featured-image-link aspect-ratio aspect-ratio--{{ settings.product_aspect_ratio }}"
+               style="--padding-bottom: {{ 1 | divided_by: ratio | times: 100 }}%;">
+                {%- render 'responsive-image', class: 'product-primary-image', image: sub_collection.image, sizes: sizes -%}
+            </a>
+        </figure>
+        <div class="sub-collection-title">
+            {{ sub_collection.metafields.custom.displaying_name.value | capitalize }}
+        </div>
+    </product-card>
+
+{%- endif -%}
+

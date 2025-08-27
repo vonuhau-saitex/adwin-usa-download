@@ -1,0 +1,29 @@
+.breadcrumbs-section + .product-section .thb-product-detail {
+  margin-top: 0;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  overflow-x: scroll;
+  padding: 15px;
+  display: inline-flex;
+  width: 100%;
+  white-space: nowrap;
+  max-width: 100vw;
+  text-align: left;
+  scrollbar-width: none;
+}
+.breadcrumbs span, .breadcrumbs a{
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .breadcrumbs {
+    padding: 35px;
+    overflow-x: hidden;
+    padding-bottom: 15px;
+    padding-top: 5px
+  }
+}
+.breadcrumbs::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,54 @@
+{% assign bundle_image = product.metafields.custom.bundle_image %}
+{% assign bundle_products = product.metafields.custom.bundle_products %}
+
+{% if bundle_products != null %}
+  <div class="bundle-products">
+    <div class="row full-width-row">
+      <div class="small-12">
+        <div class="section-header">
+          <h2 class="h3">{{ section.settings.title }}</h2>
+        </div>
+      </div>
+      <div class="small-12">
+        <div class="section-content">
+          {% if bundle_image %}
+            <div class="small-12 bundle-mobile">
+              <img src="{{ bundle_image | img_url : 'master' }}">
+            </div>
+          {% endif %}
+          <div class="medium-5 small-12 bundle-left">
+            {% for bundle in bundle_products.value %}
+              <div class="bundle-element small-6">
+                {%- render 'product-card', product_card_product: bundle -%}
+              </div>
+            {% endfor %}
+          </div>
+          {% if bundle_image %}
+            <div class="medium-7 small-12 bundle-right bundle-desktop">
+              <img src="{{ bundle_image | img_url : 'master' }}">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Bundle",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "COMPLETE THE LOOK"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Bundle"
+    }
+  ]
+}
+{% endschema %}

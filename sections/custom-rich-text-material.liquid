@@ -1,0 +1,263 @@
+{{- 'custom-rich-text-material.css' | asset_url | stylesheet_tag -}}
+{{- 'rich-text.css' | asset_url | stylesheet_tag -}}
+{%- liquid
+	assign text_width = section.settings.text_width
+	assign text_position = section.settings.text_position
+	assign text_alignment = section.settings.text_alignment
+
+	assign color_bg = section.settings.color_bg | downcase
+	assign color_text = section.settings.color_text
+
+	assign disable_top_spacing = section.settings.disable_top_spacing
+	assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+
+-%}
+<div class="row">
+	<div class="small-12 columns">
+		<div class="rich-text text-{{ text_alignment }} text-position-{{ text_position }} text-width-{{ text_width }} section-spacing-padding{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}"style="--color-bg: {{ color_bg }}; --color-text: {{ color_text }}; --solid-button-background: {{ color_text }}; --outline-button-label: {{ color_text }}; --solid-button-label: {{ solid_button_label }}; --bg-body: {{ color_bg }}; --color-accent: {{ color_links }}; --color-accent-rgb:  {{ color_links | color_extract: 'red' }}, {{ color_links | color_extract: 'green' }}, {{ color_links | color_extract: 'blue' }};">
+			<div class="rich-text__inner">
+				{% for block in section.blocks %}
+					{%- case block.type -%}						
+						{%- when 'subheading' -%}
+							<p class="subheading" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+						{%- when 'heading' -%}
+							<h3 class="{{ block.settings.size }}" {{ block.shopify_attributes }}>{{ block.settings.text | newline_to_br }}</h3>
+						{%- when 'text' -%}
+							<div class="rte {{ block.settings.size }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>                
+					{%- endcase -%}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="material-row">
+  <div class="list-text-container">
+    <div class="list-text">
+      <p class="item">Mechanically Recycled Nylon</p>
+      <p class="item">Mechanically Recycled Polyester</p>
+      <p class="item">Organic Flax</p>
+      <p class="item">Organic Hemp</p>
+      <p class="item">Recycled Cotton</p>
+      <p class="item">Recycled Wool</p>
+    </div>
+    <div class="list-text">
+      <p class="item">Chemically Recycled Nylon</p>
+      <p class="item">Chemically Recycled Polyester</p>
+      <p class="item">Crailar Flax</p>
+      <p class="item"> In Conversion Cotton</p>
+      <p class="item">Monocel<br>(Bamboo Lyocell Product)</p>
+      <p class="item">Organic Cotton</p>
+      <p class="item">Tencel<br>(Lenzing Lyocell Product)</p>
+      
+    </div>
+    <div class="list-text">
+      <p class="item">Conventional Flax (Linen)</p>
+      <p class="item">Conventional Hemp</p>
+      <p class="item">PLA</p>
+      <p class="item">Ramie</p>
+    </div>
+    <div class="list-text">
+      <p class="item">Modal (Lenzing Viscose Product)</p>
+      <p class="item">Poly-Acrylic</p>
+      <p class="item">Virgin Polyester</p>
+    </div>
+    <div class="list-text">
+      <p class="item">Bamboo Viscose</p>
+      <p class="item">Conventional Cotton</p>
+      <p class="item">Generic Viscose</p>
+      <p class="item">Rayon</p>
+      <p class="item">Spandex (Elastane)</p>
+      <p class="item">Virgin Nylon</p>
+      <p class="item">Wool</p>
+    </div>
+  </div>
+  <div class="gradient-container">
+    <div class="line">
+      <span class="line1"></span>
+      <span class="line2"></span>
+    </div>
+    <div class="text-container">
+      <p class="text1">more sustainable</p>
+      <p class="text2">less sustainable</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom rich text material",
+    "class":"custom-rich-text-material",
+    "settings": [			
+			{
+				"type": "select",
+				"id": "text_width",
+				"label": "Content width",
+				"options": [
+					{
+						"value": "small",
+						"label": "Small"
+					},
+					{
+						"value": "medium",
+						"label": "Medium"
+					},
+					{
+						"value": "large",
+						"label": "Large"
+					},
+					{
+						"value": "xlarge",
+						"label": "Extra large"
+					},
+					{
+						"value": "grid",
+						"label": "Grid"
+					}
+				],
+				"default": "medium"
+			},
+			{
+				"type": "select",
+				"id": "text_position",
+				"label": "Content position",
+				"options": [
+					{
+						"value": "left",
+						"label": "Left"
+					},
+					{
+						"value": "center",
+						"label": "Center"
+					},
+					{
+						"value": "right",
+						"label": "Right"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "select",
+				"id": "text_alignment",
+				"label": "Content alignment",
+				"options": [
+					{
+						"value": "left",
+						"label": "Left"
+					},
+					{
+						"value": "center",
+						"label": "Center"
+					},
+					{
+						"value": "right",
+						"label": "Right"
+					}
+				],
+				"default": "center"
+			},
+			{
+	      "type": "header",
+	      "content": "Colors"
+	    },
+			{
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background",
+        "default": "transparent"
+      },
+			{
+        "type": "color",
+        "id": "color_text",
+        "label": "Text",
+        "default": "#151515"
+      },
+			{
+        "type": "color",
+        "id": "color_links",
+        "label": "Links",
+        "default": "#151515"
+      },
+			{
+	      "type": "header",
+	      "content": "Spacing"
+	    },
+			{
+				"type": "checkbox",
+				"id": "disable_top_spacing",
+				"default": false,
+				"label": "Remove top spacing"
+			},
+			{
+				"type": "checkbox",
+				"id": "disable_bottom_spacing",
+				"default": false,
+				"label": "Remove bottom spacing"
+			}
+    ],
+		"blocks": [			
+			{
+				"type": "subheading",
+				"name": "Subheading",
+				"settings": [
+					{
+						"type": "text",
+						"id": "text",
+						"label": "Text",
+						"default": "Subheading for this section"
+					}
+				]
+			},
+			{
+				"type": "heading",
+				"name": "Heading",
+				"settings": [
+					{
+						"type": "text",
+						"id": "text",
+						"label": "Text",
+						"default": "Talk about your brand"
+					},
+					{
+		        "type": "select",
+		        "id": "size",
+		        "label": "Size",
+		        "options": [
+		          {
+		            "value": "h1",
+		            "label": "Extra Large"
+		          },
+							{
+		            "value": "h2",
+		            "label": "Large"
+		          },
+							{
+		            "value": "h3",
+		            "label": "Medium"
+		          },
+							{
+		            "value": "h4",
+		            "label": "Small"
+		          }
+		        ],
+		        "default": "h3"
+		      }
+				]
+			}
+          
+    ],
+    "presets": [
+      {
+        "name": "Custom rich text material",
+				"blocks": [
+					{
+						"type": "subheading"
+					},
+	        {
+	          "type": "heading"
+	        }
+	      ]
+      }
+    ]
+  }
+{% endschema %}

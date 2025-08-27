@@ -1,0 +1,411 @@
+<full-menu class="full-menu">
+  <ul class="thb-full-menu" role="menubar">
+    {%- for link in menu.links -%}
+      {%- liquid
+        assign parent_index = forloop.index
+        assign has_sub_menu = false
+        assign has_mega_menu = false
+        assign mega_menu_block_index = false
+
+        if link.links.size > 0
+          assign has_sub_menu = true
+        endif
+        for block in blocks
+          assign position = block.settings.position | plus: 0
+          if position == parent_index
+            assign has_mega_menu = true
+            assign mega_menu_block_index = forloop.index0
+          endif
+        endfor
+      -%}
+      
+      <li
+        class="{% if has_sub_menu %}menu-item-has-children{% endif %}{% if has_mega_menu %} menu-item-has-megamenu{% endif %}{% if link.active %} active{% endif %}"
+        {% if has_sub_menu %}
+          data-item-title="{{ link.title | escape }}"
+        {% endif %}
+      >
+        <a
+          href="{{ link.url }}"
+          title="{{ link.title | escape }}"
+          {%- if link.active %}
+            aria-current="page"
+          {% endif -%}
+        >
+          {{- link.title -}}
+          {%- if has_sub_menu -%}{%- render 'svg-icons' with 'thb-dropdown-bottom' -%}{%- endif -%}
+        </a>
+        {%- if has_sub_menu == true and has_mega_menu == false -%}
+          <ul class="sub-menu" tabindex="-1">
+            {%- for l in link.links -%}
+              {%- liquid
+                assign has_sub_menu = false
+                assign has_mega_menu = false
+                if l.links.size > 0
+                  assign has_sub_menu = true
+                endif
+              -%}
+              <li
+                class="{%- if l.active %}active{% endif %}{% if has_sub_menu %} menu-item-has-children{%- endif -%}"
+                role="none"
+                {% if has_sub_menu %}
+                  data-item-title="{{ l.title | escape }}"
+                {% endif %}
+              >
+                <a href="{{ l.url }}" title="{{ l.title | escape }}" role="menuitem">
+                  {{- l.title -}}
+                  {%- if has_sub_menu -%}{%- render 'svg-icons' with 'thb-dropdown-right' -%}{%- endif -%}
+                </a>
+                {%- if has_sub_menu -%}
+                  <ul class="sub-menu" role="menu">
+                    {%- for sub_link in l.links -%}
+                      <li class="{%- if sub_link.active %} active{% endif %}" role="none">
+                        <a href="{{ sub_link.url }}" title="{{ sub_link.title | escape }}" role="menuitem">
+                          {{- sub_link.title -}}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+        {%- if has_sub_menu == true and has_mega_menu == true -%}
+          {%- liquid
+            assign mega_menu_block = blocks[mega_menu_block_index]
+          -%}
+          <div
+            class="sub-menu mega-menu-container {% if link.title == 'ABOUT' %}menu-about-container {% endif %} "
+            tabindex="-1"
+          >
+            {%- if link.links.size == 1 and link.links.first == 'IGNORE-FOR-MEGA-MENU-NOT-DELETE' -%}
+              <ul class="mega-menu-columns" tabindex="-1">
+                {%- for l in link.links -%}
+                  {%- if l.title != 'IGNORE-FOR-MEGA-MENU-NOT-DELETE' -%}
+                    <li class="{% if l.active %} active{% endif %}" role="none">
+                      <a
+                        href="{{ l.url }}"
+                        title="{{ l.title | escape }}"
+                        class="mega-menu-columns__heading"
+                        role="menuitem"
+                      >
+                        {{- l.title -}}
+                      </a>
+                      {%- if l.links.size > 0 -%}
+                        <ul role="menu">
+                          {%- for sub_link in l.links -%}
+                            <li class="{% if sub_link.active %} active{% endif %}" role="none">
+                              <a href="{{ sub_link.url }}" title="{{ sub_link.title | escape }}" role="menuitem">
+                                {{- sub_link.title -}}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+            {%- if link.links.size >= 1 -%}
+              {% liquid
+                assign has_child = false
+                for l in link.links
+                  if l.links.size > 0
+                     assign has_child = true
+                      break
+                  endif
+                endfor
+              %}
+              <ul class="menu-about-columns" tabindex="-1" {%- if has_child == true -%} style="grid-auto-flow: column;" {% endif %}>
+                {%- for l in link.links -%}                  
+                  <li class="{% if l.active %} active{% endif %}" role="none">
+                    <a
+                      href="{{ l.url }}"
+                      title="{{ l.title | escape }}"
+                      class="mega-menu-columns__heading"
+                      role="menuitem"
+                      style="text-transform: uppercase;"
+                    >
+                      {{- l.title -}}
+                    </a>
+                    {%- if l.links.size > 0 -%}
+                      <ul class="menu-child" role="menu">
+                        {%- for sub_link in l.links -%}
+                          <li class="{%- if sub_link.active %} active{% endif %}" role="none">
+                            <a href="{{ sub_link.url }}" title="{{ sub_link.title | escape }}" role="menuitem">
+                              {{- sub_link.title -}}
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+              {%- if l.links.size > 1 -%}
+                <div class="about-bg-img">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0678/6315/0899/files/SAITEX.png?v=1686733854"
+                    width="auto"
+                    height="auto"
+                  >
+                </div>
+              {%- endif -%}
+            {%- endif -%}
+            <div class="mega-menu-promotion 111">
+              {%- if mega_menu_block.settings.promo_1_image -%}
+                {%- if mega_menu_block.settings.promo_1_link -%}
+                  <a href="{{ mega_menu_block.settings.promo_1_link }}">
+                {%- endif -%}
+                {%- render 'responsive-image', image: mega_menu_block.settings.promo_1_image, sizes: '670x0' -%}
+                {%- if mega_menu_block.settings.promo_1_link -%}</a>{%- endif -%}
+                <div class="mega-menu-promotion--cover">
+                  {%- if mega_menu_block.settings.promo_1_heading -%}
+                    <p class="heading-font">{{ mega_menu_block.settings.promo_1_heading }}</p>
+                  {%- endif -%}
+                  {%- if mega_menu_block.settings.promo_1_link_label -%}
+                    <a href="{{ mega_menu_block.settings.promo_1_link }}" class="text-button white">
+                      {{- mega_menu_block.settings.promo_1_link_label -}}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {% endif %}
+            </div>
+              <div class="mega-menu-promotion 222">
+                  {%- if mega_menu_block.settings.promo_2_image -%}
+                    {%- if mega_menu_block.settings.promo_2_link -%}
+                      <a href="{{ mega_menu_block.settings.promo_2_link }}">
+                    {%- endif -%}
+                    {%- render 'responsive-image', image: mega_menu_block.settings.promo_2_image, sizes: '670x0' -%}
+                    {%- if mega_menu_block.settings.promo_2_link -%}</a>{%- endif -%}
+                    <div class="mega-menu-promotion--cover">
+                      {%- if mega_menu_block.settings.promo_2_heading -%}
+                        <p class="heading-font">{{ mega_menu_block.settings.promo_2_heading }}</p>
+                      {%- endif -%}
+                      {%- if mega_menu_block.settings.promo_2_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_2_link }}" class="text-button white">
+                          {{- mega_menu_block.settings.promo_2_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                </div>
+            {% comment %}
+              {%- if mega_menu_block.settings.promo_1_link -%}
+                <div class="mega-menu-promotion" style="padding: 38px;">
+                  {%- if mega_menu_block.settings.promo_1_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_1_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_1_link }}">
+                          {{- mega_menu_block.settings.promo_1_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+
+                  {%- if mega_menu_block.settings.promo_2_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_2_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_2_link }}">
+                          {{- mega_menu_block.settings.promo_2_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                  {%- if mega_menu_block.settings.promo_3_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_3_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_3_link }}">
+                          {{- mega_menu_block.settings.promo_3_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                  {%- if mega_menu_block.settings.promo_4_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_4_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_4_link }}">
+                          {{- mega_menu_block.settings.promo_4_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                  {%- if mega_menu_block.settings.promo_5_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_5_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_5_link }}">
+                          {{- mega_menu_block.settings.promo_5_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                  {%- if mega_menu_block.settings.promo_6_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_6_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_6_link }}">
+                          {{- mega_menu_block.settings.promo_6_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                  {%- if mega_menu_block.settings.promo_7_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_7_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_7_link }}">
+                          {{- mega_menu_block.settings.promo_7_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                  {%- if mega_menu_block.settings.promo_8_link -%}
+                    <div class="mega-menu-promotion--cover-first">
+                      {%- if mega_menu_block.settings.promo_8_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_8_link }}">
+                          {{- mega_menu_block.settings.promo_8_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                </div>
+
+                <div class="mega-menu-promotion">
+                  {%- if mega_menu_block.settings.promo_1_image -%}
+                    {%- if mega_menu_block.settings.promo_1_link -%}
+                      <a href="{{ mega_menu_block.settings.promo_1_link }}">
+                    {%- endif -%}
+                    {%- render 'responsive-image', image: mega_menu_block.settings.promo_1_image, sizes: '670x0' -%}
+                    {%- if mega_menu_block.settings.promo_1_link -%}</a>{%- endif -%}
+                    <div class="mega-menu-promotion--cover">
+                      {%- if mega_menu_block.settings.promo_1_heading -%}
+                        <p class="heading-font">{{ mega_menu_block.settings.promo_1_heading }}</p>
+                      {%- endif -%}
+                      {%- if mega_menu_block.settings.promo_1_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_1_link }}" class="text-button white">
+                          {{- mega_menu_block.settings.promo_1_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="mega-menu-promotion">
+                  {%- if mega_menu_block.settings.promo_2_image -%}
+                    {%- if mega_menu_block.settings.promo_2_link -%}
+                      <a href="{{ mega_menu_block.settings.promo_2_link }}">
+                    {%- endif -%}
+                    {%- render 'responsive-image', image: mega_menu_block.settings.promo_2_image, sizes: '670x0' -%}
+                    {%- if mega_menu_block.settings.promo_2_link -%}</a>{%- endif -%}
+                    <div class="mega-menu-promotion--cover">
+                      {%- if mega_menu_block.settings.promo_2_heading -%}
+                        <p class="heading-font">{{ mega_menu_block.settings.promo_2_heading }}</p>
+                      {%- endif -%}
+                      {%- if mega_menu_block.settings.promo_2_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_2_link }}" class="text-button white">
+                          {{- mega_menu_block.settings.promo_2_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="mega-menu-promotion">
+                  {%- if mega_menu_block.settings.promo_3_image -%}
+                    {%- if mega_menu_block.settings.promo_3_link -%}
+                      <a href="{{ mega_menu_block.settings.promo_3_link }}">
+                    {%- endif -%}
+                    {%- render 'responsive-image', image: mega_menu_block.settings.promo_3_image, sizes: '670x0' -%}
+                    {%- if mega_menu_block.settings.promo_3_link -%}</a>{%- endif -%}
+                    <div class="mega-menu-promotion--cover">
+                      {%- if mega_menu_block.settings.promo_3_heading -%}
+                        <p class="heading-font">{{ mega_menu_block.settings.promo_3_heading }}</p>
+                      {%- endif -%}
+                      {%- if mega_menu_block.settings.promo_3_link_label -%}
+                        <a href="{{ mega_menu_block.settings.promo_3_link }}" class="text-button white">
+                          {{- mega_menu_block.settings.promo_3_link_label -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endcomment %}
+
+            {% comment %}
+              {%- if mega_menu_block.settings.promo_2_image -%}
+              	<div class="mega-menu-promotion">
+              		{%- if mega_menu_block.settings.promo_2_link -%}<a href="{{ mega_menu_block.settings.promo_2_link }}">{%- endif -%}
+              			{%- render 'responsive-image', image: mega_menu_block.settings.promo_2_image, sizes: '670x0' -%}
+              		{%- if mega_menu_block.settings.promo_2_link -%}</a>{%- endif -%}
+              		<div class="mega-menu-promotion--cover">
+              			{%- if mega_menu_block.settings.promo_2_heading -%}<p class="heading-font">{{ mega_menu_block.settings.promo_2_heading }}</p>{%- endif -%}
+              			{%- if mega_menu_block.settings.promo_2_link_label -%}<a href="{{ mega_menu_block.settings.promo_2_link }}" class="text-button white">{{ mega_menu_block.settings.promo_2_link_label }}</a>{%- endif -%}
+              		</div>
+              	</div>
+              {%- endif -%}
+                                {%- if mega_menu_block.settings.promo_3_image -%}
+                                	<div class="mega-menu-promotion">
+                                		{%- if mega_menu_block.settings.promo_3_link -%}<a href="{{ mega_menu_block.settings.promo_3_link }}">{%- endif -%}
+                                			{%- render 'responsive-image', image: mega_menu_block.settings.promo_3_image, sizes: '670x0' -%}
+                                		{%- if mega_menu_block.settings.promo_3_link -%}</a>{%- endif -%}
+                                		<div class="mega-menu-promotion--cover">
+                                			{%- if mega_menu_block.settings.promo_3_heading -%}<p class="heading-font">{{ mega_menu_block.settings.promo_3_heading }}</p>{%- endif -%}
+                                			{%- if mega_menu_block.settings.promo_3_link_label -%}<a href="{{ mega_menu_block.settings.promo_3_link }}" class="text-button white">{{ mega_menu_block.settings.promo_3_link_label }}</a>{%- endif -%}
+                                		</div>
+                                	</div>
+                                {%- endif -%}
+            {% endcomment %}
+            {% comment %}
+              {%- if mega_menu_block.settings.promo_4_image and mega_menu_block.settings.promo_5_image == blank -%}
+              <div class="mega-menu-promotion">
+              	{%- if mega_menu_block.settings.promo_1_link -%}<a href="{{ mega_menu_block.settings.promo_1_link }}">{%- endif -%}
+              		{%- render 'responsive-image', image: mega_menu_block.settings.promo_1_image, sizes: '670x0' -%}
+              	{%- if mega_menu_block.settings.promo_1_link -%}</a>{%- endif -%}
+              	<div class="mega-menu-promotion--cover">
+              		{%- if mega_menu_block.settings.promo_1_heading -%}<p class="heading-font">{{ mega_menu_block.settings.promo_1_heading }}</p>{%- endif -%}
+              		{%- if mega_menu_block.settings.promo_1_link_label -%}<a href="{{ mega_menu_block.settings.promo_1_link }}" class="text-button white">{{ mega_menu_block.settings.promo_1_link_label }}</a>{%- endif -%}
+              	</div>
+              </div>
+              <div class="mega-menu-promotion">
+              	{%- if mega_menu_block.settings.promo_2_link -%}<a href="{{ mega_menu_block.settings.promo_2_link }}">{%- endif -%}
+              		{%- render 'responsive-image', image: mega_menu_block.settings.promo_2_image, sizes: '670x0' -%}
+              	{%- if mega_menu_block.settings.promo_2_link -%}</a>{%- endif -%}
+              	<div class="mega-menu-promotion--cover">
+              		{%- if mega_menu_block.settings.promo_2_heading -%}<p class="heading-font">{{ mega_menu_block.settings.promo_2_heading }}</p>{%- endif -%}
+              		{%- if mega_menu_block.settings.promo_2_link_label -%}<a href="{{ mega_menu_block.settings.promo_2_link }}" class="text-button white">{{ mega_menu_block.settings.promo_2_link_label }}</a>{%- endif -%}
+              	</div>
+              </div>
+              <div class="mega-menu-promotion">
+                               		{%- if mega_menu_block.settings.promo_3_link -%}<a href="{{ mega_menu_block.settings.promo_3_link }}">{%- endif -%}
+                               			{%- render 'responsive-image', image: mega_menu_block.settings.promo_3_image, sizes: '670x0' -%}
+                               		{%- if mega_menu_block.settings.promo_3_link -%}</a>{%- endif -%}
+                               		<div class="mega-menu-promotion--cover">
+                               			{%- if mega_menu_block.settings.promo_3_heading -%}<p class="heading-font">{{ mega_menu_block.settings.promo_3_heading }}</p>{%- endif -%}
+                               			{%- if mega_menu_block.settings.promo_3_link_label -%}<a href="{{ mega_menu_block.settings.promo_3_link }}" class="text-button white">{{ mega_menu_block.settings.promo_3_link_label }}</a>{%- endif -%}
+                               		</div>
+                               	</div>
+                               	<div class="mega-menu-promotion">
+                               		{%- if mega_menu_block.settings.promo_4_link -%}<a href="{{ mega_menu_block.settings.promo_4_link }}">{%- endif -%}
+                               			{%- render 'responsive-image', image: mega_menu_block.settings.promo_3_image, sizes: '670x0' -%}
+                               		{%- if mega_menu_block.settings.promo_4_link -%}</a>{%- endif -%}
+                               		<div class="mega-menu-promotion--cover">
+                               			{%- if mega_menu_block.settings.promo_3_heading -%}<p class="heading-font">{{ mega_menu_block.settings.promo_4_heading }}</p>{%- endif -%}
+                               			{%- if mega_menu_block.settings.promo_4_link_label -%}<a href="{{ mega_menu_block.settings.promo_4_link }}" class="text-button white">{{ mega_menu_block.settings.promo_4_link_label }}</a>{%- endif -%}
+                               		</div>
+                               	</div>
+                               {%- endif -%}
+            {% endcomment %}
+          </div>
+        {%- endif -%}
+      </li>        
+    {%- endfor -%}
+    {% comment %}      
+    {%  assign memlinks = '/pages/legacy-membership' %}
+        {% if customer %}
+        {% if customer.tags contains 'Legacy Member' %}
+          {%  assign memlinks = '/pages/my-legacy-membership' %}
+        {% endif %}
+        {% endif %}        
+        <li><a href="{{ memlinks }}">LEGACY MEMBERSHIP</a></li>
+    {% endcomment %}
+  </ul>
+</full-menu>

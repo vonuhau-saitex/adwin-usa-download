@@ -1,0 +1,63 @@
+{% assign color_list = product.metafields.custom.color_list_navigation_handle %}
+
+<div class="color-list product-card__info">
+  {%- liquid
+    assign custom_colors = settings.color_swatches | newline_to_br | split: '<br />'
+    assign key_array = ''
+    assign val_array = ''
+
+    for color in custom_colors
+      assign key = color | split: ':' | first | rstrip
+      assign value = color | split: ':' | last | lstrip
+      assign key_array = key_array | append: ',' | append: key
+      assign val_array = val_array | append: ',' | append: value
+    endfor
+
+    assign key_array = key_array | remove_first: ',' | strip_newlines | downcase | split: ','
+    assign val_array = val_array | remove_first: ',' | split: ','
+  -%}
+  {% if color_list != blank %}
+    {% assign color_total = 0 %}
+    {% assign color_step = 1 %}
+    {%- for link in linklists[color_list].links -%}
+      {% assign color_total = color_total | plus: 1 %}
+    {% endfor %}    
+    {%- for link in linklists[color_list].links -%}
+        {% assign color_step = color_step | plus: 1 %}
+        {%- liquid
+          assign color_value = link.title | downcase | escape
+          for custom_color in key_array
+            if custom_color == color_value
+              assign color_value = val_array[forloop.index0]
+            endif
+          endfor
+          assign bg_value = empty
+          if color_value contains '.'
+            assign bg_value = color_value | file_url
+            assign color_value = 'var(--bg-body)'
+          endif
+        -%}
+        <span
+          class="color-swatch--rectangle swatch-{{forloop.index}}"
+          data-color-element
+          data-name="{{ link.title }}"
+          data-link="{{ link.url }}"          
+          title="{{ link.title }}"
+        >
+          <img
+            class="plp_color_swatche"
+            src="{{ bg_value }}"
+            alt="{{ link.title }}"
+            width="20"
+            height="20"
+          >
+        </span>
+        {% if color_step == 5 %}
+          {% break %}
+        {% endif %}
+    {% endfor %}
+    {% if color_total > 5 %}
+      <span class="color-swatch__view-more">+{{ color_total | minus: 5 }}</span>
+    {% endif %}
+  {% endif %}
+</div>
