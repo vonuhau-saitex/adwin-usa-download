@@ -649,6 +649,13 @@
         "id": "color_badge_sale",
         "label": "Sale",
         "default": "#151515"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_limited_time_discount_badge",
+        "label": "Show limited time discount badge",
+        "info": "Display 'LIMITED TIME: X% OFF' badge on products with compare at price",
+        "default": false
       }
     ]
   },
