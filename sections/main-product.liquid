@@ -323,17 +323,7 @@
                         </span>
                       {% endif %}
                     </div>
-                    <div class="product-title-price-container">
-                      <div class="product-title-wrapper">
-                        <div class="product-title uppercase--{{ block.settings.uppercase }}">
-                          {% assign title_tmp = product.title | split: '||' %}
-                          {{- title_tmp[0] -}}
-                        </div>
-                        <h1 class="hidden">{{ title_tmp[0] }} - {{ title_tmp[1] }}</h1>
-                      </div>
-                      {{ product.metafields.custom.product_type | metafield_tag }}
-                      
-                      <!-- Limited Time Discount Badge -->
+                    <!-- Limited Time Discount Badge -->
                       {% if settings.show_limited_time_discount_badge %}
                         {% assign original_price = product.price_min %}
                         {% assign compare_price = product.compare_at_price_min %}
@@ -349,6 +339,18 @@
                           <div class="limited-time-discount-text">LIMITED TIME: {{ discount_percentage }}% OFF</div>
                         {% endif %}
                       {% endif %}
+                      
+                    <div class="product-title-price-container">
+                      <div class="product-title-wrapper">
+                        <div class="product-title uppercase--{{ block.settings.uppercase }}">
+                          {% assign title_tmp = product.title | split: '||' %}
+                          {{- title_tmp[0] -}}
+                        </div>
+                        <h1 class="hidden">{{ title_tmp[0] }} - {{ title_tmp[1] }}</h1>
+                      </div>
+                      {{ product.metafields.custom.product_type | metafield_tag }}
+                      
+
                       
                       <div class="product-price-container">
                         <div class="no-js-hidden" id="price-{{ section.id }}">
