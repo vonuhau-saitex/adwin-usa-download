@@ -676,6 +676,13 @@
                   {% if product.tags contains 'notify-me' %}
                     <div class="klaviyo-form-VqG66f"></div>
                   {% else %}
+                  
+                  <!-- FOMO Stock Counter -->
+                  {% assign random_stock = 'now' | date: '%S' | modulo: 6 | plus: 3 %}
+                  <div class="fomo-counter">
+                    <p class="fomo-text">Only <span id="fomo-stock-count">{{ random_stock }}</span> left in stock - order soon!</p>
+                  </div>
+                  
                   <div
                     id="backinstock-alert"
                     class="{% if product.selected_variant.id != blank %}{% if product.selected_variant.available %}hide{%  else %}show{% endif %}{%  else %}{% if product.selected_or_first_available_variant.available %}hide{%  else %}show{% endif %}{%  endif %}"
