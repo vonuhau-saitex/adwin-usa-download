@@ -1,1 +1,219 @@
-{"sections":{"shogun-helper":{"type":"shogun-helper","disabled":true,"settings":{}},"shogun-above":{"type":"shogun-above","disabled":true,"settings":{}},"breadcrumbs":{"type":"breadcrumbs","settings":{}},"main-product":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"uppercase":true,"show_products_rating":false}},"okendo_star_rating_xPbU7k":{"type":"shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","settings":{"product":"{{product}}"}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","color_picker":true,"variant_is_disabled":true,"sizing_guide_text":"What’s my size?","sizing_guide_icon":"none","sizing_guide_page":"sizing-guide"}},"buy_buttons":{"type":"buy_buttons","disabled":true,"settings":{"show_quantity_selector":true,"show_dynamic_checkout":true,"show_gift_card_recipient":true,"notify_text":"No return & exchange. <a href=\"https:\/\/www.edwin-usa.com\/pages\/returns-policy\" target=\"_blank\">Learn more<\/a>","notify_text2":"<p><strong>Buy 1 get 1 free<\/strong> on any product in the <a href=\"\/collections\/bogo\" target=\"_blank\" title=\"Buy One, Get One Free\"><strong>BOGO collection<\/strong><\/a>. No limit to the number of free items per order. <br\/><br\/><strong>Please note, this promotion can’t be combined with other discount. No return & exchange. <\/strong><a href=\"https:\/\/www.edwin-usa.com\/pages\/returns-policy\" target=\"_blank\">Learn more<\/a><\/p>"}},"afterpay_on_site_messaging_payments_messaging_kDph3M":{"type":"shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8","disabled":true,"settings":{"text_align":"inherit","margin_top":10,"margin_bottom":16,"color":"","size":"xs","intro_text":"or","show_interest_free":true,"payment_amount_is_bold":true,"show_with":true,"logo_type":"lockup","logo_theme":"black-on-mint","modal_link_style":"circled-info-icon","modal_theme":"mint","breakpoint":749,"text_align_mobile":"inherit","margin_top_mobile":16,"margin_bottom_mobile":16,"show_lower_limit":true,"show_upper_limit":true,"show_if_outside_limits":true,"product":"{{product}}"}},"shipping_4HXUzk":{"type":"shipping","disabled":true,"settings":{"shippingtime":7,"text1":"Want it by","text2":"Order within","text3":"Shipping, Exchange & Return","shippingpage":"shipping-policy"}},"text_hVqYdm":{"type":"text","settings":{"text":"THIS ITEM IS COMING AT THE END OF AUGUST","text_style":"style_vendor"}},"description_EigTBV":{"type":"description","settings":{"tab_title1":"DESCRIPTION","tab_title2":"Detail","tab_content2":"{{ product.metafields.custom.product_detail | metafield_tag }}","tab_title3":"SUSTAINABILITY","tab_content3":"{{ product.metafields.custom.product_sustainability | metafield_tag }}","tab_title4":"SIZE & FIT","tab_content4":"{{ product.metafields.custom.product_size_fit | metafield_tag }}"}},"stretch_level_969eK8":{"type":"stretch_level","settings":{}},"sizefit_gYFbpK":{"type":"sizefit","settings":{}}},"block_order":["title","okendo_star_rating_xPbU7k","variant_picker","buy_buttons","afterpay_on_site_messaging_payments_messaging_kDph3M","shipping_4HXUzk","text_hVqYdm","description_EigTBV","stretch_level_969eK8","sizefit_gYFbpK"],"settings":{"full_width":true,"enable_sticky_info":true,"enable_sticky_add_to_cart":false,"show_taxes_included":false,"media_layout":"grid","display_slider_pagination":true,"media_aspect_ratio":"portrait","display_captions":false,"hide_variants":false,"lightbox":true,"enable_video_looping":true,"member1":"30% off for member.","member2":"Extra 15% off for member.","member3":"Congrat, this’s your legacy."}},"17455527366c0a622c":{"type":"apps","blocks":{"okendo_reviews_widget_gMzTQj":{"type":"shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29","settings":{"product":"{{product}}","widget_type":"reviews_widget"}}},"block_order":["okendo_reviews_widget_gMzTQj"],"settings":{}},"product-recommendations":{"type":"product-recommendations","settings":{"heading":"Frequently bought together","heading_left":false,"description":"","full_width":true,"mobile_swipe":true,"disable_top_spacing":false,"disable_bottom_spacing":false}},"complementary_products":{"type":"complementary_products","settings":{"heading":"You may also like","heading_left":false,"description":"","full_width":true,"mobile_swipe":true,"disable_top_spacing":false,"disable_bottom_spacing":false}},"shogun-below":{"type":"shogun-below","settings":{}},"shogun-optimizer":{"type":"shogun-optimizer","settings":{}}},"order":["shogun-helper","shogun-above","breadcrumbs","main-product","17455527366c0a622c","product-recommendations","complementary_products","shogun-below","shogun-optimizer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {}
+    },
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "uppercase": true,
+            "show_products_rating": false
+          }
+        },
+        "okendo_star_rating_xPbU7k": {
+          "type": "shopify://apps/okendo/blocks/star-rating/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_picker": true,
+            "variant_is_disabled": true,
+            "sizing_guide_text": "What’s my size?",
+            "sizing_guide_icon": "none",
+            "sizing_guide_page": "sizing-guide"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "notify_text": "No return & exchange. <a href=\"https://www.edwin-usa.com/pages/returns-policy\" target=\"_blank\">Learn more</a>",
+            "notify_text2": "<p><strong>Buy 1 get 1 free</strong> on any product in the <a href=\"/collections/bogo\" target=\"_blank\" title=\"Buy One, Get One Free\"><strong>BOGO collection</strong></a>. No limit to the number of free items per order. <br/><br/><strong>Please note, this promotion can’t be combined with other discount. No return & exchange. </strong><a href=\"https://www.edwin-usa.com/pages/returns-policy\" target=\"_blank\">Learn more</a></p>"
+          }
+        },
+        "afterpay_on_site_messaging_payments_messaging_kDph3M": {
+          "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "disabled": true,
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 10,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "xs",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "lockup",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "shipping_4HXUzk": {
+          "type": "shipping",
+          "disabled": true,
+          "settings": {
+            "shippingtime": 7,
+            "text1": "Want it by",
+            "text2": "Order within",
+            "text3": "Shipping, Exchange & Return",
+            "shippingpage": "shipping-policy"
+          }
+        },
+        "text_hVqYdm": {
+          "type": "text",
+          "settings": {
+            "text": "THIS ITEM IS COMING AT THE END OF AUGUST",
+            "text_style": "style_vendor"
+          }
+        },
+        "description_EigTBV": {
+          "type": "description",
+          "settings": {
+            "tab_title1": "DESCRIPTION",
+            "tab_title2": "Detail",
+            "tab_content2": "{{ product.metafields.custom.product_detail | metafield_tag }}",
+            "tab_title3": "SUSTAINABILITY",
+            "tab_content3": "{{ product.metafields.custom.product_sustainability | metafield_tag }}",
+            "tab_title4": "SIZE & FIT",
+            "tab_content4": "{{ product.metafields.custom.product_size_fit | metafield_tag }}"
+          }
+        },
+        "stretch_level_969eK8": {
+          "type": "stretch_level",
+          "settings": {}
+        },
+        "sizefit_gYFbpK": {
+          "type": "sizefit",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "okendo_star_rating_xPbU7k",
+        "variant_picker",
+        "buy_buttons",
+        "afterpay_on_site_messaging_payments_messaging_kDph3M",
+        "shipping_4HXUzk",
+        "text_hVqYdm",
+        "description_EigTBV",
+        "stretch_level_969eK8",
+        "sizefit_gYFbpK"
+      ],
+      "settings": {
+        "full_width": true,
+        "enable_sticky_info": true,
+        "enable_sticky_add_to_cart": false,
+        "show_taxes_included": false,
+        "media_layout": "grid",
+        "display_slider_pagination": true,
+        "media_aspect_ratio": "portrait",
+        "display_captions": false,
+        "hide_variants": false,
+        "lightbox": true,
+        "enable_video_looping": true,
+        "member1": "30% off for member.",
+        "member2": "Extra 15% off for member.",
+        "member3": "Congrat, this’s your legacy."
+      }
+    },
+    "17455527366c0a622c": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_gMzTQj": {
+          "type": "shopify://apps/okendo/blocks/reviews-widget/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_gMzTQj"
+      ],
+      "settings": {}
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Frequently bought together",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "mobile_swipe": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "complementary_products": {
+      "type": "complementary_products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_left": false,
+        "description": "",
+        "full_width": true,
+        "mobile_swipe": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "shogun-below": {
+      "type": "shogun-below",
+      "settings": {}
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "shogun-above",
+    "breadcrumbs",
+    "main-product",
+    "17455527366c0a622c",
+    "product-recommendations",
+    "complementary_products",
+    "shogun-below",
+    "shogun-optimizer"
+  ]
+}
