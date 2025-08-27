@@ -38,22 +38,7 @@
           {% render 'product-card-badge', product_card_product: product_card_product %}
           {% endif %}
           
-          <!-- Limited Time Discount Badge -->
-          {% if settings.show_limited_time_discount_badge %}
-            {% assign original_price = product_card_product.price_min %}
-            {% assign compare_price = product_card_product.compare_at_price_min %}
-            {% if compare_price > original_price %}
-              {% assign discount_amount = compare_price | minus: original_price %}
-              {% assign discount_percentage = discount_amount | times: 100 | divided_by: compare_price %}
-              {% assign remainder = discount_percentage | modulo: 5 %}
-              {% if remainder >= 3 %}
-                {% assign discount_percentage = discount_percentage | plus: 5 | minus: remainder %}
-              {% else %}
-                {% assign discount_percentage = discount_percentage | minus: remainder %}
-              {% endif %}
-              <span class="badge limited-time-discount {{ badge_position }}">LIMITED TIME: {{ discount_percentage }}% OFF</span>
-            {% endif %}
-          {% endif %}
+
           
           {% assign badge_position = settings.badge_position %}
           {% for col in product_card_product.collections %}
@@ -240,6 +225,22 @@
       {% render 'saitex-selectsize', product: product_card_product %}
     </figure>
     <div class="product-card-info">
+      <!-- Limited Time Discount Badge -->
+      {% if settings.show_limited_time_discount_badge %}
+        {% assign original_price = product_card_product.price_min %}
+        {% assign compare_price = product_card_product.compare_at_price_min %}
+        {% if compare_price > original_price %}
+          {% assign discount_amount = compare_price | minus: original_price %}
+          {% assign discount_percentage = discount_amount | times: 100 | divided_by: compare_price %}
+          {% assign remainder = discount_percentage | modulo: 5 %}
+          {% if remainder >= 3 %}
+            {% assign discount_percentage = discount_percentage | plus: 5 | minus: remainder %}
+          {% else %}
+            {% assign discount_percentage = discount_percentage | minus: remainder %}
+          {% endif %}
+          <span class="badge limited-time-discount {{ badge_position }}">LIMITED TIME: {{ discount_percentage }}% OFF</span>
+        {% endif %}
+      {% endif %}
       <div class="product-card-vendor">
         {% comment %} <a href="{{ product_card_product.vendor | url_for_vendor }}" title="{{ product_card_product.vendor | escape }}">{{ product_card_product.vendor }}</a> {% endcomment %}
         {{ product_card_product.metafields.custom.product_type | metafield_tag | capitalize }}
