@@ -51,7 +51,7 @@
               {% else %}
                 {% assign discount_percentage = discount_percentage | minus: remainder %}
               {% endif %}
-              <span class="badge limited-time-discount-badge {{ badge_position }}">LIMITED TIME: {{ discount_percentage }}% OFF</span>
+              <span class="badge limited-time-discount {{ badge_position }}">LIMITED TIME: {{ discount_percentage }}% OFF</span>
             {% endif %}
           {% endif %}
           
