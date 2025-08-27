@@ -9,40 +9,99 @@
  */
 {
   "sections": {
-    "slideshow_AeUTHt": {
-      "type": "slideshow",
+    "image_with_text_T4N6Ka": {
+      "type": "image-with-text",
       "blocks": {
-        "slide_8znzpM": {
+        "heading_kWDprc": {
+          "type": "heading",
+          "settings": {
+            "text": "TOP. BOTTOM. 15% OFF",
+            "heading_size": "h3"
+          }
+        },
+        "subheading_DTbwET": {
+          "type": "subheading",
+          "settings": {
+            "text": "★★★"
+          }
+        },
+        "text_yNiTjr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>STARTING FROM $85</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kWDprc",
+        "subheading_DTbwET",
+        "text_yNiTjr"
+      ],
+      "disabled": true,
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/PLP_Banner.jpg",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": false,
+        "video_controls": false,
+        "height": "small",
+        "desktop_image_width": "medium",
+        "section_width": "full-width-row-full",
+        "layout": "text_first",
+        "content_position": "text-left",
+        "color_bg": "#dedede",
+        "color_text": "#151515",
+        "color_border": "#e2e2e2",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "homepage_banner_fF9AQL": {
+      "type": "homepage-banner",
+      "blocks": {
+        "slide_TaV7Wz": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/PLP_Banner.jpg",
+            "image": "shopify://shop_images/PLP_Banner-1.jpg",
             "slide_link": "",
             "video_background": false,
             "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "gap": 20,
             "subheading": "",
-            "heading": "",
+            "heading": "TOP. BOTTOM. 15% OFF",
             "heading_size": "h1-xlarge",
-            "content": "",
+            "fontsize1": 76,
+            "lineheight1": 86,
+            "gap1": 9,
+            "content": "★★★ <br><br>\nSTARTING FROM $85",
             "description_size": "medium",
-            "content_position": "middle-center",
-            "text_alignment": "center",
+            "fontsize2": 24,
+            "lineheight2": 30,
+            "gap2": 20,
+            "content_position": "middle-left",
+            "text_alignment": "left",
             "content_size": "medium",
             "overlay_color": "#000000",
             "overlay_opacity": 70,
             "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) 100%)",
             "button_1_text": "",
             "button_1_link": "",
-            "button_1_outline": false,
+            "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "button_2_outline": false
+            "buton2_style": "button"
           }
         }
       },
       "block_order": [
-        "slide_8znzpM"
+        "slide_TaV7Wz"
       ],
-      "name": "Slideshow",
+      "custom_css": [
+        ".line-child {text-align: center;}",
+        "@media (min-width: 768px) {.line-child {text-align: left; }}"
+      ],
+      "name": "Edwin Slideshow",
       "settings": {
         "desktop_height": "desktop-height-650",
         "mobile_height": "mobile-height-500",
@@ -50,8 +109,55 @@
         "autoplay": true,
         "autoplay_length": 5,
         "transition": "swipe",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "rich_text_RjeJeH": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_mMtdiN": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading for this section"
+          }
+        },
+        "heading_cetnC4": {
+          "type": "heading",
+          "settings": {
+            "text": "LABOR DAY 15% PROMOTION",
+            "size": "h3"
+          }
+        },
+        "text_QLBYd6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>MECHIANIC: PICK TOP & BOTTOM TO GET BLA BLA BLA</p>",
+            "size": "text-size-regular"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_mMtdiN",
+        "heading_cetnC4",
+        "text_QLBYd6"
+      ],
+      "custom_css": [
+        "h1 {text-align: center; margin-bottom: 10px;}",
+        "@media (min-width: 768px) {h1 {margin-bottom: 20px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "grid",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
         "disable_top_spacing": false,
-        "disable_bottom_spacing": false
+        "disable_bottom_spacing": true
       }
     },
     "shogun-helper": {
@@ -67,75 +173,195 @@
         "hide2": true
       }
     },
-    "shogun-optimizer": {
-      "type": "shogun-optimizer",
-      "disabled": true,
-      "settings": {}
+    "rich_text_VRw6Je": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_dfMNY6": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading for this section"
+          }
+        },
+        "heading_fJPWcq": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "size": "h3"
+          }
+        },
+        "text_r8FfkT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>STEP 1: PICK A TOP TO START YOUR NEW LOOK</p>",
+            "size": "text-size-small"
+          }
+        },
+        "button_RNrmdh": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_label": "VIEW ALL",
+            "link": "shopify://collections/labor-day-jeans",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_dfMNY6",
+        "heading_fJPWcq",
+        "text_r8FfkT",
+        "button_RNrmdh"
+      ],
+      "custom_css": [
+        "h1 {text-align: center; margin-bottom: 10px;}",
+        ".text-size-small {margin-block: 20px;}",
+        "a {margin-bottom: 20px;}",
+        "@media (min-width: 768px) {h1 {margin-bottom: 20px; } .text-size-small {margin-block: 30px; } a {margin-bottom: 30px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "grid",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
     },
     "featured_collection_Gb6bUj": {
       "type": "featured-collection",
       "custom_css": [
         ".featured-collection .product-featured-image {margin-right: 10px;}",
-        "#product-grid-template--20152116510935__featured_collection_R8NrNw::after {position: absolute; width: 80%; height: 1px; background-color: black; bottom: -10px; left: 0; display: block;}",
-        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; }}"
+        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 92%; }}",
+        "@media (min-width: 1600px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 96%; }}",
+        ".row .columns {padding: 3px;}",
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal;}",
+        "@media (max-width: 768px) {.section-spacing {margin-top: 50px; } .row .columns {padding: 3px !important; }}"
       ],
       "name": "Featured collection",
       "settings": {
         "heading": "",
         "heading_left": false,
-        "description": "<p>Pick your favourite top & bottom to get extra 15% discount </p>",
+        "description": "",
         "full_width": true,
         "collection": "labor-day-tops",
         "display_type": "carousel",
-        "product_limit": 6,
+        "product_limit": 9,
         "columns_desktop": 4,
-        "show_view_all": true,
+        "show_view_all": false,
         "mobile_swipe": true,
-        "show_progress_bar": true,
-        "disable_top_spacing": false,
+        "show_progress_bar": false,
+        "disable_top_spacing": true,
         "disable_bottom_spacing": false
+      }
+    },
+    "shogun-optimizer": {
+      "type": "shogun-optimizer",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_J3hVUR": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_yWTQiN": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading for this section"
+          }
+        },
+        "heading_KDxTAc": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "size": "h3"
+          }
+        },
+        "text_DFry7F": {
+          "type": "text",
+          "settings": {
+            "text": "<p>STEP 2: PICK YOUR PREFERRED JEANS TO COMPLETE YOUR LOOK AND EARN EXTRA 15% DISCOUNT</p>",
+            "size": "text-size-small"
+          }
+        },
+        "button_ikVage": {
+          "type": "button",
+          "settings": {
+            "link_label": "VIEW ALL",
+            "link": "shopify://collections/labor-day-jeans",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_yWTQiN",
+        "heading_KDxTAc",
+        "text_DFry7F",
+        "button_ikVage"
+      ],
+      "custom_css": [
+        "h1 {text-align: center; margin-bottom: 10px;}",
+        ".text-size-small {margin-block: 20px;}",
+        "a {margin-bottom: 20px;}",
+        "@media (min-width: 768px) {h1 {margin-bottom: 20px; } .text-size-small {margin-block: 30px; } a {margin-bottom: 30px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "grid",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
       }
     },
     "featured_collection_rjiVFp": {
       "type": "featured-collection",
       "custom_css": [
-        ".featured-collection .product-featured-image {margin-right: 10px;}",
-        "#product-grid-template--20152116510935__featured_collection_R8NrNw::after {position: absolute; width: 80%; height: 1px; background-color: black; bottom: -10px; left: 0; display: block;}",
-        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; }}"
+        ".sec.featured-collection .product-featured-image {margin-right: 10px;}",
+        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 92%; }}",
+        "@media (min-width: 1600px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 96%; }}",
+        ".row .columns {padding: 3px;}",
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal;}",
+        "@media (max-width: 768px) {.section-spacing {margin-top: 50px; } .row .columns {padding: 3px !important; }}"
       ],
       "name": "Featured collection",
       "settings": {
-        "heading": "Featured Collection",
+        "heading": "",
         "heading_left": false,
-        "description": "<p>Describe your featured collection here</p>",
+        "description": "",
         "full_width": true,
         "collection": "labor-day-jeans",
         "display_type": "carousel",
-        "product_limit": 4,
+        "product_limit": 12,
         "columns_desktop": 4,
         "show_view_all": false,
         "mobile_swipe": true,
-        "show_progress_bar": true,
-        "disable_top_spacing": false,
+        "show_progress_bar": false,
+        "disable_top_spacing": true,
         "disable_bottom_spacing": false
-      }
-    },
-    "custom_liquid_hEEDJw": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "Custom liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"klaviyo-form-VkgvQH\"></div>"
       }
     }
   },
   "order": [
-    "slideshow_AeUTHt",
+    "image_with_text_T4N6Ka",
+    "homepage_banner_fF9AQL",
+    "rich_text_RjeJeH",
     "shogun-helper",
     "main",
-    "shogun-optimizer",
+    "rich_text_VRw6Je",
     "featured_collection_Gb6bUj",
-    "featured_collection_rjiVFp",
-    "custom_liquid_hEEDJw"
+    "shogun-optimizer",
+    "rich_text_J3hVUR",
+    "featured_collection_rjiVFp"
   ]
 }

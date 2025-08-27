@@ -419,7 +419,7 @@
         "heading_left": true,
         "description": "",
         "full_width": true,
-        "collection": "women-denim-lark",
+        "collection": "lark",
         "display_type": "grid",
         "product_limit": 4,
         "columns_desktop": 4,
@@ -785,6 +785,7 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/water-retag.png",
+            "video": "shopify://files/videos/promo-video.mp4",
             "image_full_width": true,
             "retina": true,
             "title": "WE BELIEVE IN SAVING WATER",
