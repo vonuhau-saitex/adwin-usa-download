@@ -147,10 +147,40 @@
         "overlay_color": "#000000",
         "overlay_opacity": 0
       }
+    },
+    "countdown_header_7weBii": {
+      "type": "countdown-header",
+      "name": "Countdown Header",
+      "settings": {
+        "enable_countdown": true,
+        "show_close_button": true,
+        "header_text": "Sale ends in:",
+        "text_alignment": "center",
+        "button_text": "Shop now",
+        "button_link": "",
+        "timer_year": 2025,
+        "timer_month": "12",
+        "timer_day": "31",
+        "timer_hour": "23",
+        "timer_minute": "59",
+        "show_days": true,
+        "show_hours": true,
+        "show_minutes": true,
+        "show_seconds": true,
+        "days_label": "Days",
+        "hours_label": "Hours",
+        "minutes_label": "Minutes",
+        "seconds_label": "Seconds",
+        "color_bg": "#ff6b6b",
+        "color_text": "#ffffff",
+        "color_button_bg": "#ffffff",
+        "color_button_text": "#ff6b6b"
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "countdown_header_7weBii"
   ]
 }
