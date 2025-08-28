@@ -122,13 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerHeight = countdownHeader.offsetHeight;
     document.documentElement.style.setProperty('--countdown-header-height', headerHeight + 'px');
     
-    console.log('Setting countdown header height:', headerHeight + 'px');
-    
     // Remove any direct style.top manipulation to avoid conflicts with Header class
     const stickyHeader = document.querySelector('.header.header-sticky--active');
     if (stickyHeader && stickyHeader.style.top) {
       stickyHeader.style.removeProperty('top');
-      console.log('Removed direct style.top from sticky header');
     }
 
     // Add close functionality if close button exists
