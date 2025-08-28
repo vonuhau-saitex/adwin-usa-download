@@ -52,7 +52,7 @@
         -%}
         <div
           class="slideshow__slide carousel__slide {{ mobile_height }} {{ desktop_height }} text-{{ text_alignment }} content-size-{{ content_size }}"
-          style="--overlay-color-rgb: {{ overlay_color.rgb | replace: ' ' , ',' }}; --overlay-opacity: {{ overlay_opacity | divided_by: 100.0 }};"
+          style="--overlay-color-rgb: {{ overlay_color.rgb | replace: ' ' , ',' }}; --overlay-opacity: {{ overlay_opacity | divided_by: 100.0 }};{%- if block.settings.button_background_color -%} --slideshow-button-background: {{ block.settings.button_background_color }};{%- endif -%}{%- if block.settings.button_text_color -%} --slideshow-button-label: {{ block.settings.button_text_color }};{%- endif -%}{%- if block.settings.button_background_hover_color -%} --slideshow-button-background-hover: {{ block.settings.button_background_hover_color }};{%- endif -%}{%- if block.settings.button_text_hover_color -%} --slideshow-button-label-hover: {{ block.settings.button_text_hover_color }};{%- endif -%}"
           {{ block.shopify_attributes }}
         >
           {% if block.settings.button_1_text == blank and block.settings.button_2_text %}
@@ -677,6 +677,34 @@
           ],
           "default": "button",
           "label": "Button Style"
+        },
+        {
+          "type": "header",
+          "content": "Button Colors"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button background color",
+          "default": "#ffffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color",
+          "default": "#000000ff"
+        },
+        {
+          "type": "color",
+          "id": "button_background_hover_color",
+          "label": "Button background color (hover)",
+          "default": "#000000ff"
+        },
+        {
+          "type": "color",
+          "id": "button_text_hover_color",
+          "label": "Button text color (hover)",
+          "default": "#ffffffff"
         },
       ]
     }

@@ -21,42 +21,31 @@
         "overlay_opacity": 40
       }
     },
-    "b26b5504-0aba-4f3d-aee3-2ef20b867830": {
-      "type": "main-collection-banner-edwin",
-      "custom_css": [],
-      "settings": {
-        "heading": "",
-        "full_width": true,
-        "disable_top_spacing": true,
-        "disable_bottom_spacing": true
-      }
-    },
     "homepage_banner_qqqbLG": {
       "type": "homepage-banner",
       "blocks": {
-        "slide_QfebBb": {
+        "slide_8XMPXP": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/BOGO_Desktop_Banner.gif",
-            "mobile_image": "shopify://shop_images/BOGO_Mobile_Banner.gif",
+            "image": "shopify://shop_images/PLP_Banner-1.jpg",
+            "mobile_image": "shopify://shop_images/PLP_mobile_Banner.jpg",
             "slide_link": "",
-            "video_background": true,
+            "video_background": false,
             "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_hosted": "shopify://files/videos/BOGO BANNER.mp4",
             "gap": 20,
             "subheading": "",
-            "heading": "",
+            "heading": "TOP + BOTTOM. 15% OFF",
             "heading_size": "h1-xlarge",
-            "fontsize1": 76,
+            "fontsize1": 65,
             "lineheight1": 86,
-            "gap1": 20,
-            "content": "",
+            "gap1": 10,
+            "content": "★ ★ ★ <br><br>\nSTARTING FROM $85",
             "description_size": "medium",
-            "fontsize2": 14,
-            "lineheight2": 22,
+            "fontsize2": 24,
+            "lineheight2": 30,
             "gap2": 20,
-            "content_position": "middle-center",
-            "text_alignment": "center",
+            "content_position": "middle-left",
+            "text_alignment": "left",
             "content_size": "medium",
             "overlay_color": "#000000",
             "overlay_opacity": 70,
@@ -68,44 +57,14 @@
             "button_2_link": "",
             "buton2_style": "button"
           }
-        },
-        "slide_8XMPXP": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "slide_link": "",
-            "video_background": false,
-            "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "gap": 20,
-            "subheading": "Add a tagline",
-            "heading": "Slide Heading",
-            "heading_size": "h1-xlarge",
-            "fontsize1": 76,
-            "lineheight1": 86,
-            "gap1": 20,
-            "content": "Add descriptive text for your slide here.",
-            "description_size": "medium",
-            "fontsize2": 14,
-            "lineheight2": 22,
-            "gap2": 20,
-            "content_position": "middle-center",
-            "text_alignment": "center",
-            "content_size": "medium",
-            "overlay_color": "#000000",
-            "overlay_opacity": 70,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0,0,0, 0.1), rgba(0, 0, 0, 0.4) 100%)",
-            "button_1_text": "Shop Now",
-            "button_1_link": "",
-            "buton1_style": "button",
-            "button_2_text": "",
-            "button_2_link": "",
-            "buton2_style": "button"
-          }
         }
       },
       "block_order": [
-        "slide_QfebBb",
         "slide_8XMPXP"
+      ],
+      "custom_css": [
+        ".line-child {text-align: center;}",
+        "@media (min-width: 768px) {.line-child {text-align: left; }}"
       ],
       "name": "Edwin Slideshow",
       "settings": {
@@ -115,6 +74,73 @@
         "autoplay": true,
         "autoplay_length": 5,
         "transition": "swipe",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "b26b5504-0aba-4f3d-aee3-2ef20b867830": {
+      "type": "main-collection-banner-edwin",
+      "custom_css": [],
+      "settings": {
+        "heading": "",
+        "full_width": true,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
+    "rich_text_6meNX8": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_RKCB96": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading for this section"
+          }
+        },
+        "heading_F4aiYK": {
+          "type": "heading",
+          "settings": {
+            "text": "CHIC TOGETHER, EXCLUSIVE VALUE",
+            "size": "h4"
+          }
+        },
+        "text_pErf3a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair select top with denim for the perfect look.<br/> Build your bundle now — enjoy <strong>15% off</strong> starting August 29.</p>",
+            "size": "text-size-regular"
+          }
+        },
+        "button_aWnz4r": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_label": "Learn More",
+            "link": "",
+            "button_outline": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_RKCB96",
+        "heading_F4aiYK",
+        "text_pErf3a",
+        "button_aWnz4r"
+      ],
+      "custom_css": [
+        "h1 {text-align: center; margin-bottom: 10px;}",
+        "@media (min-width: 768px) {h1 {margin-bottom: 20px; }}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "section_width": "grid",
+        "text_width": "large",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_text": "#151515",
+        "color_links": "#151515",
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }
@@ -126,7 +152,7 @@
           "type": "promotion",
           "disabled": true,
           "settings": {
-            "promotion_collection": "spring-24",
+            "promotion_collection": "labor-day-tops",
             "promotion_position": 8,
             "promotion_width": "1",
             "promotion_type": "image",
@@ -238,8 +264,9 @@
   },
   "order": [
     "main-collection-banner",
-    "b26b5504-0aba-4f3d-aee3-2ef20b867830",
     "homepage_banner_qqqbLG",
+    "b26b5504-0aba-4f3d-aee3-2ef20b867830",
+    "rich_text_6meNX8",
     "product-grid",
     "166366972953e881f5",
     "166367231494317262",

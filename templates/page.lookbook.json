@@ -192,9 +192,12 @@
     "featured_collection_kUaLHT": {
       "type": "featured-collection",
       "custom_css": [
-        ".featured-collection .product-featured-image {margin-right: 10px;}",
-        "#product-grid-template--20152116510935__featured_collection_R8NrNw::after {position: absolute; width: 80%; height: 1px; background-color: black; bottom: -10px; left: 0; display: block;}",
-        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; }}"
+        ".sec.featured-collection .product-featured-image {margin-right: 10px;}",
+        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 92%; }}",
+        "@media (min-width: 1600px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 96%; }}",
+        ".row .columns {padding: 3px;}",
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal;}",
+        "@media (max-width: 768px) {.section-spacing {margin-top: 50px; } .row .columns {padding: 3px !important; }}"
       ],
       "name": "Featured collection",
       "settings": {
@@ -492,9 +495,12 @@
     "featured_collection_R8NrNw": {
       "type": "featured-collection",
       "custom_css": [
-        ".featured-collection .product-featured-image {margin-right: 10px;}",
-        "#product-grid-template--20152116510935__featured_collection_R8NrNw::after {position: absolute; width: 80%; height: 1px; background-color: black; bottom: -10px; left: 0; display: block;}",
-        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; }}"
+        ".sec.featured-collection .product-featured-image {margin-right: 10px;}",
+        "@media (min-width: 768px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 92%; }}",
+        "@media (min-width: 1600px) {.featured-collection .product-featured-image {margin-right: 16px; } .product-card-info {width: 96%; }}",
+        ".row .columns {padding: 3px;}",
+        ".section-header h2 {font-size: 14px; font-weight: 700; line-height: normal;}",
+        "@media (max-width: 768px) {.section-spacing {margin-top: 50px; } .row .columns {padding: 3px !important; }}"
       ],
       "name": "Featured collection",
       "settings": {

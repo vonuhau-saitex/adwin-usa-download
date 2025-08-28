@@ -1,0 +1,247 @@
+/* Countdown Header Styles */
+.countdown-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--countdown-bg);
+  color: var(--countdown-text);
+  padding: 10px 0;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.countdown-header.hidden {
+  transform: translateY(-100%);
+}
+
+.countdown-header.expired {
+  display: none;
+}
+
+.countdown-header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.countdown-header__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.countdown-header__content.text-left {
+  justify-content: flex-start;
+}
+
+.countdown-header__content.text-right {
+  justify-content: flex-end;
+}
+
+.countdown-header__text {
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.countdown-header__timer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.countdown-timer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.countdown-timer__column:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.countdown-timer__column {
+  position: relative;
+}
+
+.countdown-timer__number {
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 30px;
+  text-align: center;
+  line-height: 1;
+}
+
+.countdown-timer__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.countdown-header__button {
+  background-color: var(--countdown-button-bg);
+  color: var(--countdown-button-text);
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 2px solid var(--countdown-button-bg);
+}
+
+.countdown-header__button:hover {
+  background-color: transparent;
+  color: var(--countdown-button-bg);
+  transform: scale(1.05);
+}
+
+.countdown-header__close {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--countdown-text);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-header__close:hover {
+  opacity: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .countdown-header {
+    padding: 8px 0;
+    font-size: 12px;
+  }
+  
+  .countdown-header__container {
+    padding: 0 15px;
+  }
+  
+  .countdown-header__content {
+    gap: 15px;
+  }
+  
+  .countdown-header__text {
+    font-size: 14px;
+  }
+  
+  .countdown-timer__number {
+    font-size: 18px;
+    min-width: 25px;
+  }
+  
+  .countdown-timer__label {
+    font-size: 10px;
+  }
+  
+  .countdown-header__button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .countdown-header__timer {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-header__content {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .countdown-timer__column:not(:last-child)::after {
+    right: -6px;
+    font-size: 16px;
+  }
+  
+  .countdown-header__timer {
+    gap: 10px;
+  }
+  
+  .countdown-header__text {
+    font-size: 12px;
+  }
+}
+
+/* Adjust body padding when countdown header is visible */
+body.countdown-header-active {
+  padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+  body.countdown-header-active {
+    padding-top: 45px;
+  }
+}
+
+/* Integration with existing header styles */
+/* Top positioning is now handled dynamically by countdown-header.js using CSS custom properties */
+.countdown-header-active .header.header-sticky--active.is-sticky {
+  top: var(--countdown-header-height, 0px);
+}
+
+/* Countdown pulse animation for urgency */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.countdown-timer__number.urgent {
+  animation: pulse 1s infinite;
+  color: #ffff00;
+}
+
+/* Fade in animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.countdown-header {
+  animation: fadeInDown 0.5s ease-out;
+}

@@ -126,14 +126,14 @@
         "heading_cetnC4": {
           "type": "heading",
           "settings": {
-            "text": "LABOR DAY 15% PROMOTION",
+            "text": "CHIC TOGETHER, EXCLUSIVE VALUE",
             "size": "h3"
           }
         },
         "text_QLBYd6": {
           "type": "text",
           "settings": {
-            "text": "<p>MECHIANIC: PICK TOP & BOTTOM TO GET BLA BLA BLA</p>",
+            "text": "<p>Pair a top with denim and save <strong>15%. </strong>Style it your way.</p>",
             "size": "text-size-regular"
           }
         }
@@ -194,7 +194,7 @@
         "text_r8FfkT": {
           "type": "text",
           "settings": {
-            "text": "<p>STEP 1: PICK A TOP TO START YOUR NEW LOOK</p>",
+            "text": "<p><strong>STEP 1:</strong> Choose your go-to top</p>",
             "size": "text-size-small"
           }
         },
@@ -251,7 +251,7 @@
         "full_width": true,
         "collection": "labor-day-tops",
         "display_type": "carousel",
-        "product_limit": 9,
+        "product_limit": 12,
         "columns_desktop": 4,
         "show_view_all": false,
         "mobile_swipe": true,
@@ -286,7 +286,7 @@
         "text_DFry7F": {
           "type": "text",
           "settings": {
-            "text": "<p>STEP 2: PICK YOUR PREFERRED JEANS TO COMPLETE YOUR LOOK AND EARN EXTRA 15% DISCOUNT</p>",
+            "text": "<p><strong>STEP 2:</strong> Add denim to complete your bundle</p>",
             "size": "text-size-small"
           }
         },

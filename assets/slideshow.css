@@ -356,45 +356,48 @@
 
 
 .slideshow__slide-content .button {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--slideshow-button-background, rgba(255, 255, 255, 1));
   opacity: 1 !important;
-  color: #000 !important;
+  color: var(--slideshow-button-label, #000) !important;
   border-radius: 4px !important;
+  border-color: var(--slideshow-button-background, rgba(255, 255, 255, 1));
 }
 
 .slideshow__slide-content .button.white{
-  border-color: #fff;
+  border-color: var(--slideshow-button-background, rgba(0, 0, 0, 1));
 }
 
 .slideshow__slide-content .button:hover{
-  color: #fff !important;
-  background-color: rgba(0, 0, 0, 1);  
+  color: var(--slideshow-button-label-hover, #fff) !important;
+  background-color: var(--slideshow-button-background-hover, rgba(0, 0, 0, 1));
+  border-color: var(--slideshow-button-background-hover, rgba(0, 0, 0, 1));
 }
 
 .slideshow__slide-content .button.white:before{
-  background-color: rgba(0, 0, 0, 1);
-  border: rgba(0, 0, 0, 1);
+  background-color: var(--slideshow-button-background-hover, rgba(0, 0, 0, 1));
+  border: var(--slideshow-button-background-hover, rgba(0, 0, 0, 1));
 }
 
 .slideshow__slide-content .button.white:hover{
-  border-color: #000;
+  border-color: var(--slideshow-button-background-hover, #000);
 }
 
 .slideshow__slide-content .button.outline{
-  color: #fff !important;
-  background-color: transparent;  
+  color: var(--slideshow-button-label, #fff) !important;
+  background-color: transparent;
+  border-color: var(--slideshow-button-background, rgba(255, 255, 255, 1));
 }
 
 .slideshow__slide-content .button.outline:hover{
-  color: #000 !important;
-  background-color: #fff;  
-  border-color: #fff;
+  color: var(--slideshow-button-label-hover, #000) !important;
+  background-color: var(--slideshow-button-background-hover, #fff);
+  border-color: var(--slideshow-button-background-hover, #fff);
 }
 
 .slideshow__slide-content .button.outline.white:before{
-  color: #000 !important;
-  background-color: #fff; 
-  border-color: #fff;
+  color: var(--slideshow-button-label-hover, #000) !important;
+  background-color: var(--slideshow-button-background-hover, #fff);
+  border-color: var(--slideshow-button-background-hover, #fff);
 }
 
 .slideshow__slide-content .button * {

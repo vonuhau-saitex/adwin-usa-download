@@ -322,6 +322,23 @@
                         </span>
                       {% endif %}
                     </div>
+                    <!-- Limited Time Discount Badge -->
+                      {% if settings.show_limited_time_discount_badge %}
+                        {% assign original_price = product.price_min %}
+                        {% assign compare_price = product.compare_at_price_min %}
+                        {% if compare_price > original_price %}
+                          {% assign discount_amount = compare_price | minus: original_price %}
+                          {% assign discount_percentage = discount_amount | times: 100 | divided_by: compare_price %}
+                          {% assign remainder = discount_percentage | modulo: 5 %}
+                          {% if remainder >= 3 %}
+                            {% assign discount_percentage = discount_percentage | plus: 5 | minus: remainder %}
+                          {% else %}
+                            {% assign discount_percentage = discount_percentage | minus: remainder %}
+                          {% endif %}
+                          <div class="limited-time-discount-text">LIMITED TIME: {{ discount_percentage }}% OFF</div>
+                        {% endif %}
+                      {% endif %}
+
                     <div class="product-title-price-container">
                       <div class="product-title-wrapper">
                         <div class="product-title uppercase--{{ block.settings.uppercase }}">
@@ -840,6 +857,15 @@
                     {%- endif -%}
                   </side-panel-links>
                 {%- when 'buy_buttons' -%}
+                  
+                  <!-- FOMO Stock Counter -->
+                  {% if settings.show_limited_time_discount_badge %}
+                    {% assign random_stock = 'now' | date: '%S' | modulo: 6 | plus: 3 %}
+                    <div class="fomo-counter">
+                      <p class="fomo-text">Only <span id="fomo-stock-count">{{ random_stock }}</span> left in stock - get it now!</p>
+                    </div>
+                  {% endif %}
+                  
                   <div
                     id="backinstock-alert"
                     class="{% if product.selected_variant.id != blank %}{% if product.selected_variant.available %}hide{%  else %}show{% endif %}{%  else %}{% if product.selected_or_first_available_variant.available %}hide{%  else %}show{% endif %}{%  endif %}"
