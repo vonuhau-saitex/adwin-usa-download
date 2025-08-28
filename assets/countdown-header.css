@@ -1,247 +1,283 @@
-/* Countdown Header Styles */
-.countdown-header {
+/* Countdown Header Standalone Section Styles */
+.countdown-header-standalone {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  background-color: var(--countdown-bg);
-  color: var(--countdown-text);
-  padding: 10px 0;
-  font-size: 14px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  z-index: 9999;
+  padding: 12px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-family: inherit;
+  height: auto;
+  min-height: 60px; /* Set a consistent minimum height */
 }
 
-.countdown-header.hidden {
-  transform: translateY(-100%);
-}
-
-.countdown-header.expired {
-  display: none;
-}
-
-.countdown-header__container {
+.countdown-header-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-}
-
-.countdown-header__content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
+  position: relative;
+  min-height: 36px; /* Ensure content has minimum height */
 }
 
-.countdown-header__content.text-left {
-  justify-content: flex-start;
-}
-
-.countdown-header__content.text-right {
-  justify-content: flex-end;
-}
-
-.countdown-header__text {
-  font-weight: 600;
-  white-space: nowrap;
+.countdown-message {
   font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
 }
 
-.countdown-header__timer {
+.countdown-timer-header {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
-.countdown-timer__column {
+.countdown-timer-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.countdown-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  min-width: 40px;
 }
 
-.countdown-timer__column:not(:last-child)::after {
-  content: ":";
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.countdown-timer__column {
-  position: relative;
-}
-
-.countdown-timer__number {
-  font-weight: bold;
-  font-size: 20px;
-  min-width: 30px;
-  text-align: center;
+.countdown-number {
+  font-size: 28px;
+  font-weight: 700;
   line-height: 1;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.countdown-timer__label {
+.countdown-label {
   font-size: 11px;
+  text-transform: capitalize;
+  opacity: 0.85;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.countdown-separator {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 2px;
+  opacity: 0.8;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.countdown-button {
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  opacity: 0.9;
-}
-
-.countdown-header__button {
-  background-color: var(--countdown-button-bg);
-  color: var(--countdown-button-text);
-  padding: 8px 16px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
   white-space: nowrap;
-  border: 2px solid var(--countdown-button-bg);
 }
 
-.countdown-header__button:hover {
-  background-color: transparent;
-  color: var(--countdown-button-bg);
-  transform: scale(1.05);
+.countdown-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.countdown-header__close {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--countdown-text);
-  font-size: 20px;
-  cursor: pointer;
-  padding: 5px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-  line-height: 1;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.countdown-close {
+  position: absolute !important;
+  right: 0px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: none !important;
+  border: none !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  color: inherit !important;
+  opacity: 0.7 !important;
+  padding: 4px !important;
+  width: 24px !important;
+  height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  transition: all 0.2s ease !important;
 }
 
-.countdown-header__close:hover {
-  opacity: 1;
+.countdown-close:hover {
+  opacity: 1 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .countdown-header {
-    padding: 8px 0;
-    font-size: 12px;
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+  .countdown-header-standalone {
+    padding: 10px 12px;
+    min-height: 75px; /* Slightly taller on mobile due to stacking */
   }
   
-  .countdown-header__container {
-    padding: 0 15px;
+  .countdown-header-content {
+    gap: 16px;
+    flex-direction: column;
+    min-height: 50px;
   }
   
-  .countdown-header__content {
-    gap: 15px;
-  }
-  
-  .countdown-header__text {
+  .countdown-message {
     font-size: 14px;
+    text-align: center;
   }
   
-  .countdown-timer__number {
-    font-size: 18px;
-    min-width: 25px;
+  .countdown-number {
+    font-size: 24px;
   }
   
-  .countdown-timer__label {
+  .countdown-label {
     font-size: 10px;
   }
   
-  .countdown-header__button {
-    padding: 6px 12px;
-    font-size: 12px;
+  .countdown-separator {
+    font-size: 18px;
+    margin-top: 3px;
   }
   
-  .countdown-header__timer {
+  .countdown-button {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+  
+  .countdown-timer-display {
+    gap: 5px;
+  }
+  
+  .countdown-item {
+    min-width: 35px;
+  }
+
+  .countdown-close {
+    right: 8px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .countdown-header-standalone {
+    padding: 8px 10px;
+    min-height: 85px; /* Even taller on small mobile */
+  }
+  
+  .countdown-header-content {
     gap: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .countdown-header__content {
-    flex-direction: column;
-    gap: 8px;
+    min-height: 60px;
   }
   
-  .countdown-timer__column:not(:last-child)::after {
-    right: -6px;
+  .countdown-message {
+    font-size: 13px;
+  }
+  
+  .countdown-number {
+    font-size: 20px;
+  }
+  
+  .countdown-label {
+    font-size: 9px;
+  }
+  
+  .countdown-separator {
     font-size: 16px;
+    margin-top: 2px;
   }
   
-  .countdown-header__timer {
-    gap: 10px;
+  .countdown-timer-display {
+    gap: 3px;
   }
   
-  .countdown-header__text {
+  .countdown-item {
+    min-width: 32px;
+  }
+
+  .countdown-button {
+    padding: 7px 16px;
     font-size: 12px;
   }
-}
 
-/* Adjust body padding when countdown header is visible */
-body.countdown-header-active {
-  padding-top: 50px;
-}
-
-@media (max-width: 768px) {
-  body.countdown-header-active {
-    padding-top: 45px;
+  .countdown-close {
+    right: 4px !important;
+    font-size: 16px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
 }
 
-/* Integration with existing header styles */
-/* Top positioning is now handled dynamically by countdown-header.js using CSS custom properties */
-.countdown-header-active .header.header-sticky--active.is-sticky {
-  top: var(--countdown-header-height, 0px);
+/* Adjust main header when countdown is visible */
+.countdown-header-section .header-section {
+  top: 60px; /* Position sticky header below countdown */
 }
 
-/* Countdown pulse animation for urgency */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+@media only screen and (max-width: 768px) {
+  .countdown-header-section .header-section {
+    top: 75px;
   }
 }
 
-.countdown-timer__number.urgent {
-  animation: pulse 1s infinite;
-  color: #ffff00;
+@media only screen and (max-width: 480px) {
+  .countdown-header-section .header-section {
+    top: 85px;
+  }
 }
 
-/* Fade in animation */
-@keyframes fadeInDown {
+/* Modern browser support using :has() selector */
+body:has(.countdown-header-standalone) .header-section {
+  top: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  body:has(.countdown-header-standalone) .header-section {
+    top: 75px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body:has(.countdown-header-standalone) .header-section {
+    top: 85px;
+  }
+}
+
+/* Ensure body has top padding to account for both countdown and sticky header */
+.countdown-header-section body {
+  padding-top: 0; /* Reset any existing padding */
+}
+
+/* Add some top margin to the main content when countdown is active */
+.countdown-header-section main,
+.countdown-header-section .main-content {
+  margin-top: 0; /* Let the sticky header handle positioning */
+}
+
+/* Animation for countdown header appearance */
+.countdown-header-standalone {
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
   from {
-    opacity: 0;
     transform: translateY(-100%);
+    opacity: 0;
   }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
-}
-
-.countdown-header {
-  animation: fadeInDown 0.5s ease-out;
 }

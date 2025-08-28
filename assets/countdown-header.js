@@ -1,9 +1,9 @@
 /**
- * Countdown Header Timer Component
- * Uses a different custom element name to avoid conflicts
+ *  @class
+ *  @function CountdownTimerHeader
  */
-if (!customElements.get('countdown-header-timer')) {
-  class CountdownHeaderTimer extends HTMLElement {
+if (!customElements.get('countdown-timer')) {
+  class CountdownTimer extends HTMLElement {
     constructor() {
       super();
 
@@ -24,17 +24,32 @@ if (!customElements.get('countdown-header-timer')) {
 
       // Set the date we're counting down to
       let date_string = month + '/' + day + '/' + year + ' ' + tarhour + ':' + tarmin + ' GMT' + timezone;
+      // Time without timezone
+      this.countDownDate = new Date(year, month - 1, day, tarhour, tarmin, 0, 0).getTime();
+
       // Time with timezone
       this.countDownDate = new Date(date_string).getTime();
+
+      // Add class to body for styling purposes
+      if (this.classList.contains('countdown-timer-header')) {
+        document.body.classList.add('countdown-header-active');
+      }
+    }
+
+    convertDateForIos(date) {
+      var arr = date.split(/[- :]/);
+      date = new Date(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
+      return date;
     }
 
     connectedCallback() {
       let _this = this;
       const updateTime = function() {
-        // Get current date and time
+
+        // Get todays date and time
         const now = new Date().getTime();
 
-        // Find the distance between now and the countdown date
+        // Find the distance between now an the count down date
         const distance = _this.countDownDate - now;
 
         // Time calculations for days, hours, minutes and seconds
@@ -43,118 +58,104 @@ if (!customElements.get('countdown-header-timer')) {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the corresponding elements
-        const daysEl = _this.querySelector('.days .countdown-timer__number');
-        const hoursEl = _this.querySelector('.hours .countdown-timer__number');
-        const minutesEl = _this.querySelector('.minutes .countdown-timer__number');
-        const secondsEl = _this.querySelector('.seconds .countdown-timer__number');
-
-        if (daysEl) daysEl.innerHTML = CountdownHeaderTimer.addZero(days);
-        if (hoursEl) hoursEl.innerHTML = CountdownHeaderTimer.addZero(hours);
-        if (minutesEl) minutesEl.innerHTML = CountdownHeaderTimer.addZero(minutes);
-        if (secondsEl) secondsEl.innerHTML = CountdownHeaderTimer.addZero(seconds);
-
-        // Add urgent class when time is running low (less than 1 hour)
-        const isUrgent = days === 0 && hours === 0 && minutes < 60;
-        [daysEl, hoursEl, minutesEl, secondsEl].forEach(el => {
-          if (el) {
-            el.classList.toggle('urgent', isUrgent);
-          }
-        });
-
-        // If the countdown is finished, hide the header
         if (distance < 0) {
-          clearInterval(_this.interval);
-          _this.hideCountdownHeader();
+          // Timer expired - hide the countdown header
+          const countdownHeader = document.querySelector('.countdown-header');
+          if (countdownHeader) {
+            countdownHeader.style.display = 'none';
+            document.body.classList.remove('countdown-header-active');
+          }
+          
+          _this.querySelector('.days .countdown-timer--column--number').innerHTML = 0;
+          _this.querySelector('.hours .countdown-timer--column--number').innerHTML = 0;
+          _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = 0;
+          _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = 0;
+        } else {
+          requestAnimationFrame(updateTime);
+          _this.querySelector('.days .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(days);
+          _this.querySelector('.hours .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(hours);
+          _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(minutes);
+          _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(seconds);
         }
       };
-
-      // Update the countdown every 1 second
-      updateTime();
-      this.interval = setInterval(updateTime, 1000);
-    }
-
-    hideCountdownHeader() {
-      const countdownHeader = document.querySelector('.countdown-header');
-      if (countdownHeader) {
-        countdownHeader.classList.add('expired');
-        document.body.classList.remove('countdown-header-active');
-        
-        // Remove CSS custom property and direct styles
-        document.documentElement.style.removeProperty('--countdown-header-height');
-        const stickyHeader = document.querySelector('.header.header-sticky--active');
-        if (stickyHeader && stickyHeader.style.top) {
-          stickyHeader.style.removeProperty('top');
-        }
-      }
-    }
-
-    disconnectedCallback() {
-      if (this.interval) {
-        clearInterval(this.interval);
-      }
+      requestAnimationFrame(updateTime);
     }
 
     static addZero(x) {
       return (x < 10 && x >= 0) ? "0" + x : x;
     }
   }
-
-  customElements.define('countdown-header-timer', CountdownHeaderTimer);
+  customElements.define('countdown-timer', CountdownTimer);
 }
 
 // Initialize countdown header functionality
 document.addEventListener('DOMContentLoaded', function() {
-  const countdownHeader = document.querySelector('.countdown-header');
+  const countdownHeader = document.querySelector('.countdown-header-standalone');
   
   if (countdownHeader) {
-    // Check if user previously dismissed the header
-    const dismissedKey = 'countdownHeaderDismissed_' + new Date().toDateString();
-    if (localStorage.getItem(dismissedKey) === 'true') {
-      countdownHeader.classList.add('expired');
-      return;
-    }
-
-    // Add body class for spacing adjustment
+    // Add class to body for styling purposes
     document.body.classList.add('countdown-header-active');
     
-    // Set countdown header height as CSS custom property instead of direct style manipulation
-    const headerHeight = countdownHeader.offsetHeight;
-    document.documentElement.style.setProperty('--countdown-header-height', headerHeight + 'px');
-    
-    // Remove any direct style.top manipulation to avoid conflicts with Header class
-    const stickyHeader = document.querySelector('.header.header-sticky--active');
-    if (stickyHeader && stickyHeader.style.top) {
-      stickyHeader.style.removeProperty('top');
+    // Function to adjust header position dynamically
+    function adjustHeaderPosition() {
+      const headerSection = document.querySelector('.header-section');
+      if (headerSection && countdownHeader) {
+        const countdownHeight = countdownHeader.offsetHeight;
+        headerSection.style.top = countdownHeight + 'px';
+      }
     }
-
-    // Add close functionality if close button exists
-    const closeButton = countdownHeader.querySelector('.countdown-header__close');
-    if (closeButton) {
-      closeButton.addEventListener('click', function() {
-        countdownHeader.classList.add('expired');
-        document.body.classList.remove('countdown-header-active');
-        
-        // Remove CSS custom property and direct styles
-        document.documentElement.style.removeProperty('--countdown-header-height');
-        const stickyHeader = document.querySelector('.header.header-sticky--active');
-        if (stickyHeader && stickyHeader.style.top) {
-          stickyHeader.style.removeProperty('top');
-        }
-        
-        // Store in localStorage to remember user dismissed it (for today only)
-        localStorage.setItem(dismissedKey, 'true');
-      });
+    
+    // Adjust position on load and resize
+    adjustHeaderPosition();
+    window.addEventListener('resize', adjustHeaderPosition);
+    
+    // Optional: Add close functionality
+    const closeButton = document.createElement('button');
+    closeButton.innerHTML = '×';
+    closeButton.className = 'countdown-close';
+    closeButton.style.cssText = `
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: inherit;
+      opacity: 0.7;
+      padding: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    `;
+    
+    closeButton.addEventListener('click', function() {
+      countdownHeader.style.display = 'none';
+      document.body.classList.remove('countdown-header-active');
+      
+      // Reset header section top position
+      const headerSection = document.querySelector('.header-section');
+      if (headerSection) {
+        headerSection.style.top = '0px';
+      }
+      
+      // Store in localStorage to remember user preference
+      localStorage.setItem('countdown-header-closed', 'true');
+    });
+    
+    // Check if user previously closed the countdown
+    if (localStorage.getItem('countdown-header-closed') === 'true') {
+      countdownHeader.style.display = 'none';
+      document.body.classList.remove('countdown-header-active');
+    } else {
+      countdownHeader.appendChild(closeButton);
+      // Adjust position after adding close button
+      setTimeout(adjustHeaderPosition, 100);
     }
   }
-  
-  // Handle window resize
-  window.addEventListener('resize', function() {
-    const countdownHeader = document.querySelector('.countdown-header');
-    
-    if (countdownHeader && !countdownHeader.classList.contains('expired')) {
-      const headerHeight = countdownHeader.offsetHeight;
-      document.documentElement.style.setProperty('--countdown-header-height', headerHeight + 'px');
-    }
-  });
 });

@@ -354,9 +354,10 @@ class Header {
     window.addEventListener('scroll', function() {
       setHeaderOffset(header);
       setHeaderHeight(header_main);
-            // Sticky Header Class
+      // Sticky Header Class
       if (header_main.classList.contains('header-sticky--active')) {
         let offset = parseInt(header_main.getBoundingClientRect().top, 10) + document.documentElement.scrollTop;
+
         header_main.classList.toggle('is-sticky', window.scrollY >= offset && window.scrollY > 0);
       }
 
@@ -388,13 +389,6 @@ class Header {
   }
   setHeaderHeight(header) {
     let h = header.clientHeight;
-    
-    // Add countdown header height if it exists (from CSS custom property)
-    const countdownHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height')) || 0;
-    if (countdownHeight > 0) {
-      h += countdownHeight;
-    }
-    
     document.documentElement.style.setProperty('--header-height', h + 'px');
   }
   onSummaryClick(event) {

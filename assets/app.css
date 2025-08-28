@@ -4243,9 +4243,7 @@ input[type="submit"]:before {
   input[type="submit"]:focus,
   input[type="submit"].loading,
   [loading="true"] input[type="submit"] {
-    color: var(--solid-button-label-hover, var(--outline-button-label, var(--color-accent)));
-    background: var(--solid-button-background-hover, var(--solid-button-background, var(--color-accent)));
-    border-color: var(--solid-button-background-hover, var(--solid-button-background, var(--color-accent)));
+    color: var(--outline-button-label, var(--color-accent));
   }
 
   .button:hover:before,
