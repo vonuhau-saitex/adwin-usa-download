@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to adjust header position dynamically
     function adjustHeaderPosition() {
       const headerSection = document.querySelector('.header-section');
-      if (headerSection && countdownHeader) {
+      if (headerSection && countdownHeader && !countdownHeader.classList.contains('countdown-expired')) {
         const countdownHeight = countdownHeader.offsetHeight;
         headerSection.style.top = countdownHeight + 'px';
         
@@ -121,6 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.style.setProperty('--countdown-header-height', countdownHeight + 'px');
         
         // Trigger header recalculation
+        if (window.recalculateHeaderPosition) {
+          window.recalculateHeaderPosition();
+        }
+      } else {
+        // Countdown is expired or doesn't exist, reset header position
+        if (headerSection) {
+          headerSection.style.top = '0px';
+        }
+        document.documentElement.style.setProperty('--countdown-header-height', '0px');
         if (window.recalculateHeaderPosition) {
           window.recalculateHeaderPosition();
         }
@@ -151,10 +160,11 @@ document.addEventListener('DOMContentLoaded', function() {
     adjustHeaderPosition();
     window.addEventListener('resize', adjustHeaderPosition);
     
-    // Optional: Add close functionality
+    // Optional: Add close functionality with better UX
     const closeButton = document.createElement('button');
     closeButton.innerHTML = '×';
     closeButton.className = 'countdown-close';
+    closeButton.setAttribute('aria-label', 'Close countdown');
     closeButton.style.cssText = `
       position: absolute;
       right: 10px;
@@ -167,14 +177,24 @@ document.addEventListener('DOMContentLoaded', function() {
       color: inherit;
       opacity: 0.7;
       padding: 0;
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
       transition: all 0.2s ease;
     `;
+    
+    closeButton.addEventListener('mouseenter', function() {
+      this.style.opacity = '1';
+      this.style.background = 'rgba(255, 255, 255, 0.1)';
+    });
+    
+    closeButton.addEventListener('mouseleave', function() {
+      this.style.opacity = '0.7';
+      this.style.background = 'none';
+    });
     
     closeButton.addEventListener('click', function() {
       removeCountdown();
