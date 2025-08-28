@@ -226,14 +226,30 @@
   top: 60px; /* Position sticky header below countdown */
 }
 
+.countdown-header-section .announcement-bar-section {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 9998; /* Just below countdown header */
+}
+
 @media only screen and (max-width: 768px) {
   .countdown-header-section .header-section {
+    top: 75px;
+  }
+  
+  .countdown-header-section .announcement-bar-section {
     top: 75px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .countdown-header-section .header-section {
+    top: 85px;
+  }
+  
+  .countdown-header-section .announcement-bar-section {
     top: 85px;
   }
 }
@@ -243,14 +259,30 @@ body:has(.countdown-header-standalone) .header-section {
   top: 60px;
 }
 
+body:has(.countdown-header-standalone) .announcement-bar-section {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 9998; /* Just below countdown header */
+}
+
 @media only screen and (max-width: 768px) {
   body:has(.countdown-header-standalone) .header-section {
+    top: 75px;
+  }
+  
+  body:has(.countdown-header-standalone) .announcement-bar-section {
     top: 75px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   body:has(.countdown-header-standalone) .header-section {
+    top: 85px;
+  }
+  
+  body:has(.countdown-header-standalone) .announcement-bar-section {
     top: 85px;
   }
 }
