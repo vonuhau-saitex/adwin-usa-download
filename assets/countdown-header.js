@@ -34,6 +34,9 @@ if (!customElements.get('countdown-timer')) {
       if (this.classList.contains('countdown-timer-header')) {
         document.body.classList.add('countdown-header-active');
       }
+      
+      // Check if seconds should be shown
+      this.showSeconds = this.dataset.showSeconds === 'true';
     }
 
     convertDateForIos(date) {
