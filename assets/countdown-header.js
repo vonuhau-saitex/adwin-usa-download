@@ -60,10 +60,24 @@ if (!customElements.get('countdown-timer')) {
 
         if (distance < 0) {
           // Timer expired - hide the countdown header
-          const countdownHeader = document.querySelector('.countdown-header');
+          const countdownHeader = document.querySelector('.countdown-header-standalone');
           if (countdownHeader) {
             countdownHeader.style.display = 'none';
             document.body.classList.remove('countdown-header-active');
+            
+            // Reset header section top position
+            const headerSection = document.querySelector('.header-section');
+            if (headerSection) {
+              headerSection.style.top = '0px';
+            }
+            
+            // Reset CSS custom property
+            document.documentElement.style.setProperty('--countdown-header-height', '0px');
+            
+            // Trigger header recalculation
+            if (window.recalculateHeaderPosition) {
+              window.recalculateHeaderPosition();
+            }
           }
           
           _this.querySelector('.days .countdown-timer--column--number').innerHTML = 0;
