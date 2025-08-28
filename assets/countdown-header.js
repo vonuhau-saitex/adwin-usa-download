@@ -190,12 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // Adjust position after adding close button
       setTimeout(adjustHeaderPosition, 100);
     }
-    
-    // Expose function globally for app.js to use
-    window.recalculateHeaderPosition = function() {
-      // This will be called by app.js when it needs to recalculate
-      adjustHeaderPosition();
-    };
   } else {
     // No countdown header, make sure CSS property is set to 0
     document.documentElement.style.setProperty('--countdown-header-height', '0px');
