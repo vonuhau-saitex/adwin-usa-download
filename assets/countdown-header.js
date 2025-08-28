@@ -57,7 +57,7 @@ if (!customElements.get('countdown-timer')) {
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
+        console.log(distance)
         if (distance < 0) {
           // Timer expired - hide the countdown header
           const countdownHeader = document.querySelector('.countdown-header-standalone');
