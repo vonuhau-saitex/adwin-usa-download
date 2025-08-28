@@ -23,13 +23,7 @@
        color: {{ countdown_text_color }};
      ">
   <div class="countdown-header-content">
-    <div class="countdown-content-wrapper">
-      {%- if announcement_text != blank -%}
-        <div class="countdown-announcement">
-          {{ announcement_text }}
-        </div>
-      {%- endif -%}
-      
+    <div class="countdown-content-wrapper">      
       <div class="countdown-main-content">
         {%- if countdown_message != blank -%}
           <div class="countdown-message">
@@ -42,7 +36,8 @@
             class="countdown-timer-header"
             data-date="{{ countdown_date | date: '%d-%m-%Y' }}"
             data-time="{{ countdown_time | default: '23:59' }}"
-            data-timezone="{{ countdown_timezone | default: '+00:00' }}">
+            data-timezone="{{ countdown_timezone | default: '+00:00' }}"
+            data-show-seconds="{{ show_seconds }}">
             <div class="countdown-timer-display">
               <div class="countdown-item">
                 <div class="countdown-number days">
@@ -64,13 +59,15 @@
                 </div>
                 <div class="countdown-label">Minutes</div>
               </div>
-              <div class="countdown-separator">:</div>
-              <div class="countdown-item">
-                <div class="countdown-number seconds">
-                  <span class="countdown-timer--column--number">00</span>
+              {%- if show_seconds -%}
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                  <div class="countdown-number seconds">
+                    <span class="countdown-timer--column--number">00</span>
+                  </div>
+                  <div class="countdown-label">Seconds</div>
                 </div>
-                <div class="countdown-label">Seconds</div>
-              </div>
+              {%- endif -%}
             </div>
           </countdown-timer>
           
@@ -87,6 +84,12 @@
           {%- endif -%}
         </div>
       </div>
+      
+      {%- if announcement_text != blank -%}
+        <div class="countdown-announcement">
+          {{ announcement_text }}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </div>
