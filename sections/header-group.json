@@ -150,6 +150,7 @@
     },
     "countdown_header_Qb9Rp6": {
       "type": "countdown-header",
+      "disabled": true,
       "name": "Countdown Header",
       "settings": {
         "countdown_enabled": true,
