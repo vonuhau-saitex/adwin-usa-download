@@ -68,13 +68,17 @@ if (!customElements.get('countdown-timer')) {
             // Reset header section top position
             const headerSection = document.querySelector('.header-section');
             if (headerSection) {
-              headerSection.style.top = '0px';
+              headerSection.style.top = '';
             }
             
-            // Reset announcement bar position
+            // Reset announcement bar position and styles
             const announcementBar = document.querySelector('#shopify-section-announcement-bar');
             if (announcementBar) {
-              announcementBar.style.top = '0px';
+              announcementBar.style.position = '';
+              announcementBar.style.top = '';
+              announcementBar.style.left = '';
+              announcementBar.style.right = '';
+              announcementBar.style.zIndex = '';
             }
             
             // Reset CSS custom property
