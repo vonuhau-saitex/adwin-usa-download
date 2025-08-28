@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to remove countdown and reset header
     function removeCountdown() {
-      countdownHeader.style.display = 'none';
+      countdownHeader.classList.add('countdown-expired');
       document.body.classList.remove('countdown-header-active');
       
       // Reset header section top position
@@ -178,18 +178,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     closeButton.addEventListener('click', function() {
       removeCountdown();
-      // Store in localStorage to remember user preference
-      localStorage.setItem('countdown-header-closed', 'true');
     });
     
-    // Check if user previously closed the countdown
-    if (localStorage.getItem('countdown-header-closed') === 'true') {
-      removeCountdown();
-    } else {
-      countdownHeader.appendChild(closeButton);
-      // Adjust position after adding close button
-      setTimeout(adjustHeaderPosition, 100);
-    }
+    // Always show the countdown when the section is active (no localStorage check)
+    countdownHeader.appendChild(closeButton);
+    // Adjust position after adding close button
+    setTimeout(adjustHeaderPosition, 100);
   } else {
     // No countdown header, make sure CSS property is set to 0
     document.documentElement.style.setProperty('--countdown-header-height', '0px');
