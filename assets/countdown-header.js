@@ -123,7 +123,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to adjust header position dynamically
     function adjustHeaderPosition() {
       const headerSection = document.querySelector('.header-section');
-      const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+      // Try multiple selectors for announcement bar
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar') ||
+                             document.querySelector('[id*="announcement"]') ||
+                             document.querySelector('[class*="announcement"]');
       
       if (headerSection && countdownHeader && !countdownHeader.classList.contains('countdown-expired')) {
         const countdownHeight = countdownHeader.offsetHeight;
@@ -140,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
           announcementBar.style.left = '0';
           announcementBar.style.right = '0';
           announcementBar.style.zIndex = '9998';
+          announcementBar.style.width = '100%';
         }
         
         // Position header below both countdown and announcement bar
@@ -163,6 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
           announcementBar.style.left = '';
           announcementBar.style.right = '';
           announcementBar.style.zIndex = '';
+          announcementBar.style.width = '';
         }
         document.documentElement.style.setProperty('--countdown-header-height', '0px');
         if (window.recalculateHeaderPosition) {
