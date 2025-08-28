@@ -68,13 +68,21 @@ if (!customElements.get('countdown-timer')) {
             // Reset header section top position
             const headerSection = document.querySelector('.header-section');
             if (headerSection) {
-              headerSection.style.top = '0px';
+              headerSection.style.top = '';
             }
             
-            // Reset announcement bar position
-            const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+            // Reset announcement bar position and styles
+            const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                                   document.querySelector('.announcement-bar') ||
+                                   document.querySelector('[id*="announcement"]') ||
+                                   document.querySelector('[class*="announcement"]');
             if (announcementBar) {
-              announcementBar.style.top = '0px';
+              announcementBar.style.position = '';
+              announcementBar.style.top = '';
+              announcementBar.style.left = '';
+              announcementBar.style.right = '';
+              announcementBar.style.zIndex = '';
+              announcementBar.style.width = '';
             }
             
             // Reset CSS custom property
@@ -119,25 +127,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to adjust header position dynamically
     function adjustHeaderPosition() {
       const headerSection = document.querySelector('.header-section');
-      const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+      // Try multiple selectors for announcement bar
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar') ||
+                             document.querySelector('[id*="announcement"]') ||
+                             document.querySelector('[class*="announcement"]');
       
       if (headerSection && countdownHeader && !countdownHeader.classList.contains('countdown-expired')) {
         const countdownHeight = countdownHeader.offsetHeight;
-        let announcementHeight = 0;
+        let totalOffset = countdownHeight;
         
-        // Get announcement bar height if it exists
+        // Get announcement bar height if it exists and add it to total offset
         if (announcementBar) {
-          announcementHeight = announcementBar.offsetHeight;
-          // Position announcement bar below countdown
+          const announcementHeight = announcementBar.offsetHeight;
+          totalOffset += announcementHeight;
+          
+          // Position announcement bar below countdown using fixed positioning
+          announcementBar.style.position = 'fixed';
           announcementBar.style.top = countdownHeight + 'px';
+          announcementBar.style.left = '0';
+          announcementBar.style.right = '0';
+          announcementBar.style.zIndex = '9998';
+          announcementBar.style.width = '100%';
         }
         
         // Position header below both countdown and announcement bar
-        const totalOffset = countdownHeight + announcementHeight;
         headerSection.style.top = totalOffset + 'px';
         
         // Set CSS custom property for app.js to use
-        document.documentElement.style.setProperty('--countdown-header-height', countdownHeight + 'px');
+        document.documentElement.style.setProperty('--countdown-header-height', totalOffset + 'px');
         
         // Trigger header recalculation
         if (window.recalculateHeaderPosition) {
@@ -146,10 +164,15 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         // Countdown is expired or doesn't exist, reset positions
         if (headerSection) {
-          headerSection.style.top = '0px';
+          headerSection.style.top = '';
         }
         if (announcementBar) {
-          announcementBar.style.top = '0px';
+          announcementBar.style.position = '';
+          announcementBar.style.top = '';
+          announcementBar.style.left = '';
+          announcementBar.style.right = '';
+          announcementBar.style.zIndex = '';
+          announcementBar.style.width = '';
         }
         document.documentElement.style.setProperty('--countdown-header-height', '0px');
         if (window.recalculateHeaderPosition) {
@@ -166,13 +189,21 @@ document.addEventListener('DOMContentLoaded', function() {
       // Reset header section top position
       const headerSection = document.querySelector('.header-section');
       if (headerSection) {
-        headerSection.style.top = '0px';
+        headerSection.style.top = '';
       }
       
-      // Reset announcement bar position
-      const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+      // Reset announcement bar position and styles - try multiple selectors
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar') ||
+                             document.querySelector('[id*="announcement"]') ||
+                             document.querySelector('[class*="announcement"]');
       if (announcementBar) {
-        announcementBar.style.top = '0px';
+        announcementBar.style.position = '';
+        announcementBar.style.top = '';
+        announcementBar.style.left = '';
+        announcementBar.style.right = '';
+        announcementBar.style.zIndex = '';
+        announcementBar.style.width = '';
       }
       
       // Reset CSS custom property
