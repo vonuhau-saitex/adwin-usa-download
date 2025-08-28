@@ -113,9 +113,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to adjust header position dynamically
     function adjustHeaderPosition() {
       const headerSection = document.querySelector('.header-section');
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+      
       if (headerSection && countdownHeader && !countdownHeader.classList.contains('countdown-expired')) {
         const countdownHeight = countdownHeader.offsetHeight;
-        headerSection.style.top = countdownHeight + 'px';
+        let announcementHeight = 0;
+        
+        // Get announcement bar height if it exists
+        if (announcementBar) {
+          announcementHeight = announcementBar.offsetHeight;
+          // Position announcement bar below countdown
+          announcementBar.style.top = countdownHeight + 'px';
+        }
+        
+        // Position header below both countdown and announcement bar
+        const totalOffset = countdownHeight + announcementHeight;
+        headerSection.style.top = totalOffset + 'px';
         
         // Set CSS custom property for app.js to use
         document.documentElement.style.setProperty('--countdown-header-height', countdownHeight + 'px');
@@ -125,9 +138,12 @@ document.addEventListener('DOMContentLoaded', function() {
           window.recalculateHeaderPosition();
         }
       } else {
-        // Countdown is expired or doesn't exist, reset header position
+        // Countdown is expired or doesn't exist, reset positions
         if (headerSection) {
           headerSection.style.top = '0px';
+        }
+        if (announcementBar) {
+          announcementBar.style.top = '0px';
         }
         document.documentElement.style.setProperty('--countdown-header-height', '0px');
         if (window.recalculateHeaderPosition) {
@@ -145,6 +161,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const headerSection = document.querySelector('.header-section');
       if (headerSection) {
         headerSection.style.top = '0px';
+      }
+      
+      // Reset announcement bar position
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+      if (announcementBar) {
+        announcementBar.style.top = '0px';
       }
       
       // Reset CSS custom property
