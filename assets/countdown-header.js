@@ -72,13 +72,17 @@ if (!customElements.get('countdown-timer')) {
             }
             
             // Reset announcement bar position and styles
-            const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+            const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                                   document.querySelector('.announcement-bar') ||
+                                   document.querySelector('[id*="announcement"]') ||
+                                   document.querySelector('[class*="announcement"]');
             if (announcementBar) {
               announcementBar.style.position = '';
               announcementBar.style.top = '';
               announcementBar.style.left = '';
               announcementBar.style.right = '';
               announcementBar.style.zIndex = '';
+              announcementBar.style.width = '';
             }
             
             // Reset CSS custom property
