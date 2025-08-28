@@ -62,6 +62,7 @@ if (!customElements.get('countdown-timer')) {
           // Timer expired - hide the countdown header
           const countdownHeader = document.querySelector('.countdown-header-standalone');
           if (countdownHeader) {
+            console.log("hey display in here")
             countdownHeader.style.display = 'none';
             document.body.classList.remove('countdown-header-active');
             
