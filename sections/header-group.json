@@ -155,7 +155,7 @@
         "countdown_enabled": true,
         "countdown_message": "Time is ticking",
         "countdown_timer_day": 31,
-        "countdown_timer_month": 12,
+        "countdown_timer_month": 10,
         "countdown_timer_year": 2025,
         "countdown_timer_hour": 23,
         "countdown_timer_minute": 59,
