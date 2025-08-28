@@ -1,199 +1,324 @@
+{{- 'countdown-header.css' | asset_url | stylesheet_tag -}}
+
 {%- liquid
-  assign countdown_enabled = section.settings.countdown_enabled
+  assign countdown_date = section.settings.countdown_date
+  assign countdown_time = section.settings.countdown_time
+  assign countdown_timezone = section.settings.countdown_timezone
+  assign countdown_message = section.settings.countdown_message
+  assign announcement_text = section.settings.announcement_text
   assign countdown_bg_color = section.settings.countdown_bg_color
   assign countdown_text_color = section.settings.countdown_text_color
-  assign countdown_timer_year = section.settings.countdown_timer_year
-  assign countdown_timer_month = section.settings.countdown_timer_month
-  assign countdown_timer_day = section.settings.countdown_timer_day
-  assign countdown_timer_hour = section.settings.countdown_timer_hour
-  assign countdown_timer_minute = section.settings.countdown_timer_minute
-  assign countdown_message = section.settings.countdown_message
-  assign countdown_button_text = section.settings.countdown_button_text
-  assign countdown_button_link = section.settings.countdown_button_link
-  assign countdown_button_bg_color = section.settings.countdown_button_bg_color
-  assign countdown_button_text_color = section.settings.countdown_button_text_color
-
-  assign timezone = 1 | date: '%z'
-
-  capture countdown_date
-    echo countdown_timer_day | append: '-' | append: countdown_timer_month | append: '-' | append: countdown_timer_year
-  endcapture
-
-  capture countdown_time
-    echo countdown_timer_hour | append: ':' | append: countdown_timer_minute
-  endcapture
+  assign button_text = section.settings.button_text
+  assign button_url = section.settings.button_url
+  assign button_bg_color = section.settings.button_bg_color
+  assign button_text_color = section.settings.button_text_color
+  assign button_border_radius = section.settings.button_border_radius
 -%}
 
-{% if countdown_enabled %}
-{{ 'countdown-header.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'countdown-header.js' | asset_url }}" defer></script>
-
-<div class="countdown-header-standalone" style="background-color: {{ countdown_bg_color }}; color: {{ countdown_text_color }};">
+{%- if countdown_date != blank -%}
+<div class="countdown-header-standalone" 
+     style="
+       background-color: {{ countdown_bg_color }};
+       color: {{ countdown_text_color }};
+     ">
   <div class="countdown-header-content">
-    {% if countdown_message != blank %}
-      <div class="countdown-message">{{ countdown_message }}</div>
-    {% endif %}
-    
-    <countdown-timer 
-      class="countdown-timer-header"
-      data-date="{{ countdown_date }}"
-      data-time="{{ countdown_time }}"
-      data-timezone="{{ timezone }}">
-      <div class="countdown-timer-display">
-        <div class="countdown-item">
-          <span class="countdown-number days">
-            <span class="countdown-timer--column--number">00</span>
-          </span>
-          <span class="countdown-label">Days</span>
+    <div class="countdown-content-wrapper">
+      {%- if announcement_text != blank -%}
+        <div class="countdown-announcement">
+          {{ announcement_text }}
         </div>
-        <div class="countdown-separator">:</div>
-        <div class="countdown-item">
-          <span class="countdown-number hours">
-            <span class="countdown-timer--column--number">00</span>
-          </span>
-          <span class="countdown-label">Hours</span>
-        </div>
-        <div class="countdown-separator">:</div>
-        <div class="countdown-item">
-          <span class="countdown-number minutes">
-            <span class="countdown-timer--column--number">00</span>
-          </span>
-          <span class="countdown-label">Minutes</span>
-        </div>
-        <div class="countdown-separator">:</div>
-        <div class="countdown-item">
-          <span class="countdown-number seconds">
-            <span class="countdown-timer--column--number">00</span>
-          </span>
-          <span class="countdown-label">Seconds</span>
+      {%- endif -%}
+      
+      <div class="countdown-main-content">
+        {%- if countdown_message != blank -%}
+          <div class="countdown-message">
+            {{ countdown_message }}
+          </div>
+        {%- endif -%}
+        
+        <div class="countdown-timer-wrapper">
+          <countdown-timer 
+            class="countdown-timer-header"
+            data-date="{{ countdown_date | date: '%d-%m-%Y' }}"
+            data-time="{{ countdown_time | default: '23:59' }}"
+            data-timezone="{{ countdown_timezone | default: '+00:00' }}">
+            <div class="countdown-timer-display">
+              <div class="countdown-item">
+                <div class="countdown-number days">
+                  <span class="countdown-timer--column--number">00</span>
+                </div>
+                <div class="countdown-label">Days</div>
+              </div>
+              <div class="countdown-separator">:</div>
+              <div class="countdown-item">
+                <div class="countdown-number hours">
+                  <span class="countdown-timer--column--number">00</span>
+                </div>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-separator">:</div>
+              <div class="countdown-item">
+                <div class="countdown-number minutes">
+                  <span class="countdown-timer--column--number">00</span>
+                </div>
+                <div class="countdown-label">Minutes</div>
+              </div>
+              <div class="countdown-separator">:</div>
+              <div class="countdown-item">
+                <div class="countdown-number seconds">
+                  <span class="countdown-timer--column--number">00</span>
+                </div>
+                <div class="countdown-label">Seconds</div>
+              </div>
+            </div>
+          </countdown-timer>
+          
+          {%- if button_text != blank -%}
+            <a href="{{ button_url | default: '#' }}" 
+               class="countdown-button"
+               style="
+                 background-color: {{ button_bg_color }};
+                 color: {{ button_text_color }};
+                 border-radius: {{ button_border_radius }}px;
+               ">
+              {{ button_text }}
+            </a>
+          {%- endif -%}
         </div>
       </div>
-    </countdown-timer>
-    
-    {% if countdown_button_text != blank and countdown_button_link != blank %}
-      <a href="{{ countdown_button_link }}" class="countdown-button" style="background-color: {{ countdown_button_bg_color }}; color: {{ countdown_button_text_color }};">
-        {{ countdown_button_text }}
-      </a>
-    {% endif %}
+    </div>
   </div>
 </div>
-{% endif %}
+
+<script src="{{ 'countdown-header.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 
 {% schema %}
 {
   "name": "Countdown Header",
+  "tag": "section",
   "class": "countdown-header-section",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "countdown_enabled",
-      "label": "Enable countdown header",
-      "default": true,
-      "info": "Display a fixed countdown header at the top of the page"
+      "type": "header",
+      "content": "Countdown Settings"
+    },
+    {
+      "type": "text",
+      "id": "countdown_date",
+      "label": "Countdown Date",
+      "info": "Format: YYYY-MM-DD (e.g., 2024-12-31)",
+      "default": "2024-12-31"
+    },
+    {
+      "type": "text",
+      "id": "countdown_time",
+      "label": "Countdown Time (24-hour format)",
+      "info": "Format: HH:MM (e.g., 23:59)",
+      "default": "23:59"
+    },
+    {
+      "type": "select",
+      "id": "countdown_timezone",
+      "label": "UTC Timezone",
+      "options": [
+        {
+          "value": "-12:00",
+          "label": "UTC-12:00 (Baker Island)"
+        },
+        {
+          "value": "-11:00",
+          "label": "UTC-11:00 (American Samoa)"
+        },
+        {
+          "value": "-10:00",
+          "label": "UTC-10:00 (Hawaii)"
+        },
+        {
+          "value": "-09:00",
+          "label": "UTC-09:00 (Alaska)"
+        },
+        {
+          "value": "-08:00",
+          "label": "UTC-08:00 (Pacific Time)"
+        },
+        {
+          "value": "-07:00",
+          "label": "UTC-07:00 (Mountain Time)"
+        },
+        {
+          "value": "-06:00",
+          "label": "UTC-06:00 (Central Time)"
+        },
+        {
+          "value": "-05:00",
+          "label": "UTC-05:00 (Eastern Time)"
+        },
+        {
+          "value": "-04:00",
+          "label": "UTC-04:00 (Atlantic Time)"
+        },
+        {
+          "value": "-03:00",
+          "label": "UTC-03:00 (Argentina)"
+        },
+        {
+          "value": "-02:00",
+          "label": "UTC-02:00 (South Georgia)"
+        },
+        {
+          "value": "-01:00",
+          "label": "UTC-01:00 (Azores)"
+        },
+        {
+          "value": "+00:00",
+          "label": "UTC+00:00 (London/GMT)"
+        },
+        {
+          "value": "+01:00",
+          "label": "UTC+01:00 (Paris/Berlin)"
+        },
+        {
+          "value": "+02:00",
+          "label": "UTC+02:00 (Cairo/Athens)"
+        },
+        {
+          "value": "+03:00",
+          "label": "UTC+03:00 (Moscow)"
+        },
+        {
+          "value": "+04:00",
+          "label": "UTC+04:00 (Dubai)"
+        },
+        {
+          "value": "+05:00",
+          "label": "UTC+05:00 (Pakistan)"
+        },
+        {
+          "value": "+05:30",
+          "label": "UTC+05:30 (India)"
+        },
+        {
+          "value": "+06:00",
+          "label": "UTC+06:00 (Bangladesh)"
+        },
+        {
+          "value": "+07:00",
+          "label": "UTC+07:00 (Thailand)"
+        },
+        {
+          "value": "+08:00",
+          "label": "UTC+08:00 (China/Singapore)"
+        },
+        {
+          "value": "+09:00",
+          "label": "UTC+09:00 (Japan/Korea)"
+        },
+        {
+          "value": "+10:00",
+          "label": "UTC+10:00 (Australia East)"
+        },
+        {
+          "value": "+11:00",
+          "label": "UTC+11:00 (Solomon Islands)"
+        },
+        {
+          "value": "+12:00",
+          "label": "UTC+12:00 (New Zealand)"
+        }
+      ],
+      "default": "+00:00"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "info": "Text that appears above the countdown",
+      "default": "Limited Time Offer!"
     },
     {
       "type": "text",
       "id": "countdown_message",
-      "label": "Countdown message",
-      "default": "Time is ticking",
-      "info": "Message displayed before the countdown timer"
+      "label": "Countdown Message",
+      "info": "Text that appears next to the countdown timer",
+      "default": "Time is ticking"
     },
     {
       "type": "header",
-      "content": "Countdown Timer"
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "SHOP NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "/collections/all"
     },
     {
       "type": "range",
-      "id": "countdown_timer_day",
-      "min": 1,
-      "max": 31,
-      "step": 1,
-      "label": "Day",
-      "default": 31
-    },
-    {
-      "type": "range",
-      "id": "countdown_timer_month",
-      "min": 1,
-      "max": 12,
-      "step": 1,
-      "label": "Month",
-      "default": 12
-    },
-    {
-      "type": "range",
-      "id": "countdown_timer_year",
-      "min": 2024,
-      "max": 2030,
-      "step": 1,
-      "label": "Year",
-      "default": 2025
-    },
-    {
-      "type": "range",
-      "id": "countdown_timer_hour",
+      "id": "button_border_radius",
       "min": 0,
-      "max": 23,
+      "max": 50,
       "step": 1,
-      "label": "Hour (24h format)",
-      "default": 23
-    },
-    {
-      "type": "range",
-      "id": "countdown_timer_minute",
-      "min": 0,
-      "max": 59,
-      "step": 1,
-      "label": "Minute",
-      "default": 59
+      "unit": "px",
+      "label": "Button Border Radius",
+      "default": 6
     },
     {
       "type": "header",
-      "content": "Styling"
+      "content": "Colors"
     },
     {
       "type": "color",
       "id": "countdown_bg_color",
-      "label": "Background color",
+      "label": "Background Color",
       "default": "#000000"
     },
     {
       "type": "color",
       "id": "countdown_text_color",
-      "label": "Text color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "header",
-      "content": "Button"
-    },
-    {
-      "type": "text",
-      "id": "countdown_button_text",
-      "label": "Button text",
-      "default": "Shop now"
-    },
-    {
-      "type": "url",
-      "id": "countdown_button_link",
-      "label": "Button link"
-    },
-    {
-      "type": "color",
-      "id": "countdown_button_bg_color",
-      "label": "Button background color",
+      "label": "Text Color",
       "default": "#ffffff"
     },
     {
       "type": "color",
-      "id": "countdown_button_text_color",
-      "label": "Button text color",
-      "default": "#000000"
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#ff0000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
     }
   ],
   "presets": [
     {
-      "name": "Countdown Header"
+      "name": "Countdown Header",
+      "settings": {
+        "countdown_date": "2024-12-31",
+        "countdown_time": "23:59",
+        "countdown_timezone": "+00:00",
+        "announcement_text": "Limited Time Offer!",
+        "countdown_message": "Time is ticking",
+        "button_text": "SHOP NOW",
+        "button_url": "/collections/all",
+        "countdown_bg_color": "#000000",
+        "countdown_text_color": "#ffffff",
+        "button_bg_color": "#ff0000",
+        "button_text_color": "#ffffff",
+        "button_border_radius": 6
+      }
     }
   ]
 }
