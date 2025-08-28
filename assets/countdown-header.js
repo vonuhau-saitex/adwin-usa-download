@@ -102,6 +102,34 @@ document.addEventListener('DOMContentLoaded', function() {
       if (headerSection && countdownHeader) {
         const countdownHeight = countdownHeader.offsetHeight;
         headerSection.style.top = countdownHeight + 'px';
+        
+        // Set CSS custom property for app.js to use
+        document.documentElement.style.setProperty('--countdown-header-height', countdownHeight + 'px');
+        
+        // Trigger header recalculation
+        if (window.recalculateHeaderPosition) {
+          window.recalculateHeaderPosition();
+        }
+      }
+    }
+    
+    // Function to remove countdown and reset header
+    function removeCountdown() {
+      countdownHeader.style.display = 'none';
+      document.body.classList.remove('countdown-header-active');
+      
+      // Reset header section top position
+      const headerSection = document.querySelector('.header-section');
+      if (headerSection) {
+        headerSection.style.top = '0px';
+      }
+      
+      // Reset CSS custom property
+      document.documentElement.style.setProperty('--countdown-header-height', '0px');
+      
+      // Trigger header recalculation
+      if (window.recalculateHeaderPosition) {
+        window.recalculateHeaderPosition();
       }
     }
     
@@ -135,27 +163,27 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     
     closeButton.addEventListener('click', function() {
-      countdownHeader.style.display = 'none';
-      document.body.classList.remove('countdown-header-active');
-      
-      // Reset header section top position
-      const headerSection = document.querySelector('.header-section');
-      if (headerSection) {
-        headerSection.style.top = '0px';
-      }
-      
+      removeCountdown();
       // Store in localStorage to remember user preference
       localStorage.setItem('countdown-header-closed', 'true');
     });
     
     // Check if user previously closed the countdown
     if (localStorage.getItem('countdown-header-closed') === 'true') {
-      countdownHeader.style.display = 'none';
-      document.body.classList.remove('countdown-header-active');
+      removeCountdown();
     } else {
       countdownHeader.appendChild(closeButton);
       // Adjust position after adding close button
       setTimeout(adjustHeaderPosition, 100);
     }
+    
+    // Expose function globally for app.js to use
+    window.recalculateHeaderPosition = function() {
+      // This will be called by app.js when it needs to recalculate
+      adjustHeaderPosition();
+    };
+  } else {
+    // No countdown header, make sure CSS property is set to 0
+    document.documentElement.style.setProperty('--countdown-header-height', '0px');
   }
 });
