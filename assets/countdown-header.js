@@ -100,13 +100,17 @@ if (!customElements.get('countdown-timer')) {
           _this.querySelector('.days .countdown-timer--column--number').innerHTML = 0;
           _this.querySelector('.hours .countdown-timer--column--number').innerHTML = 0;
           _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = 0;
-          _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = 0;
+          if (_this.showSeconds) {
+            _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = 0;
+          }
         } else {
           requestAnimationFrame(updateTime);
           _this.querySelector('.days .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(days);
           _this.querySelector('.hours .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(hours);
           _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(minutes);
-          _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(seconds);
+          if (_this.showSeconds) {
+            _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(seconds);
+          }
         }
       };
       requestAnimationFrame(updateTime);
