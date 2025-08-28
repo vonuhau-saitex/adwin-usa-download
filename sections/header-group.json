@@ -147,10 +147,30 @@
         "overlay_color": "#000000",
         "overlay_opacity": 0
       }
+    },
+    "countdown_header_aVDWAN": {
+      "type": "countdown-header",
+      "name": "Countdown Header",
+      "settings": {
+        "countdown_date": "2025-12-31",
+        "countdown_time": "23:59",
+        "countdown_timezone": "-05:00",
+        "show_seconds": true,
+        "announcement_text": "Limited Time Offer!",
+        "countdown_message": "Time is ticking",
+        "button_text": "SHOP NOW",
+        "button_url": "/collections/all",
+        "button_border_radius": 6,
+        "countdown_bg_color": "#000000",
+        "countdown_text_color": "#ffffff",
+        "button_bg_color": "#ff0000",
+        "button_text_color": "#ffffff"
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "countdown_header_aVDWAN"
   ]
 }
