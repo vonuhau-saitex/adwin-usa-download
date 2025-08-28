@@ -350,40 +350,14 @@ class Header {
       window.dispatchEvent(new Event('resize.resize-select'));
     });
 
-    // Store original header position on load (before any countdown interference)
-    let originalHeaderTop = null;
-    
-    // Calculate original header position
-    const calculateOriginalHeaderTop = () => {
-      // Get countdown height from CSS custom property if available
-      const countdownHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height')) || 0;
-      
-      if (countdownHeight > 0) {
-        // If countdown header exists, the original position needs to account for it
-        originalHeaderTop = header_main.getBoundingClientRect().top + document.documentElement.scrollTop - countdownHeight;
-      } else {
-        // No countdown header, use actual position
-        originalHeaderTop = header_main.getBoundingClientRect().top + document.documentElement.scrollTop;
-      }
-    };
-    
-    // Calculate on initial load
-    calculateOriginalHeaderTop();
-
     // Mobile Menu offset
     window.addEventListener('scroll', function() {
       setHeaderOffset(header);
       setHeaderHeight(header_main);
             // Sticky Header Class
       if (header_main.classList.contains('header-sticky--active')) {
-        console.log(`scrollY: ${window.scrollY} originalHeaderTop: ${originalHeaderTop} getBoundingClientRect: ${header_main.getBoundingClientRect().top} countdownHeight: ${getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height')}`);
-        
-        // Recalculate if we haven't done it yet or if countdown state changed
-        if (originalHeaderTop === null) {
-          calculateOriginalHeaderTop();
-        }
-
-        header_main.classList.toggle('is-sticky', window.scrollY >= originalHeaderTop && window.scrollY > 0);
+        let offset = parseInt(header_main.getBoundingClientRect().top, 10) + document.documentElement.scrollTop;
+        header_main.classList.toggle('is-sticky', window.scrollY >= offset && window.scrollY > 0);
       }
 
     }, {
@@ -395,19 +369,10 @@ class Header {
       const a_bar = document.getElementById('shopify-section-announcement-bar');
       window.addEventListener('resize', function() {
         setAnnouncementHeight(a_bar);
-        // Recalculate original header position on resize
-        calculateOriginalHeaderTop();
       }, {
         passive: true
       });
       window.dispatchEvent(new Event('resize'));
-    } else {
-      // Still need to handle resize for header position even without announcement bar
-      window.addEventListener('resize', function() {
-        calculateOriginalHeaderTop();
-      }, {
-        passive: true
-      });
     }
     // Buttons.
     menu.querySelectorAll('summary').forEach(summary => summary.addEventListener('click', this.onSummaryClick.bind(this)));
