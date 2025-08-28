@@ -350,15 +350,48 @@ class Header {
       window.dispatchEvent(new Event('resize.resize-select'));
     });
 
+    // Store original header position on load (before any countdown interference)
+    let originalHeaderTop = null;
+    
+    // Calculate original header position
+    const calculateOriginalHeaderTop = () => {
+      // Get countdown height from CSS custom property if available
+      const countdownHeightStr = getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height');
+      const countdownHeight = parseInt(countdownHeightStr) || 0;
+      
+      // Check if countdown header actually exists in DOM
+      const countdownHeaderExists = document.querySelector('.countdown-header-standalone') && 
+                                   !document.querySelector('.countdown-header-standalone').style.display === 'none';
+      
+      if (countdownHeaderExists && countdownHeight > 0) {
+        // If countdown header exists and is visible, calculate the header's natural position
+        // The header is positioned below the countdown, so its natural scroll trigger point
+        // should be when the countdown header would start to scroll out of view
+        originalHeaderTop = countdownHeight;
+      } else {
+        // No countdown header, header starts at the top
+        originalHeaderTop = 0;
+      }
+    };
+    
+    // Calculate on initial load
+    calculateOriginalHeaderTop();
+    
+    // Expose function globally for countdown header to call
+    window.recalculateHeaderPosition = calculateOriginalHeaderTop;
+
     // Mobile Menu offset
     window.addEventListener('scroll', function() {
       setHeaderOffset(header);
       setHeaderHeight(header_main);
-      // Sticky Header Class
+            // Sticky Header Class
       if (header_main.classList.contains('header-sticky--active')) {
-        let offset = parseInt(header_main.getBoundingClientRect().top, 10) + document.documentElement.scrollTop;
-
-        header_main.classList.toggle('is-sticky', window.scrollY >= offset && window.scrollY > 0);
+        // Recalculate if we haven't done it yet or if countdown state changed
+        if (originalHeaderTop === null) {
+          calculateOriginalHeaderTop();
+        }
+        
+        header_main.classList.toggle('is-sticky', window.scrollY >= originalHeaderTop && window.scrollY > 0);
       }
 
     }, {
@@ -370,10 +403,19 @@ class Header {
       const a_bar = document.getElementById('shopify-section-announcement-bar');
       window.addEventListener('resize', function() {
         setAnnouncementHeight(a_bar);
+        // Recalculate original header position on resize
+        calculateOriginalHeaderTop();
       }, {
         passive: true
       });
       window.dispatchEvent(new Event('resize'));
+    } else {
+      // Still need to handle resize for header position even without announcement bar
+      window.addEventListener('resize', function() {
+        calculateOriginalHeaderTop();
+      }, {
+        passive: true
+      });
     }
     // Buttons.
     menu.querySelectorAll('summary').forEach(summary => summary.addEventListener('click', this.onSummaryClick.bind(this)));
@@ -389,6 +431,13 @@ class Header {
   }
   setHeaderHeight(header) {
     let h = header.clientHeight;
+    
+    // Add countdown header height if it exists (from CSS custom property)
+    const countdownHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height')) || 0;
+    if (countdownHeight > 0) {
+      h += countdownHeight;
+    }
+    
     document.documentElement.style.setProperty('--header-height', h + 'px');
   }
   onSummaryClick(event) {
