@@ -359,9 +359,9 @@ class Header {
       const countdownHeightStr = getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height');
       const countdownHeight = parseInt(countdownHeightStr) || 0;
       
-      // Check if countdown header actually exists in DOM
+      // Check if countdown header actually exists in DOM and is not expired
       const countdownHeaderExists = document.querySelector('.countdown-header-standalone') && 
-                                   !document.querySelector('.countdown-header-standalone').style.display === 'none';
+                                   !document.querySelector('.countdown-header-standalone').classList.contains('countdown-expired');
       
       if (countdownHeaderExists && countdownHeight > 0) {
         // If countdown header exists and is visible, calculate the header's natural position
