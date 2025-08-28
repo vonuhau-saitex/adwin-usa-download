@@ -147,10 +147,30 @@
         "overlay_color": "#000000",
         "overlay_opacity": 0
       }
+    },
+    "countdown_header_etXdRJ": {
+      "type": "countdown-header",
+      "name": "Countdown Header",
+      "settings": {
+        "countdown_enabled": true,
+        "countdown_message": "Time is ticking",
+        "countdown_timer_day": 31,
+        "countdown_timer_month": 12,
+        "countdown_timer_year": 2025,
+        "countdown_timer_hour": 23,
+        "countdown_timer_minute": 59,
+        "countdown_bg_color": "#000000",
+        "countdown_text_color": "#ffffff",
+        "countdown_button_text": "Shop now",
+        "countdown_button_link": "",
+        "countdown_button_bg_color": "#ffffff",
+        "countdown_button_text_color": "#000000"
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "countdown_header_etXdRJ"
   ]
 }
