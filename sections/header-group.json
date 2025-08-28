@@ -148,7 +148,7 @@
         "overlay_opacity": 0
       }
     },
-    "countdown_header_etXdRJ": {
+    "countdown_header_Qb9Rp6": {
       "type": "countdown-header",
       "name": "Countdown Header",
       "settings": {
@@ -171,6 +171,6 @@
   "order": [
     "announcement-bar",
     "header",
-    "countdown_header_etXdRJ"
+    "countdown_header_Qb9Rp6"
   ]
 }
