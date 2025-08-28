@@ -75,7 +75,7 @@ if (!customElements.get('countdown-header-timer')) {
         if (distance < 0) {
           console.log('Countdown expired! Distance:', distance, 'Current time:', new Date().getTime(), 'Target time:', _this.countDownDate);
           console.log('Current date:', new Date(), 'Target date:', new Date(_this.countDownDate));
-          console.log('Date string was:', date_string);
+          console.log('Date string was:', _this.debugDateString);
           
           // Temporarily comment out auto-hide to debug
           // clearInterval(_this.interval);
