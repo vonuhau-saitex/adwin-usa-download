@@ -271,6 +271,10 @@ body:has(.countdown-header-standalone) .header-section {
   animation: slideDown 0.5s ease-out;
 }
 
+.countdown-header-standalone.countdown-expired {
+  display: none !important;
+}
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
