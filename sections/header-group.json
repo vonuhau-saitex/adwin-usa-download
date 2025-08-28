@@ -148,39 +148,29 @@
         "overlay_opacity": 0
       }
     },
-    "countdown_header_7weBii": {
+    "countdown_header_zDBnmN": {
       "type": "countdown-header",
       "name": "Countdown Header",
       "settings": {
-        "enable_countdown": true,
-        "show_close_button": true,
-        "header_text": "Sale ends in:",
-        "text_alignment": "center",
-        "button_text": "Shop now",
-        "button_link": "",
-        "timer_year": 2025,
-        "timer_month": "12",
-        "timer_day": "31",
-        "timer_hour": "23",
-        "timer_minute": "59",
-        "show_days": true,
-        "show_hours": true,
-        "show_minutes": true,
-        "show_seconds": true,
-        "days_label": "Days",
-        "hours_label": "Hours",
-        "minutes_label": "Minutes",
-        "seconds_label": "Seconds",
-        "color_bg": "#ff6b6b",
-        "color_text": "#ffffff",
-        "color_button_bg": "#ffffff",
-        "color_button_text": "#ff6b6b"
+        "countdown_enabled": true,
+        "countdown_message": "Time is ticking",
+        "countdown_timer_day": 31,
+        "countdown_timer_month": 12,
+        "countdown_timer_year": 2025,
+        "countdown_timer_hour": 23,
+        "countdown_timer_minute": 59,
+        "countdown_bg_color": "#000000",
+        "countdown_text_color": "#ffffff",
+        "countdown_button_text": "Shop now",
+        "countdown_button_link": "",
+        "countdown_button_bg_color": "#ffffff",
+        "countdown_button_text_color": "#000000"
       }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "countdown_header_7weBii"
+    "countdown_header_zDBnmN"
   ]
 }
