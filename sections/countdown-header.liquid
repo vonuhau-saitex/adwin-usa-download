@@ -136,27 +136,27 @@
         },
         {
           "value": "-10:00",
-          "label": "UTC-10:00 (Hawaii)"
+          "label": "UTC-10:00 (Hawaii - HST)"
         },
         {
           "value": "-09:00",
-          "label": "UTC-09:00 (Alaska)"
+          "label": "UTC-09:00 (Alaska - AKST)"
         },
         {
           "value": "-08:00",
-          "label": "UTC-08:00 (Pacific Time)"
+          "label": "UTC-08:00 (Pacific - PST/Los Angeles)"
         },
         {
           "value": "-07:00",
-          "label": "UTC-07:00 (Mountain Time)"
+          "label": "UTC-07:00 (Mountain - MST/Denver)"
         },
         {
           "value": "-06:00",
-          "label": "UTC-06:00 (Central Time)"
+          "label": "UTC-06:00 (Central - CST/Chicago)"
         },
         {
           "value": "-05:00",
-          "label": "UTC-05:00 (Eastern Time)"
+          "label": "UTC-05:00 (Eastern - EST/New York)"
         },
         {
           "value": "-04:00",
@@ -231,7 +231,14 @@
           "label": "UTC+12:00 (New Zealand)"
         }
       ],
-      "default": "+00:00"
+      "default": "-05:00"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_seconds",
+      "label": "Show Seconds",
+      "info": "Display seconds in the countdown timer",
+      "default": true
     },
     {
       "type": "header",
@@ -312,7 +319,8 @@
       "settings": {
         "countdown_date": "2024-12-31",
         "countdown_time": "23:59",
-        "countdown_timezone": "+00:00",
+        "countdown_timezone": "-05:00",
+        "show_seconds": true,
         "announcement_text": "Limited Time Offer!",
         "countdown_message": "Time is ticking",
         "button_text": "SHOP NOW",
