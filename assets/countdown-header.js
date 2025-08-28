@@ -34,6 +34,9 @@ if (!customElements.get('countdown-timer')) {
       if (this.classList.contains('countdown-timer-header')) {
         document.body.classList.add('countdown-header-active');
       }
+      
+      // Check if seconds should be shown
+      this.showSeconds = this.dataset.showSeconds === 'true';
     }
 
     convertDateForIos(date) {
@@ -72,13 +75,17 @@ if (!customElements.get('countdown-timer')) {
             }
             
             // Reset announcement bar position and styles
-            const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+            const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                                   document.querySelector('.announcement-bar') ||
+                                   document.querySelector('[id*="announcement"]') ||
+                                   document.querySelector('[class*="announcement"]');
             if (announcementBar) {
               announcementBar.style.position = '';
               announcementBar.style.top = '';
               announcementBar.style.left = '';
               announcementBar.style.right = '';
               announcementBar.style.zIndex = '';
+              announcementBar.style.width = '';
             }
             
             // Reset CSS custom property
@@ -93,13 +100,17 @@ if (!customElements.get('countdown-timer')) {
           _this.querySelector('.days .countdown-timer--column--number').innerHTML = 0;
           _this.querySelector('.hours .countdown-timer--column--number').innerHTML = 0;
           _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = 0;
-          _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = 0;
+          if (_this.showSeconds) {
+            _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = 0;
+          }
         } else {
           requestAnimationFrame(updateTime);
           _this.querySelector('.days .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(days);
           _this.querySelector('.hours .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(hours);
           _this.querySelector('.minutes .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(minutes);
-          _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(seconds);
+          if (_this.showSeconds) {
+            _this.querySelector('.seconds .countdown-timer--column--number').innerHTML = CountdownTimer.addZero(seconds);
+          }
         }
       };
       requestAnimationFrame(updateTime);
@@ -123,7 +134,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to adjust header position dynamically
     function adjustHeaderPosition() {
       const headerSection = document.querySelector('.header-section');
-      const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+      // Try multiple selectors for announcement bar
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar') ||
+                             document.querySelector('[id*="announcement"]') ||
+                             document.querySelector('[class*="announcement"]');
       
       if (headerSection && countdownHeader && !countdownHeader.classList.contains('countdown-expired')) {
         const countdownHeight = countdownHeader.offsetHeight;
@@ -140,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
           announcementBar.style.left = '0';
           announcementBar.style.right = '0';
           announcementBar.style.zIndex = '9998';
+          announcementBar.style.width = '100%';
         }
         
         // Position header below both countdown and announcement bar
@@ -163,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
           announcementBar.style.left = '';
           announcementBar.style.right = '';
           announcementBar.style.zIndex = '';
+          announcementBar.style.width = '';
         }
         document.documentElement.style.setProperty('--countdown-header-height', '0px');
         if (window.recalculateHeaderPosition) {
@@ -182,14 +199,18 @@ document.addEventListener('DOMContentLoaded', function() {
         headerSection.style.top = '';
       }
       
-      // Reset announcement bar position and styles
-      const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+      // Reset announcement bar position and styles - try multiple selectors
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar') ||
+                             document.querySelector('[id*="announcement"]') ||
+                             document.querySelector('[class*="announcement"]');
       if (announcementBar) {
         announcementBar.style.position = '';
         announcementBar.style.top = '';
         announcementBar.style.left = '';
         announcementBar.style.right = '';
         announcementBar.style.zIndex = '';
+        announcementBar.style.width = '';
       }
       
       // Reset CSS custom property
