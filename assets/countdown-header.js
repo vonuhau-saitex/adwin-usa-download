@@ -26,6 +26,14 @@ if (!customElements.get('countdown-header-timer')) {
       let date_string = month + '/' + day + '/' + year + ' ' + tarhour + ':' + tarmin + ' GMT' + timezone;
       // Time with timezone
       this.countDownDate = new Date(date_string).getTime();
+      
+      // Debug: Log the countdown date setup
+      console.log('Countdown setup:', {
+        date_string,
+        countDownDate: this.countDownDate,
+        currentTime: new Date().getTime(),
+        difference: this.countDownDate - new Date().getTime()
+      });
     }
 
     connectedCallback() {
@@ -64,6 +72,7 @@ if (!customElements.get('countdown-header-timer')) {
 
         // If the countdown is finished, hide the header
         if (distance < 0) {
+          console.log('Countdown expired! Distance:', distance, 'Current time:', new Date().getTime(), 'Target time:', _this.countDownDate);
           clearInterval(_this.interval);
           _this.hideCountdownHeader();
         }
