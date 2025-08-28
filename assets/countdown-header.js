@@ -71,6 +71,12 @@ if (!customElements.get('countdown-timer')) {
               headerSection.style.top = '0px';
             }
             
+            // Reset announcement bar position
+            const announcementBar = document.querySelector('#shopify-section-announcement-bar');
+            if (announcementBar) {
+              announcementBar.style.top = '0px';
+            }
+            
             // Reset CSS custom property
             document.documentElement.style.setProperty('--countdown-header-height', '0px');
             
