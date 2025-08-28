@@ -57,7 +57,7 @@ if (!customElements.get('countdown-timer')) {
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        console.log(distance)
+        
         if (distance < 0) {
           // Timer expired - hide the countdown header
           const countdownHeader = document.querySelector('.countdown-header-standalone');
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to remove countdown and reset header
     function removeCountdown() {
-      countdownHeader.style.display = 'none';
+      // countdownHeader.style.display = 'none';
       document.body.classList.remove('countdown-header-active');
       
       // Reset header section top position
