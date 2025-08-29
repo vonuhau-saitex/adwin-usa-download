@@ -5,7 +5,6 @@
   assign countdown_time = section.settings.countdown_time
   assign countdown_timezone = section.settings.countdown_timezone
   assign countdown_message = section.settings.countdown_message
-  assign announcement_text = section.settings.announcement_text
   assign show_seconds = section.settings.show_seconds
   assign countdown_bg_color = section.settings.countdown_bg_color
   assign countdown_text_color = section.settings.countdown_text_color
@@ -17,11 +16,17 @@
 -%}
 
 {%- if countdown_date != blank -%}
-<div class="countdown-header-standalone" 
-     style="
-       background-color: {{ countdown_bg_color }};
-       color: {{ countdown_text_color }};
-     ">
+<style>
+  .countdown-header-standalone {
+    --countdown-bg: {{ countdown_bg_color | default: '#ffffff' }};
+    --countdown-text: {{ countdown_text_color | default: '#000000' }};
+    --header-countdown-button-bg: {{ button_bg_color | default: '#000000' }};
+    --header-countdown-button-text: {{ button_text_color | default: '#ffffff' }};
+    --header-countdown-border-button-radius: {{ button_border_radius | default: 6 }}px;
+  }
+</style>
+
+<div class="countdown-header-standalone">
   <div class="countdown-header-content">
     <div class="countdown-content-wrapper">      
       <div class="countdown-main-content">
@@ -72,24 +77,12 @@
           </countdown-timer>
           
           {%- if button_text != blank -%}
-            <a href="{{ button_url | default: '#' }}" 
-               class="countdown-button"
-               style="
-                 background-color: {{ button_bg_color }};
-                 color: {{ button_text_color }};
-                 border-radius: {{ button_border_radius }}px;
-               ">
+            <a href="{{ button_url | default: '#' }}" class="countdown-button">
               {{ button_text }}
             </a>
           {%- endif -%}
         </div>
       </div>
-      
-      {%- if announcement_text != blank -%}
-        <div class="countdown-announcement">
-          {{ announcement_text }}
-        </div>
-      {%- endif -%}
     </div>
   </div>
 </div>
@@ -245,13 +238,6 @@
       "content": "Content"
     },
     {
-      "type": "textarea",
-      "id": "announcement_text",
-      "label": "Announcement Text",
-      "info": "Text that appears above the countdown",
-      "default": "Limited Time Offer!"
-    },
-    {
       "type": "text",
       "id": "countdown_message",
       "label": "Countdown Message",
@@ -317,11 +303,10 @@
     {
       "name": "Countdown Header",
       "settings": {
-        "countdown_date": "2024-12-31",
+        "countdown_date": "2025-12-31",
         "countdown_time": "23:59",
         "countdown_timezone": "-05:00",
         "show_seconds": true,
-        "announcement_text": "Limited Time Offer!",
         "countdown_message": "Time is ticking",
         "button_text": "SHOP NOW",
         "button_url": "/collections/all",

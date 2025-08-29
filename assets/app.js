@@ -356,29 +356,19 @@ class Header {
     // Calculate original header position
     const calculateOriginalHeaderTop = () => {
       // Get countdown height from CSS custom property if available
-      const countdownHeightStr = getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height');
-      const countdownHeight = parseInt(countdownHeightStr) || 0;
+      const countdownHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height')) || 0;
       
-      // Check if countdown header actually exists in DOM and is not expired
-      const countdownHeaderExists = document.querySelector('.countdown-header-standalone') && 
-                                   !document.querySelector('.countdown-header-standalone').classList.contains('countdown-expired');
-      
-      if (countdownHeaderExists && countdownHeight > 0) {
-        // If countdown header exists and is visible, calculate the header's natural position
-        // The header is positioned below the countdown, so its natural scroll trigger point
-        // should be when the countdown header would start to scroll out of view
-        originalHeaderTop = countdownHeight;
+      if (countdownHeight > 0) {
+        // If countdown header exists, the original position needs to account for it
+        originalHeaderTop = header_main.getBoundingClientRect().top + document.documentElement.scrollTop - countdownHeight;
       } else {
-        // No countdown header, header starts at the top
-        originalHeaderTop = 0;
+        // No countdown header, use actual position
+        originalHeaderTop = header_main.getBoundingClientRect().top + document.documentElement.scrollTop;
       }
     };
     
     // Calculate on initial load
     calculateOriginalHeaderTop();
-    
-    // Expose function globally for countdown header to call
-    window.recalculateHeaderPosition = calculateOriginalHeaderTop;
 
     // Mobile Menu offset
     window.addEventListener('scroll', function() {
@@ -386,6 +376,8 @@ class Header {
       setHeaderHeight(header_main);
             // Sticky Header Class
       if (header_main.classList.contains('header-sticky--active')) {
+        console.log(`scrollY: ${window.scrollY} originalHeaderTop: ${originalHeaderTop} getBoundingClientRect: ${header_main.getBoundingClientRect().top} countdownHeight: ${getComputedStyle(document.documentElement).getPropertyValue('--countdown-header-height')}`);
+        
         // Recalculate if we haven't done it yet or if countdown state changed
         if (originalHeaderTop === null) {
           calculateOriginalHeaderTop();

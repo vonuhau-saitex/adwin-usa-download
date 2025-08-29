@@ -55,7 +55,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         }
       },
@@ -108,7 +112,7 @@
         "text_pErf3a": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair select top with denim for the perfect look.<br/> Build your bundle now — enjoy <strong>15% off</strong> starting August 29.</p>",
+            "text": "<p>Pair select top with denim for the perfect look.<br/>Build your bundle now — enjoy <strong>extra 15% off </strong>starting August 29</p>",
             "size": "text-size-regular"
           }
         },

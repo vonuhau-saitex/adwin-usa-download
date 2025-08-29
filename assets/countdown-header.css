@@ -1,255 +1,282 @@
-/* Countdown Header Standalone Section Styles */
+/* Countdown Header Styles - Mobile First */
 .countdown-header-standalone {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
-  padding: 12px 16px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  font-family: inherit;
-  height: auto;
-  min-height: 60px; /* Set a consistent minimum height */
+  z-index: 1001;
+  background-color: var(--countdown-bg);
+  color: var(--countdown-text);
+  padding: 8px 0;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  animation: fadeInDown 0.5s ease-out;
+}
+
+.countdown-header-standalone.hidden {
+  transform: translateY(-100%);
+}
+
+.countdown-header-standalone.expired,
+.countdown-header-standalone.countdown-expired {
+  display: none;
 }
 
 .countdown-header-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.countdown-content-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 15px;
   flex-wrap: wrap;
-  position: relative;
-  min-height: 36px; /* Ensure content has minimum height */
+}
+
+.countdown-main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .countdown-message {
-  font-size: 16px;
   font-weight: 600;
-  margin: 0;
-  white-space: nowrap;
+  font-size: 12px;
+  text-align: center;
 }
 
-.countdown-timer-header {
+.countdown-timer-wrapper {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .countdown-timer-display {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .countdown-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 40px;
-}
-
-.countdown-number {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1;
-  display: block;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.countdown-label {
-  font-size: 11px;
-  text-transform: capitalize;
-  opacity: 0.85;
-  margin-top: 2px;
-  font-weight: 500;
+  gap: 2px;
+  position: relative;
 }
 
 .countdown-separator {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 2px;
-  opacity: 0.8;
-  align-self: flex-start;
-  margin-top: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  color: inherit;
+}
+
+.countdown-number,
+.countdown-timer--column--number {
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 24px;
+  text-align: center;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
 }
 
 .countdown-button {
-  padding: 10px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
+  display: inline-flex;
   cursor: pointer;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
+  padding: 6px 12px;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--header-countdown-button-bg);
+  color: var(--header-countdown-button-text);
+  border-radius: var(--header-countdown-border-button-radius);
+  transition: transform 0.2s ease;
 }
 
 .countdown-button:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 .countdown-close {
-  position: absolute !important;
-  right: 0px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  background: none !important;
-  border: none !important;
-  font-size: 18px !important;
-  cursor: pointer !important;
-  color: inherit !important;
-  opacity: 0.7 !important;
-  padding: 4px !important;
-  width: 24px !important;
-  height: 24px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 50% !important;
-  transition: all 0.2s ease !important;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .countdown-close:hover {
-  opacity: 1 !important;
-  background: rgba(255, 255, 255, 0.1) !important;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* Mobile Responsive */
-@media only screen and (max-width: 768px) {
+/* Tablet and up - Progressive Enhancement */
+@media (min-width: 768px) {
   .countdown-header-standalone {
-    padding: 10px 12px;
-    min-height: 75px; /* Slightly taller on mobile due to stacking */
+    padding: 10px 0;
+    font-size: 14px;
   }
   
   .countdown-header-content {
-    gap: 16px;
-    flex-direction: column;
-    min-height: 50px;
+    padding: 0 20px;
+  }
+  
+  .countdown-content-wrapper,
+  .countdown-main-content {
+    gap: 20px;
   }
   
   .countdown-message {
-    font-size: 14px;
-    text-align: center;
+    font-size: 16px;
   }
   
-  .countdown-number {
-    font-size: 24px;
+  .countdown-timer-wrapper {
+    gap: 15px;
   }
   
-  .countdown-label {
-    font-size: 10px;
+  .countdown-timer-display {
+    gap: 12px;
+  }
+  
+  .countdown-number,
+  .countdown-timer--column--number {
+    font-size: 20px;
+    min-width: 30px;
   }
   
   .countdown-separator {
     font-size: 18px;
-    margin-top: 3px;
-  }
-  
-  .countdown-button {
-    padding: 8px 20px;
-    font-size: 13px;
-  }
-  
-  .countdown-timer-display {
-    gap: 5px;
-  }
-  
-  .countdown-item {
-    min-width: 35px;
-  }
-
-  .countdown-close {
-    right: 8px !important;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .countdown-header-standalone {
-    padding: 8px 10px;
-    min-height: 85px; /* Even taller on small mobile */
-  }
-  
-  .countdown-header-content {
-    gap: 12px;
-    min-height: 60px;
-  }
-  
-  .countdown-message {
-    font-size: 13px;
-  }
-  
-  .countdown-number {
-    font-size: 20px;
   }
   
   .countdown-label {
-    font-size: 9px;
+    font-size: 11px;
   }
   
-  .countdown-separator {
-    font-size: 16px;
-    margin-top: 2px;
-  }
-  
-  .countdown-timer-display {
-    gap: 3px;
-  }
-  
-  .countdown-item {
-    min-width: 32px;
-  }
-
   .countdown-button {
-    padding: 7px 16px;
-    font-size: 12px;
+    padding: 8px 16px;
+    font-size: 14px;
   }
-
+  
   .countdown-close {
-    right: 4px !important;
-    font-size: 16px !important;
-    width: 20px !important;
-    height: 20px !important;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    right: 15px;
   }
 }
 
-/* Let JavaScript handle all positioning - remove conflicting CSS rules */
-
-/* Ensure body has top padding to account for both countdown and sticky header */
-.countdown-header-section body {
-  padding-top: 0; /* Reset any existing padding */
+/* Body padding when countdown is active - Mobile First */
+body.countdown-header-active {
+  padding-top: 45px;
 }
 
-/* Add some top margin to the main content when countdown is active */
-.countdown-header-section main,
-.countdown-header-section .main-content {
-  margin-top: 0; /* Let the sticky header handle positioning */
+@media (min-width: 768px) {
+  body.countdown-header-active {
+    padding-top: 50px;
+  }
 }
 
-/* Animation for countdown header appearance */
-.countdown-header-standalone {
-  animation: slideDown 0.5s ease-out;
+/* Header positioning - Mobile First */
+.countdown-header-active .header-section {
+  position: sticky;
+  top: var(--countdown-header-height, 0px);
+  z-index: 50;
 }
 
-.countdown-header-standalone.countdown-expired {
-  display: none !important;
+.countdown-header-active .header-section.header-sticky--active.is-sticky {
+  top: var(--countdown-header-height, 0px);
 }
 
-@keyframes slideDown {
+/* Announcement bar positioning with scroll behavior */
+.countdown-header-active .announcement-bar-section {
+  position: fixed !important;
+  top: var(--countdown-header-height, 0px) !important;
+  left: 0;
+  right: 0;
+  z-index: 999 !important;
+  width: 100%;
+  transition: transform 0.3s ease !important;
+}
+
+.countdown-header-active .header-section + .announcement-bar-section {
+  z-index: 999 !important;
+}
+
+/* Animations */
+@keyframes fadeInDown {
   from {
-    transform: translateY(-100%);
     opacity: 0;
+    transform: translateY(-100%);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.countdown-header-standalone.hiding {
+  animation: fadeOutUp 0.3s ease-out forwards;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Urgency pulse animation */
+.countdown-number.urgent,
+.countdown-timer--column--number.urgent {
+  animation: pulse 1s infinite;
+  color: #ffff00;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -68,6 +68,10 @@ if (!customElements.get('countdown-timer')) {
             countdownHeader.classList.add('countdown-expired');
             document.body.classList.remove('countdown-header-active');
             
+            // Reset CSS custom properties
+            document.documentElement.style.setProperty('--countdown-header-height', '0px');
+            document.documentElement.style.setProperty('--total-header-offset', '0px');
+            
             // Reset header section top position
             const headerSection = document.querySelector('.header-section');
             if (headerSection) {
@@ -76,6 +80,7 @@ if (!customElements.get('countdown-timer')) {
             
             // Reset announcement bar position and styles
             const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                                   document.querySelector('.announcement-bar-section') ||
                                    document.querySelector('.announcement-bar') ||
                                    document.querySelector('[id*="announcement"]') ||
                                    document.querySelector('[class*="announcement"]');
@@ -87,9 +92,6 @@ if (!customElements.get('countdown-timer')) {
               announcementBar.style.zIndex = '';
               announcementBar.style.width = '';
             }
-            
-            // Reset CSS custom property
-            document.documentElement.style.setProperty('--countdown-header-height', '0px');
             
             // Trigger header recalculation
             if (window.recalculateHeaderPosition) {
@@ -131,45 +133,59 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add class to body for styling purposes
     document.body.classList.add('countdown-header-active');
     
+    // Scroll behavior for announcement bar
+    let lastScrollTop = 0;
+    let scrollThreshold = 50; // Minimum scroll distance to trigger hide/show
+    let resizeTimeout; // Debounce resize events
+    
     // Function to adjust header position dynamically
     function adjustHeaderPosition() {
       const headerSection = document.querySelector('.header-section');
-      // Try multiple selectors for announcement bar
       const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar-section') ||
                              document.querySelector('.announcement-bar') ||
                              document.querySelector('[id*="announcement"]') ||
                              document.querySelector('[class*="announcement"]');
       
       if (headerSection && countdownHeader && !countdownHeader.classList.contains('countdown-expired')) {
-        const countdownHeight = countdownHeader.offsetHeight;
-        let totalOffset = countdownHeight;
+        // Force recalculation of dimensions
+        const countdownHeight = countdownHeader.getBoundingClientRect().height;
         
-        // Get announcement bar height if it exists and add it to total offset
+        // Set CSS custom property for countdown height
+        document.documentElement.style.setProperty('--countdown-header-height', countdownHeight + 'px');
+        
+        // If there's an announcement bar, adjust its position
         if (announcementBar) {
-          const announcementHeight = announcementBar.offsetHeight;
-          totalOffset += announcementHeight;
+          const announcementHeight = announcementBar.getBoundingClientRect().height;
           
-          // Position announcement bar below countdown using fixed positioning
+          // Position announcement bar below countdown
           announcementBar.style.position = 'fixed';
           announcementBar.style.top = countdownHeight + 'px';
           announcementBar.style.left = '0';
           announcementBar.style.right = '0';
-          announcementBar.style.zIndex = '9998';
+          announcementBar.style.zIndex = '999';
           announcementBar.style.width = '100%';
+          announcementBar.style.transition = 'transform 0.3s ease';
+          
+          // Update header section to account for both countdown and announcement
+          const totalOffset = countdownHeight + announcementHeight;
+          headerSection.style.top = totalOffset + 'px';
+          document.documentElement.style.setProperty('--total-header-offset', totalOffset + 'px');
+        } else {
+          // No announcement bar, just position header below countdown
+          headerSection.style.top = countdownHeight + 'px';
+          document.documentElement.style.setProperty('--total-header-offset', countdownHeight + 'px');
         }
         
-        // Position header below both countdown and announcement bar
-        headerSection.style.top = totalOffset + 'px';
-        
-        // Set CSS custom property for app.js to use
-        document.documentElement.style.setProperty('--countdown-header-height', totalOffset + 'px');
-        
-        // Trigger header recalculation
+        // Trigger header recalculation if function exists
         if (window.recalculateHeaderPosition) {
           window.recalculateHeaderPosition();
         }
       } else {
         // Countdown is expired or doesn't exist, reset positions
+        document.documentElement.style.setProperty('--countdown-header-height', '0px');
+        document.documentElement.style.setProperty('--total-header-offset', '0px');
+        
         if (headerSection) {
           headerSection.style.top = '';
         }
@@ -180,12 +196,58 @@ document.addEventListener('DOMContentLoaded', function() {
           announcementBar.style.right = '';
           announcementBar.style.zIndex = '';
           announcementBar.style.width = '';
+          announcementBar.style.transition = '';
+          announcementBar.style.transform = '';
         }
-        document.documentElement.style.setProperty('--countdown-header-height', '0px');
+        
         if (window.recalculateHeaderPosition) {
           window.recalculateHeaderPosition();
         }
       }
+    }
+    
+    // Function to handle scroll behavior for announcement bar
+    function handleAnnouncementBarScroll() {
+      const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar-section') ||
+                             document.querySelector('.announcement-bar') ||
+                             document.querySelector('[id*="announcement"]') ||
+                             document.querySelector('[class*="announcement"]');
+      
+      if (!announcementBar || countdownHeader.classList.contains('countdown-expired')) return;
+      
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Only trigger hide/show if scrolled past threshold
+      if (Math.abs(lastScrollTop - currentScrollTop) <= scrollThreshold) {
+        return;
+      }
+      
+      if (currentScrollTop > lastScrollTop && currentScrollTop > scrollThreshold) {
+        // Scrolling down - hide announcement bar
+        announcementBar.style.transform = 'translateY(-100%)';
+        // Adjust header position to account for hidden announcement bar
+        const headerSection = document.querySelector('.header-section');
+        if (headerSection && countdownHeader) {
+          const countdownHeight = countdownHeader.getBoundingClientRect().height;
+          headerSection.style.top = countdownHeight + 'px';
+          document.documentElement.style.setProperty('--total-header-offset', countdownHeight + 'px');
+        }
+      } else {
+        // Scrolling up or at top - show announcement bar
+        announcementBar.style.transform = 'translateY(0)';
+        // Restore header position to account for visible announcement bar
+        const headerSection = document.querySelector('.header-section');
+        if (headerSection && countdownHeader) {
+          const countdownHeight = countdownHeader.getBoundingClientRect().height;
+          const announcementHeight = announcementBar.getBoundingClientRect().height;
+          const totalOffset = countdownHeight + announcementHeight;
+          headerSection.style.top = totalOffset + 'px';
+          document.documentElement.style.setProperty('--total-header-offset', totalOffset + 'px');
+        }
+      }
+      
+      lastScrollTop = currentScrollTop;
     }
     
     // Function to remove countdown and reset header
@@ -193,14 +255,19 @@ document.addEventListener('DOMContentLoaded', function() {
       countdownHeader.classList.add('countdown-expired');
       document.body.classList.remove('countdown-header-active');
       
+      // Reset CSS custom properties
+      document.documentElement.style.setProperty('--countdown-header-height', '0px');
+      document.documentElement.style.setProperty('--total-header-offset', '0px');
+      
       // Reset header section top position
       const headerSection = document.querySelector('.header-section');
       if (headerSection) {
         headerSection.style.top = '';
       }
       
-      // Reset announcement bar position and styles - try multiple selectors
+      // Reset announcement bar position and styles
       const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                             document.querySelector('.announcement-bar-section') ||
                              document.querySelector('.announcement-bar') ||
                              document.querySelector('[id*="announcement"]') ||
                              document.querySelector('[class*="announcement"]');
@@ -211,10 +278,9 @@ document.addEventListener('DOMContentLoaded', function() {
         announcementBar.style.right = '';
         announcementBar.style.zIndex = '';
         announcementBar.style.width = '';
+        announcementBar.style.transition = '';
+        announcementBar.style.transform = '';
       }
-      
-      // Reset CSS custom property
-      document.documentElement.style.setProperty('--countdown-header-height', '0px');
       
       // Trigger header recalculation
       if (window.recalculateHeaderPosition) {
@@ -222,9 +288,42 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
+    // Debounced resize handler for better performance
+    function handleResize() {
+      // Clear existing timeout
+      clearTimeout(resizeTimeout);
+      
+      // Set new timeout to debounce rapid resize events
+      resizeTimeout = setTimeout(() => {
+        // Reset scroll position tracking on resize
+        lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Recalculate all positions
+        adjustHeaderPosition();
+        
+        // Reset announcement bar transform on resize to avoid stuck states
+        const announcementBar = document.querySelector('#shopify-section-announcement-bar') || 
+                               document.querySelector('.announcement-bar-section') ||
+                               document.querySelector('.announcement-bar') ||
+                               document.querySelector('[id*="announcement"]') ||
+                               document.querySelector('[class*="announcement"]');
+        
+        if (announcementBar && !countdownHeader.classList.contains('countdown-expired')) {
+          announcementBar.style.transform = 'translateY(0)';
+        }
+      }, 150); // 150ms debounce for smooth performance
+    }
+    
     // Adjust position on load and resize
     adjustHeaderPosition();
-    window.addEventListener('resize', adjustHeaderPosition);
+    window.addEventListener('resize', handleResize, { passive: true });
+    window.addEventListener('orientationchange', () => {
+      // Handle mobile orientation changes with slight delay
+      setTimeout(adjustHeaderPosition, 100);
+    }, { passive: true });
+    
+    // Add scroll listener for announcement bar behavior
+    window.addEventListener('scroll', handleAnnouncementBarScroll, { passive: true });
     
     // Optional: Add close functionality with better UX
     const closeButton = document.createElement('button');
