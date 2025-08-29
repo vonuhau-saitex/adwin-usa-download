@@ -44,7 +44,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_Ri634t": {
@@ -79,7 +83,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_NAFHyc": {
@@ -114,7 +122,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_MmncCt": {
@@ -149,7 +161,11 @@
             "buton1_style": "outline",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "outline"
+            "buton2_style": "outline",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_A3BCyE": {
@@ -184,7 +200,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_XibDxf": {
@@ -219,7 +239,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_XTKjt7": {
@@ -253,7 +277,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#1a55b7",
+            "button_text_color": "#ffffff",
+            "button_background_hover_color": "#072c69",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_MHbYcr": {
@@ -287,7 +315,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#1a55b7",
+            "button_text_color": "#ffffff",
+            "button_background_hover_color": "#072c69",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_ciTHbh": {
@@ -321,7 +353,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         },
         "slide_FWEVjG": {
@@ -355,7 +391,11 @@
             "buton1_style": "button",
             "button_2_text": "",
             "button_2_link": "",
-            "buton2_style": "button"
+            "buton2_style": "button",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_background_hover_color": "#000000",
+            "button_text_hover_color": "#ffffff"
           }
         }
       },
